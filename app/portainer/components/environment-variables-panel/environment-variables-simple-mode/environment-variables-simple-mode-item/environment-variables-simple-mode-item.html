@@ -1,0 +1,56 @@
+<ng-form class="env-item mt-1" name="$ctrl.{{ $ctrl.formName }}">
+  <div class="col-sm-5">
+    <div class="input-group input-group-sm env-item-key w-full">
+      <span class="input-group-addon">名称</span>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        placeholder="例如 FOO"
+        ng-model="$ctrl.variable.name"
+        ng-disabled="$ctrl.variable.added"
+        ng-change="$ctrl.onChangeName($ctrl.variable.name)"
+        required
+      />
+    </div>
+    <div class="form-group" style="margin-top: 5px" ng-show="$ctrl[$ctrl.formName].name.$invalid">
+      <div class="col-sm-12 small">
+        <div ng-messages="$ctrl[$ctrl.formName].name.$error">
+          <p ng-message="required"> <pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> Name is required. </p>
+          <p ng-message="pattern">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            This field must consist alphanumeric characters, '-' or '_', start with an alphabetic character, and end with an alphanumeric character (例如 'my-var', or 'MY_VAR123').
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="w-full env-item-value">
+      <div class="input-group input-group-sm">
+        <span class="input-group-addon">value</span>
+        <input
+          type="text"
+          class="form-control"
+          ng-model="$ctrl.variable.value"
+          placeholder="例如 bar"
+          ng-trim="false"
+          name="value"
+          ng-change="$ctrl.onChangeValue($ctrl.variable.value)"
+        />
+      </div>
+    </div>
+    <div class="form-group" ng-show="$ctrl[$ctrl.formName].value.$invalid">
+      <div class="col-sm-12 small text-warning">
+        <div ng-messages="$ctrl[$ctrl.formName].value.$error">
+          <p ng-message="pattern"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Value is invalid. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-dangerlight" type="button" ng-click="$ctrl.onRemove($ctrl.index)">
+      <pr-icon icon="'trash-2'" feather="true" size="'md'"></pr-icon>
+    </button>
+  </div>
+</ng-form>

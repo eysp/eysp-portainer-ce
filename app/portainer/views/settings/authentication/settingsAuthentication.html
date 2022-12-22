@@ -1,0 +1,76 @@
+<page-header title="'验证设置'" breadcrumbs="[{label:'Settings', link:'portainer.settings'}, 'Authentication']"> </page-header>
+
+<div class="row">
+  <div class="col-sm-12">
+    <rd-widget>
+      <rd-widget-header icon="users" feather-icon="true" title-text="Authentication"></rd-widget-header>
+      <rd-widget-body>
+        <form class="form-horizontal" name="authSettingsForm">
+          <div class="col-sm-12 form-section-title"> 配置 </div>
+          <div class="form-group">
+            <label for="user_timeout" class="col-sm-2 control-label text-left">
+              Session 会话期限
+              <portainer-tooltip message="'在用户被迫重新登录之前的时间。'"></portainer-tooltip>
+            </label>
+            <div class="col-sm-10">
+              <select
+                id="user_timeout"
+                class="form-control"
+                ng-model="settings.UserSessionTimeout"
+                ng-options="opt.value as opt.key for opt in state.availableUserSessionTimeoutOptions"
+              ></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <span class="col-sm-12 text-muted small vertical-center">
+              <pr-icon icon="'alert-triangle'" feather="true" class-name="'icon-sm icon-yellow'"></pr-icon>
+              只有当你在Portainer前面有额外的认证层时，才建议改变默认的做法。
+            </span>
+          </div>
+
+          <div class="col-sm-12 form-section-title"> 认证方法 </div>
+
+          <box-selector radio-name="'authOptions'" value="authMethod" options="authOptions" on-change="(onChangeAuthMethod)"></box-selector>
+
+          <internal-auth
+            ng-if="authenticationMethodSelected(1)"
+            on-save-settings="(saveSettings)"
+            is-loading="state.actionInProgress"
+            value="settings.InternalAuthSettings"
+            on-change="(onChangePasswordLength)"
+          ></internal-auth>
+
+          <ldap-settings
+            ng-if="authenticationMethodSelected(2)"
+            settings="formValues.ldap.ldapSettings"
+            tlsca-cert="formValues.TLSCACert"
+            state="state"
+            connectivity-check="LDAPConnectivityCheck"
+            on-save-settings="(saveSettings)"
+            save-button-state="state.actionInProgress"
+            is-ldap-form-valid="isLDAPFormValid"
+          ></ldap-settings>
+
+          <ad-settings
+            ng-if="authenticationMethodSelected(4)"
+            settings="formValues.ldap.adSettings"
+            tlsca-cert="formValues.TLSCACert"
+            state="state"
+            connectivity-check="LDAPConnectivityCheck"
+            on-save-settings="(saveSettings)"
+            save-button-state="state.actionInProgress"
+            is-ldap-form-valid="isLDAPFormValid()"
+          ></ad-settings>
+
+          <oauth-settings
+            ng-if="authenticationMethodSelected(3)"
+            settings="OAuthSettings"
+            teams="teams"
+            on-save-settings="(saveSettings)"
+            save-button-state="state.actionInProgress"
+          ></oauth-settings>
+        </form>
+      </rd-widget-body>
+    </rd-widget>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<ng-form ng-if="service.EnvironmentVariables" id="service-env-variables" name="serviceEnvForm">
+  <rd-widget>
+    <rd-widget-header icon="list" feather-icon="true" title-text="环境变量">
+      <div class="nopadding" authorization="DockerServiceUpdate">
+        <a class="btn btn-secondary btn-sm pull-right" ng-click="isUpdating || addEnvironmentVariable(service)" ng-disabled="isUpdating">
+          <pr-icon icon="'plus'" feather="true"></pr-icon> 环境变量
+        </a>
+      </div>
+    </rd-widget-header>
+    <rd-widget-body ng-if="service.EnvironmentVariables.length === 0">
+      <p>这个服务没有环境变量。</p>
+    </rd-widget-body>
+    <rd-widget-body ng-if="service.EnvironmentVariables.length > 0">
+      <environment-variables-panel is-name-disabled="true" ng-model="service.EnvironmentVariables" on-change="(onChangeEnvVars)"></environment-variables-panel>
+    </rd-widget-body>
+    <rd-widget-footer authorization="DockerServiceUpdate">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group" role="group">
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            ng-disabled="!hasChanges(service, ['EnvironmentVariables']) || serviceEnvForm.$invalid"
+            ng-click="updateService(service)"
+          >
+            应用变更
+          </button>
+          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a ng-click="cancelChanges(service, ['EnvironmentVariables'])">重置变更</a></li>
+            <li><a ng-click="cancelChanges(service)">重置所有更改</a></li>
+          </ul>
+        </div>
+      </div>
+    </rd-widget-footer>
+  </rd-widget>
+</ng-form>

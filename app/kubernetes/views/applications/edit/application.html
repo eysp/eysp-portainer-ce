@@ -32,7 +32,7 @@
                       <td>名称</td>
                       <td data-cy="k8sAppDetail-appName">
                         {{ ctrl.application.Name }}
-                        <span class="label label-primary image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && ctrl.isExternalApplication()">external</span>
+                        <span class="label label-primary image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && ctrl.isExternalApplication()">外部</span>
                       </td>
                     </tr>
                     <tr>
@@ -43,7 +43,7 @@
                       <td>Namespace</td>
                       <td data-cy="k8sAppDetail-resourcePoolName">
                         <a ui-sref="kubernetes.resourcePools.resourcePool({ id: ctrl.application.ResourcePool })">{{ ctrl.application.ResourcePool }}</a>
-                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.isSystemNamespace()">system</span>
+                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.isSystemNamespace()">系统</span>
                       </td>
                     </tr>
                     <tr>

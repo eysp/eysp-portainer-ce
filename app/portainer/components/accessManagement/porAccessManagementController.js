@@ -75,7 +75,7 @@ class PorAccessManagementController {
     }
 
     if (this.isRoleLimitedToBE(role)) {
-      return `${role.Name} (Business Edition Feature)`;
+      return `${role.Name} (商业版功能)`;
     }
 
     return `${role.Name} (Default)`;

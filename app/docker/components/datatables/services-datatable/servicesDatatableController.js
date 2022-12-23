@@ -17,19 +17,19 @@ angular.module('portainer.docker').controller('ServicesDatatableController', [
     this.columnVisibility = {
       columns: {
         image: {
-          label: 'Image',
+          label: '镜像',
           display: true,
         },
         ownership: {
-          label: 'OwnerShip',
+          label: '所有权',
           display: true,
         },
         ports: {
-          label: 'Published Ports',
+          label: '已发布端口',
           display: true,
         },
         updated: {
-          label: 'Last Update',
+          label: '最后更新',
           display: true,
         },
       },

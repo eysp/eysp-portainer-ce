@@ -35,14 +35,14 @@
                       <td class="!pl-0 !border-none w-[40%]">名称</td>
                       <td class="!border-none">
                         {{ ctrl.configuration.Name }}
-                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.configuration.IsRegistrySecret">system</span>
+                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.configuration.IsRegistrySecret">系统</span>
                       </td>
                     </tr>
                     <tr>
                       <td class="!pl-0">Namespace</td>
                       <td>
                         <a ui-sref="kubernetes.resourcePools.resourcePool({ id: ctrl.configuration.Namespace })">{{ ctrl.configuration.Namespace }}</a>
-                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.isSystemNamespace()">system</span>
+                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.isSystemNamespace()">系统</span>
                       </td>
                     </tr>
                     <tr>

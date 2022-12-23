@@ -35,7 +35,7 @@ function validateYAML(yaml, containerNames, originalContainersNames = []) {
   try {
     yamlObject = YAML.parse(yaml);
   } catch (err) {
-    return 'There is an error in the yaml syntax: ' + err;
+    return 'yaml语法中存在一个错误: ' + err;
   }
 
   const names = _.uniq(GenericHelper.findDeepAll(yamlObject, 'container_name'));
@@ -47,8 +47,8 @@ function validateYAML(yaml, containerNames, originalContainersNames = []) {
   }
 
   return (
-    (duplicateContainers.length === 1 ? 'This container name is' : 'These container names are') +
-    ' already used by another container running in this environment: ' +
+    (duplicateContainers.length === 1 ? '这个容器名称是' : '这些容器名称是') +
+    ' 已经被运行在这个环境中的另一个容器所使用: ' +
     _.join(duplicateContainers, ', ') +
     '.'
   );

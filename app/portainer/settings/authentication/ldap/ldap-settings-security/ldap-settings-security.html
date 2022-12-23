@@ -6,7 +6,7 @@
 <div class="form-group" ng-if="!$ctrl.settings.TLSConfig.TLS">
   <label for="tls" class="control-label col-sm-3 col-lg-2 text-left" style="padding-top: 0">
     Use StartTLS
-    <portainer-tooltip message="'Enable this option if want to use StartTLS to secure the connection to the server. Ignored if Use TLS is selected.'"></portainer-tooltip>
+    <portainer-tooltip message="'如果想使用StartTLS来保护与服务器的连接，请启用该选项。如果选择了使用TLS，则忽略。'"></portainer-tooltip>
   </label>
   <div class="col-sm-9 col-lg-10">
     <label class="switch">
@@ -21,7 +21,7 @@
 <div class="form-group" ng-if="!$ctrl.settings.StartTLS">
   <label for="tls" class="control-label col-sm-3 col-lg-2 text-left" style="padding-top: 0">
     Use TLS
-    <portainer-tooltip message="'Enable this option if you need to specify TLS certificates to connect to the LDAP server.'"></portainer-tooltip>
+    <portainer-tooltip message="'如果你需要指定TLS证书来连接到LDAP服务器，请启用这个选项。'"></portainer-tooltip>
   </label>
   <div class="col-sm-9 col-lg-10">
     <label class="switch">
@@ -35,8 +35,8 @@
 <!-- tls-skip-verify -->
 <div class="form-group">
   <label for="tls" class="control-label col-sm-3 col-lg-2 text-left" style="padding-top: 0">
-    Skip verification of server certificate
-    <portainer-tooltip message="'Skip the verification of the server TLS certificate. Not recommended on unsecured networks.'"></portainer-tooltip>
+    跳过服务器证书的验证
+    <portainer-tooltip message="'跳过对服务器TLS证书的验证。不建议在不安全的网络上使用。'"></portainer-tooltip>
   </label>
   <div class="col-sm-9 col-lg-10">
     <label class="switch">
@@ -49,7 +49,7 @@
 
 <!-- ca-input -->
 <div class="form-group" ng-if="$ctrl.settings.TLSConfig.TLS || ($ctrl.settings.StartTLS && !$ctrl.settings.TLSConfig.TLSSkipVerify)">
-  <label class="col-sm-3 col-lg-2 control-label text-left">TLS CA certificate</label>
+  <label class="col-sm-3 col-lg-2 control-label text-left">TLS CA 证书</label>
   <div class="col-sm-9 col-lg-10 vertical-center">
     <button
       type="button"
@@ -59,7 +59,7 @@
       limited-feature-dir="{{::$ctrl.limitedFeatureId}}"
       limited-feature-tabindex="-1"
     >
-      Select file
+      选择文件
     </button>
     <span class="vertical-center">
       {{ $ctrl.tlscaCert.name }}

@@ -132,7 +132,7 @@
                           Restore
                         </button>
                         <span class="label label-warning label-sm image-tag" ng-if="label.IsUsed && !ctrl.isSystemLabel($index)" style="margin-left: 5px">used</span>
-                        <span class="label label-info image-tag" ng-if="ctrl.isSystemLabel($index)" style="margin-left: 5px">system</span>
+                        <span class="label label-info image-tag" ng-if="ctrl.isSystemLabel($index)" style="margin-left: 5px">系统</span>
                       </div>
                     </div>
                     <div class="small mt-2 text-warning" ng-show="kubernetesNodeUpdateForm['label_key_' + $index].$invalid || ctrl.state.duplicateLabelKeys[$index] !== undefined">

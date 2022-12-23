@@ -7,7 +7,7 @@
         <div class="widget-icon space-right">
           <pr-icon icon="'svg-dataflow'" class-name="'[&>*]:mr-0.5'"></pr-icon>
         </div>
-        Port mappings
+        端口映射
       </div>
       <div class="searchBar vertical-center !mr-0 min-w-[300px]">
         <pr-icon icon="'search'" feather="true" class-name="'icon !h-3'"></pr-icon>
@@ -16,7 +16,7 @@
           class="searchInput"
           ng-model="$ctrl.state.textFilter"
           ng-change="$ctrl.onTextFilterChange()"
-          placeholder="Search for a port mapping..."
+          placeholder="搜索端口映射..."
           auto-focus
           ng-model-options="{ debounce: 300 }"
         />
@@ -29,12 +29,12 @@
           </span>
           <div class="dropdown-menu dropdown-menu-right" uib-dropdown-menu>
             <div class="tableMenu">
-              <div class="menuHeader"> Table settings </div>
+              <div class="menuHeader"> 表格设置 </div>
               <div class="menuContent">
                 <div>
                   <div class="md-checkbox" ng-if="$ctrl.isAdmin">
                     <input id="applications_setting_show_system" type="checkbox" ng-model="$ctrl.settings.showSystem" ng-change="$ctrl.onSettingsShowSystemChange()" />
-                    <label for="applications_setting_show_system">Show system resources</label>
+                    <label for="applications_setting_show_system">显示系统资源</label>
                   </div>
                   <div class="md-checkbox">
                     <input
@@ -44,10 +44,10 @@
                       ng-change="$ctrl.onSettingsRepeaterChange()"
                       data-cy="k8sApp-autoRefreshCheckbox-port"
                     />
-                    <label for="setting_auto_refresh">Auto refresh</label>
+                    <label for="setting_auto_refresh">自动刷新</label>
                   </div>
                   <div ng-if="$ctrl.settings.repeater.autoRefresh">
-                    <label for="settings_refresh_rate"> Refresh rate </label>
+                    <label for="settings_refresh_rate"> 刷新频率 </label>
                     <select
                       id="settings_refresh_rate"
                       ng-model="$ctrl.settings.repeater.refreshRate"
@@ -68,7 +68,7 @@
                 </div>
               </div>
               <div>
-                <a type="button" class="btn btn-sm btn-default btn-sm" ng-click="$ctrl.settings.open = false;" data-cy="k8sApp-tableSettingsCloseButton-port">Close</a>
+                <a type="button" class="btn btn-sm btn-default btn-sm" ng-click="$ctrl.settings.open = false;" data-cy="k8sApp-tableSettingsCloseButton-port">关闭</a>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
     <div class="flex flex-row w-full">
       <span class="small text-muted mt-1 vertical-center" ng-if="$ctrl.isAdmin && !$ctrl.settings.showSystem">
         <pr-icon icon="'info'" feather="true" mode="'primary'"></pr-icon>
-        System resources are hidden, this can be changed in the table settings.
+        系统资源是隐藏的，这可以在表设置中更改。
       </span>
     </div>
   </div>
@@ -148,17 +148,17 @@
           <!-- Application -->
           <td>
             <a ui-sref="kubernetes.applications.application({ name: item.Name, namespace: item.ResourcePool })">{{ item.Name }}</a>
-            <span class="label label-info image-tag label-margins" ng-if="$ctrl.isSystemNamespace(item)">system</span>
-            <span class="label label-primary image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && $ctrl.isExternalApplication(item)">external</span>
+            <span class="label label-info image-tag label-margins" ng-if="$ctrl.isSystemNamespace(item)">系统</span>
+            <span class="label label-primary image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && $ctrl.isExternalApplication(item)">外部的</span>
           </td>
           <!-- Publishing mode -->
           <td>
             <!-- LB -->
             <span ng-if="item.ServiceType === $ctrl.KubernetesServiceTypes.LOAD_BALANCER">
-              <span><pr-icon icon="'share-2'" feather="true" class-name="'icon'"></pr-icon> LoadBalancer </span>
+              <span><pr-icon icon="'share-2'" feather="true" class-name="'icon'"></pr-icon> 负载均衡器 </span>
               <span class="text-muted small ml-5">
                 <span ng-if="item.LoadBalancerIPAddress">{{ item.LoadBalancerIPAddress }}</span>
-                <span ng-if="!item.LoadBalancerIPAddress">pending</span>
+                <span ng-if="!item.LoadBalancerIPAddress">待定</span>
               </span>
             </span>
             <!-- Internal -->
@@ -171,7 +171,7 @@
             <span ng-if="!$ctrl.itemCanExpand(item)">
               {{ item.Ports[0].Port }}
               <a class="vertical-center" ng-if="item.LoadBalancerIPAddress" ng-href="http://{{ item.LoadBalancerIPAddress }}:{{ item.Ports[0].Port }}" target="_blank" class="ml-1">
-                <pr-icon icon="'external-link'" feather="true" class-name="'icon'"></pr-icon> access
+                <pr-icon icon="'external-link'" feather="true" class-name="'icon'"></pr-icon> 访问
               </a>
             </span>
           </td>
@@ -191,7 +191,7 @@
                   tooltip-placement="bottom"
                   tooltip-class="portainer-tooltip"
                   uib-tooltip="Ingress controller IP address not available yet"
-                  >pending
+                  >待定
                 </span>
                 <span ng-if="$ctrl.ruleCanBeDisplayed(item.Ports[0].IngressRules[0])">
                   <a ng-href="{{ $ctrl.buildIngressRuleURL(item.Ports[0].IngressRules[0]) }}" target="_blank">
@@ -210,7 +210,7 @@
           <td ng-if="!$ctrl.portHasIngressRules(port)">
             {{ port.Port }}
             <a ng-if="item.LoadBalancerIPAddress" ng-href="http://{{ item.LoadBalancerIPAddress }}:{{ port.Port }}" target="_blank" class="ml-1">
-              <pr-icon icon="'external-link'" feather="true"></pr-icon> access
+              <pr-icon icon="'external-link'" feather="true"></pr-icon> 访问
             </a>
           </td>
           <td ng-if="!$ctrl.portHasIngressRules(port)">{{ port.TargetPort }}/{{ port.Protocol }}</td>
@@ -228,7 +228,7 @@
           <td>
             {{ port.Port }}
             <a ng-if="item.LoadBalancerIPAddress" ng-href="http://{{ item.LoadBalancerIPAddress }}:{{ port.Port }}" target="_blank" class="ml-1">
-              <pr-icon icon="'external-link'" feather="true"></pr-icon>access
+              <pr-icon icon="'external-link'" feather="true"></pr-icon>访问
             </a>
           </td>
           <td>{{ port.TargetPort }}/{{ port.Protocol }}</td>
@@ -240,7 +240,7 @@
               tooltip-placement="bottom"
               tooltip-class="portainer-tooltip"
               uib-tooltip="Ingress controller IP address not available yet"
-              >pending
+              >待定
             </span>
             <span ng-if="$ctrl.ruleCanBeDisplayed(rule)">
               <a ng-href="{{ $ctrl.buildIngressRuleURL(rule) }}" target="_blank">
@@ -252,21 +252,21 @@
         <tr class="!h-0" dir-paginate-end></tr>
         <!-- no dataset -->
         <tr ng-if="!$ctrl.dataset">
-          <td colspan="6" class="text-center text-muted">Loading...</td>
+          <td colspan="6" class="text-center text-muted">加载中...</td>
         </tr>
         <!-- no values in filtered dataset -->
         <tr ng-if="$ctrl.state.filteredDataSet.length === 0">
-          <td colspan="6" class="text-center text-muted">No application port mapping available.</td>
+          <td colspan="6" class="text-center text-muted">没有可用的应用程序端口映射。</td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="footer pl-5" ng-if="$ctrl.dataset">
-    <div class="infoBar !ml-0" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} item(s) selected </div>
+    <div class="infoBar !ml-0" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} 所选项目 </div>
     <div class="paginationControls">
       <form class="form-inline">
         <span class="limitSelector">
-          <span class="mr-1"> Items per page </span>
+          <span class="mr-1"> 每页项目数 </span>
           <select class="form-control" ng-model="$ctrl.state.paginatedItemLimit" ng-change="$ctrl.changePaginationLimit()" data-cy="component-paginationSelect">
             <option value="0">All</option>
             <option value="10">10</option>

@@ -15,7 +15,7 @@
             class="searchInput"
             ng-model="$ctrl.state.textFilter"
             ng-change="$ctrl.onTextFilterChange()"
-            placeholder="Search for a registry..."
+            placeholder="搜索注册表..."
             auto-focus
             ng-model-options="{ debounce: 300 }"
             data-cy="registry-searchInput"
@@ -30,10 +30,10 @@
             ng-click="$ctrl.removeAction($ctrl.state.selectedItems)"
             data-cy="registry-removeRegistryButton"
           >
-            <pr-icon icon="'trash-2'" feather="true"></pr-icon>Remove
+            <pr-icon icon="'trash-2'" feather="true"></pr-icon>删除
           </button>
           <button type="button" class="btn btn-sm btn-primary h-fit vertical-center !ml-0" ui-sref="portainer.registries.new" data-cy="registry-addRegistryButton">
-            <pr-icon icon="'plus'" feather="true"></pr-icon>Add registry
+            <pr-icon icon="'plus'" feather="true"></pr-icon>添加注册表
           </button>
         </div>
       </div>
@@ -107,27 +107,27 @@
                   ng-if="$ctrl.canManageAccess(item)"
                   ng-click="$ctrl.redirectToManageAccess(item)"
                 >
-                  <pr-icon icon="'users'" feather="true"></pr-icon>Manage access
+                  <pr-icon icon="'users'" feather="true"></pr-icon>管理访问权限
                 </button>
                 <be-feature-indicator feature="$ctrl.limitedFeature" ng-if="$ctrl.canBrowse(item)">
-                  <span class="text-muted space-left" style="padding-right: 5px"> <pr-icon icon="'search'" feather="true"></pr-icon> Browse </span>
+                  <span class="text-muted space-left" style="padding-right: 5px"> <pr-icon icon="'search'" feather="true"></pr-icon> 浏览 </span>
                 </be-feature-indicator>
 
                 <span ng-if="!$ctrl.canBrowse(item) && !$ctrl.canManageAccess(item)"> - </span>
               </td>
             </tr>
             <tr ng-if="!$ctrl.dataset">
-              <td colspan="3" class="text-center text-muted">Loading...</td>
+              <td colspan="3" class="text-center text-muted">加载中...</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="footer" ng-if="$ctrl.dataset">
-        <div class="infoBar" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} item(s) selected </div>
+        <div class="infoBar" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} 所选项目 </div>
         <div class="paginationControls">
           <form class="form-inline vertical-center">
             <span class="limitSelector">
-              <span style="margin-right: 5px"> Items per page </span>
+              <span style="margin-right: 5px"> 每页项目数 </span>
               <select class="form-control" ng-model="$ctrl.state.paginatedItemLimit" ng-change="$ctrl.changePaginationLimit()" data-cy="component-paginationSelect">
                 <option value="0">All</option>
                 <option value="10">10</option>

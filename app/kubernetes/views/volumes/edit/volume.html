@@ -35,7 +35,7 @@
                       <td>名称</td>
                       <td data-cy="k8sVolDetail-volName">
                         {{ ctrl.volume.PersistentVolumeClaim.Name }}
-                        <span class="label label-primary image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && ctrl.isExternalVolume()">external</span>
+                        <span class="label label-primary image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && ctrl.isExternalVolume()">外部</span>
                         <span class="label label-warning image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && !ctrl.isUsed()">unused</span>
                       </td>
                     </tr>
@@ -45,7 +45,7 @@
                         <a ui-sref="kubernetes.resourcePools.resourcePool({ id: ctrl.volume.ResourcePool.Namespace.Name })" data-cy="k8sVolDetail-volNamespace">{{
                           ctrl.volume.ResourcePool.Namespace.Name
                         }}</a>
-                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.isSystemNamespace()">system</span>
+                        <span style="margin-left: 5px" class="label label-info image-tag" ng-if="ctrl.isSystemNamespace()">系统</span>
                       </td>
                     </tr>
                     <tr>

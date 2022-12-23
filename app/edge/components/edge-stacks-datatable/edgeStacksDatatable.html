@@ -10,7 +10,7 @@
             class="searchInput"
             ng-model="$ctrl.state.textFilter"
             ng-change="$ctrl.onTextFilterChange()"
-            placeholder="Search..."
+            placeholder="搜索..."
             auto-focus
             ng-model-options="{ debounce: 300 }"
           />
@@ -34,7 +34,7 @@
             <span uib-dropdown-toggle><pr-icon icon="'more-vertical'" feather="true"></pr-icon></span>
             <div class="dropdown-menu dropdown-menu-right" uib-dropdown-menu>
               <div class="tableMenu">
-                <div class="menuHeader"> <pr-icon icon="'settings'" feather="true"></pr-icon> Table settings </div>
+                <div class="menuHeader"> <pr-icon icon="'settings'" feather="true"></pr-icon> 表格设置 </div>
                 <div class="menuContent">
                   <div>
                     <div class="md-checkbox">
@@ -45,10 +45,10 @@
                         ng-change="$ctrl.onSettingsRepeaterChange()"
                         data-cy="edgeStack-autoRefreshCheckbox"
                       />
-                      <label for="setting_auto_refresh">Auto refresh</label>
+                      <label for="setting_auto_refresh">自动刷新</label>
                     </div>
                     <div ng-if="$ctrl.settings.repeater.autoRefresh">
-                      <label for="settings_refresh_rate"> Refresh rate </label>
+                      <label for="settings_refresh_rate"> 刷新频率 </label>
                       <select id="settings_refresh_rate" ng-model="$ctrl.settings.repeater.refreshRate" ng-change="$ctrl.onSettingsRepeaterChange()" class="small-select">
                         <option value="10">10s</option>
                         <option value="30">30s</option>
@@ -113,7 +113,7 @@
               <td>{{ item.CreationDate | getisodatefromtimestamp }}</td>
             </tr>
             <tr ng-if="!$ctrl.dataset" data-cy="edgeStack-loadingRow">
-              <td colspan="4" class="text-center text-muted">Loading...</td>
+              <td colspan="4" class="text-center text-muted">加载中...</td>
             </tr>
             <tr ng-if="$ctrl.state.filteredDataSet.length === 0" data-cy="edgeStack-noStackRow">
               <td colspan="4" class="text-center text-muted"> No stack available. </td>
@@ -122,11 +122,11 @@
         </table>
       </div>
       <div class="footer" ng-if="$ctrl.dataset">
-        <div class="infoBar" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} item(s) selected </div>
+        <div class="infoBar" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} 所选项目 </div>
         <div class="paginationControls">
           <form class="form-inline">
             <span class="limitSelector">
-              <span class="mr-1"> Items per page </span>
+              <span class="mr-1"> 每页项目数 </span>
               <select class="form-control" ng-model="$ctrl.state.paginatedItemLimit" ng-change="$ctrl.changePaginationLimit()" data-cy="component-paginationSelect">
                 <option value="0">All</option>
                 <option value="10">10</option>

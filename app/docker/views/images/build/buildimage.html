@@ -137,7 +137,7 @@
                         你可以从你的本地计算机上传文件，以便在你的Docker文件中引用（使用ADD文件名），这样它们就会包含在你构建的镜像中。
                       </span>
                     </div>
-                    <button class="btn btn-sm btn-primary" ngf-select="selectAdditionalFiles($files)" ngf-multiple="true">Select files</button>
+                    <button class="btn btn-sm btn-primary" ngf-select="selectAdditionalFiles($files)" ngf-multiple="true">选择文件</button>
                     <span ng-repeat="item in formValues.AdditionalFiles track by $index" class="mx-2">
                       {{ item.name }}
                     </span>

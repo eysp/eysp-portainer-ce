@@ -26,7 +26,7 @@
                   <label for="select_all"></label>
                 </span>
                 <table-column-header
-                  col-title="'Name'"
+                  col-title="'名称'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Hostname'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Hostname' && $ctrl.state.reverseOrder"
@@ -35,7 +35,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Role'"
+                  col-title="'角色'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Role'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Role' && $ctrl.state.reverseOrder"
@@ -44,7 +44,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Engine'"
+                  col-title="'引擎'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'EngineVersion'"
                   is-sorted-desc="$ctrl.state.orderBy === 'EngineVersion' && $ctrl.state.reverseOrder"
@@ -53,7 +53,7 @@
               </th>
               <th ng-if="$ctrl.showIpAddressColumn">
                 <table-column-header
-                  col-title="'IP Address'"
+                  col-title="'IP 地址'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Addr'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Addr' && $ctrl.state.reverseOrder"
@@ -62,7 +62,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Status'"
+                  col-title="'状态'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Status'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Status' && $ctrl.state.reverseOrder"
@@ -92,10 +92,10 @@
               </td>
             </tr>
             <tr ng-if="!$ctrl.dataset">
-              <td colspan="7" class="text-center text-muted">Loading...</td>
+              <td colspan="7" class="text-center text-muted">加载中...</td>
             </tr>
             <tr ng-if="$ctrl.state.filteredDataSet.length === 0">
-              <td colspan="7" class="text-center text-muted">No node available.</td>
+              <td colspan="7" class="text-center text-muted">没有可用节点。</td>
             </tr>
           </tbody>
         </table>
@@ -104,7 +104,7 @@
         <div class="paginationControls">
           <form class="form-inline vertical-center">
             <span class="limitSelector">
-              <span style="margin-right: 5px"> Items per page </span>
+              <span style="margin-right: 5px"> 每页项目数 </span>
               <select class="form-control" ng-model="$ctrl.state.paginatedItemLimit" ng-change="$ctrl.changePaginationLimit()" data-cy="component-paginationSelect">
                 <option value="0">All</option>
                 <option value="10">10</option>

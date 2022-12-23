@@ -6,7 +6,7 @@
         <div class="widget-icon space-right">
           <pr-icon icon="'database'" feather="true"></pr-icon>
         </div>
-        Volumes
+        存储卷
       </div>
       <div class="searchBar vertical-center">
         <pr-icon icon="'search'" feather="true"></pr-icon>
@@ -15,7 +15,7 @@
           class="searchInput !mr-0"
           ng-model="$ctrl.state.textFilter"
           ng-change="$ctrl.onTextFilterChange()"
-          placeholder="Search for a volume..."
+          placeholder="搜索存储卷..."
           auto-focus
           ng-model-options="{ debounce: 300 }"
         />
@@ -28,11 +28,11 @@
           ng-click="$ctrl.removeAction($ctrl.state.selectedItems)"
         >
           <pr-icon icon="'trash-2'" feather="true"></pr-icon>
-          Remove
+          删除
         </button>
         <button type="button" class="btn btn-sm btn-primary vertical-center !ml-0" ui-sref="kubernetes.deploy" data-cy="k8sVolume-deployFromManifestButton">
           <pr-icon icon="'plus'" feather="true" class-name="'!h-3'"></pr-icon>
-          Create from manifest
+          从清单创建
         </button>
       </div>
       <div class="settings">
@@ -50,19 +50,19 @@
           </span>
           <div class="dropdown-menu dropdown-menu-right" uib-dropdown-menu>
             <div class="tableMenu">
-              <div class="menuHeader"> Table settings </div>
+              <div class="menuHeader"> 表格设置 </div>
               <div class="menuContent">
                 <div>
                   <div class="md-checkbox" ng-if="$ctrl.isAdmin">
                     <input id="setting_show_system" type="checkbox" ng-model="$ctrl.settings.showSystem" ng-change="$ctrl.onSettingsShowSystemChange()" />
-                    <label for="setting_show_system">Show system resources</label>
+                    <label for="setting_show_system">显示系统资源</label>
                   </div>
                   <div class="md-checkbox">
                     <input id="setting_auto_refresh" type="checkbox" ng-model="$ctrl.settings.repeater.autoRefresh" ng-change="$ctrl.onSettingsRepeaterChange()" />
-                    <label for="setting_auto_refresh">Auto refresh</label>
+                    <label for="setting_auto_refresh">自动刷新</label>
                   </div>
                   <div ng-if="$ctrl.settings.repeater.autoRefresh">
-                    <label for="settings_refresh_rate"> Refresh rate </label>
+                    <label for="settings_refresh_rate"> 刷新频率 </label>
                     <select id="settings_refresh_rate" ng-model="$ctrl.settings.repeater.refreshRate" ng-change="$ctrl.onSettingsRepeaterChange()" class="small-select">
                       <option value="10">10s</option>
                       <option value="30">30s</option>
@@ -77,7 +77,7 @@
                 </div>
               </div>
               <div>
-                <a type="button" class="btn btn-default btn-sm" ng-click="$ctrl.settings.open = false;" data-cy="k8s-vol-table-settings-close">Close</a>
+                <a type="button" class="btn btn-default btn-sm" ng-click="$ctrl.settings.open = false;" data-cy="k8s-vol-table-settings-close">关闭</a>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@
     <div class="flex flex-row w-full" ng-if="!ctrl.isAdmin && !$ctrl.settings.showSystem">
       <span class="small text-muted mt-1 vertical-center">
         <pr-icon icon="'info'" feather="true" mode="'primary'"></pr-icon>
-        <span> System resources are hidden, this can be changed in the table settings. </span>
+        <span> 系统资源被隐藏，这可以在表格设置中改变。 </span>
       </span>
     </div>
   </div>
@@ -168,8 +168,8 @@
               <label for="select_{{ $index }}"></label>
             </span>
             <a ui-sref="kubernetes.volumes.volume({ namespace: item.ResourcePool.Namespace.Name, name: item.PersistentVolumeClaim.Name })">{{ item.PersistentVolumeClaim.Name }}</a>
-            <span class="label label-info image-tag label-margins" ng-if="$ctrl.isSystemNamespace(item)">system</span>
-            <span class="label label-primary image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && $ctrl.isExternalVolume(item)">external</span>
+            <span class="label label-info image-tag label-margins" ng-if="$ctrl.isSystemNamespace(item)">系统</span>
+            <span class="label label-primary image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && $ctrl.isExternalVolume(item)">外部</span>
             <span class="label label-warning image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && !$ctrl.isUsed(item)">unused</span>
           </td>
           <td>
@@ -194,20 +194,20 @@
           </td>
         </tr>
         <tr ng-if="!$ctrl.dataset">
-          <td colspan="6" class="text-center text-muted">Loading...</td>
+          <td colspan="6" class="text-center text-muted">加载中...</td>
         </tr>
         <tr ng-if="$ctrl.state.filteredDataSet.length === 0">
-          <td colspan="6" class="text-center text-muted">No volume available.</td>
+          <td colspan="6" class="text-center text-muted">没有可用的卷。</td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="footer pl-5" ng-if="$ctrl.dataset">
-    <div class="infoBar !ml-0" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} item(s) selected </div>
+    <div class="infoBar !ml-0" ng-if="$ctrl.state.selectedItemCount !== 0"> {{ $ctrl.state.selectedItemCount }} 所选项目 </div>
     <div class="paginationControls">
       <form class="form-inline">
         <span class="limitSelector">
-          <span style="margin-right: 5px"> Items per page </span>
+          <span style="margin-right: 5px"> 每页项目数 </span>
           <select class="form-control" ng-model="$ctrl.state.paginatedItemLimit" ng-change="$ctrl.changePaginationLimit()" data-cy="component-paginationSelect">
             <option value="0">All</option>
             <option value="10">10</option>

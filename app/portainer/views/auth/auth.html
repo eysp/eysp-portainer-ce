@@ -63,7 +63,7 @@
                 ng-model="ctrl.formValues.Username"
                 auto-focus
                 data-cy="auth-usernameInput"
-                placeholder="Enter your username"
+                placeholder="输入你的用户名"
               />
             </div>
 
@@ -90,7 +90,7 @@
                   tooltip-append-to-body="true"
                   tooltip-placement="top"
                   tooltip-class="portainer-tooltip"
-                  uib-tooltip="{{ ctrl.state.passwordInputType === 'password' ? 'Show password' : 'Hide password' }}"
+                  uib-tooltip="{{ ctrl.state.passwordInputType === 'password' ? '显示密码' : '隐藏密码' }}"
                 >
                   <pr-icon icon="ctrl.state.passwordInputType === 'password' ? 'eye-off' : 'eye'" feather="true" size="'md'"></pr-icon>
                 </button>

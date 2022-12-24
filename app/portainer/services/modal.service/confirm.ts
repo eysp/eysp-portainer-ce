@@ -204,7 +204,7 @@ export function confirmRedeploy(message: string, callback: ConfirmCallback) {
     message: messageSanitized,
     buttons: {
       confirm: {
-        label: '重新部署应用程序,
+        label: '重新部署应用程序',
         className: 'btn-primary',
       },
       cancel: {

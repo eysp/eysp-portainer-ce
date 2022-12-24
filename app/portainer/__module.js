@@ -119,17 +119,6 @@ v
         },
       };
 
-      var zhans = {
-        name: 'portainer.zhans',
-        url: 'https://jq.qq.com/?_wv=1027&k=5HqPeR7',
-        views: {
-          'content@': {
-            templateUrl: './views/account/account.html',
-            controller: 'AccountController',
-          },
-        },
-      };
-
       const tokenCreation = {
         name: 'portainer.account.new-access-token',
         url: '/tokens/new',

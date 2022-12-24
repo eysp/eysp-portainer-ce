@@ -19,7 +19,7 @@ import { useColumns } from './columns';
 import { ContainersDatatableActions } from './ContainersDatatableActions';
 import { RowProvider } from './RowContext';
 
-const storageKey = 'containers';
+const storageKey = '容器';
 const useStore = createStore(storageKey);
 
 const actions = [
@@ -58,7 +58,7 @@ export function ContainersDatatable({
       <Datatable
         titleOptions={{
           icon: 'svg-cubes',
-          title: 'Containers',
+          title: '容器',
         }}
         settingsStore={settings}
         columns={columns}

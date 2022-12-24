@@ -163,6 +163,20 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
               帮助 / 关于
             </a>
           </SidebarItem.Wrapper>
+          <SidebarItem.Wrapper label="汉化支持ysp">
+            <a
+              href={
+                process.env.PORTAINER_EDITION === 'CE'
+                  ? 'https://jq.qq.com/?_wv=1027&k=5HqPeR7'
+                  : 'https://hub.docker.com/r/6053537/portainer-ce'
+              }
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 rounded flex h-8 items-center"
+            >
+              汉化支持ysp
+            </a>
+          </SidebarItem.Wrapper>
         </SidebarItem>
       )}
     </SidebarSection>

@@ -36,17 +36,17 @@ export function NotificationsView() {
 
   return (
     <>
-      <PageHeader title="Notifications" breadcrumbs={breadcrumbs} reload />
+      <PageHeader title="通知" breadcrumbs={breadcrumbs} reload />
       <Datatable
         columns={columns}
         titleOptions={{
-          title: 'Notifications',
+          title: '通知',
           icon: Bell,
         }}
         dataset={userNotifications}
         settingsStore={settingsStore}
         storageKey="notifications"
-        emptyContentLabel="No notifications found"
+        emptyContentLabel="没有找到通知"
         totalCount={userNotifications.length}
         renderTableActions={(selectedRows) => (
           <TableActions selectedRows={selectedRows} />

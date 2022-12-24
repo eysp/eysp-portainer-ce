@@ -40,7 +40,7 @@ class KubernetesVolumesController {
   }
 
   selectTab(index) {
-    this.LocalStorage.storeActiveTab('volumes', index);
+    this.LocalStorage.storeActiveTab('存储卷', index);
   }
 
   async removeActionAsync(selectedItems) {
@@ -97,7 +97,7 @@ class KubernetesVolumesController {
     this.state = {
       viewReady: false,
       currentName: this.$state.$current.name,
-      activeTab: this.LocalStorage.getActiveTab('volumes'),
+      activeTab: this.LocalStorage.getActiveTab('存储卷'),
       isAdmin: this.Authentication.isAdmin(),
     };
 
@@ -112,7 +112,7 @@ class KubernetesVolumesController {
 
   $onDestroy() {
     if (this.state.currentName !== this.$state.$current.name) {
-      this.LocalStorage.storeActiveTab('volumes', 0);
+      this.LocalStorage.storeActiveTab('存储卷', 0);
     }
   }
 }

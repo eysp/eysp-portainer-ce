@@ -21,7 +21,7 @@ export function ListView({ endpoint: environment }: Props) {
     <>
       <PageHeader
         title="Container list"
-        breadcrumbs={[{ label: 'Containers' }]}
+        breadcrumbs={[{ label: '容器' }]}
         reload
       />
 

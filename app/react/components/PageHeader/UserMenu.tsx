@@ -57,11 +57,6 @@ export function UserMenu() {
           data-cy="userMenu-logOut"
           params={{ performApiLogout: true }}
         />
-        <MenuLink
-          to="portainer.zhans"
-          label="汉化支持"
-          target="_blank"
-        />
       </MenuList>
     </Menu>
   );

@@ -25,10 +25,9 @@ export function EnvironmentSelector({
 }: Props) {
   return (
     <div className="row">
-      <FormSection title="Select your environment(s)">
+      <FormSection title="选择你的环境">
         <p className="text-muted small">
-          You can onboard different types of environments, select all that
-          apply.
+        你可以登上不同类型的环境，选择所有适用的。
         </p>
         <div className="flex gap-4 flex-wrap">
           {filterEdgeDevicesIfNeed(environmentTypes, createEdgeDevice).map(

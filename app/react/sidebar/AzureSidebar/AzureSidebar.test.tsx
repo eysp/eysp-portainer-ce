@@ -8,9 +8,9 @@ import { AzureSidebar } from './AzureSidebar';
 
 test('dashboard items should render correctly', () => {
   const { getByLabelText } = renderComponent();
-  const dashboardItem = getByLabelText('Dashboard');
+  const dashboardItem = getByLabelText('仪表板);
   expect(dashboardItem).toBeVisible();
-  expect(dashboardItem).toHaveTextContent('Dashboard');
+  expect(dashboardItem).toHaveTextContent('仪表板');
 
   const dashboardItemElements = within(dashboardItem);
   expect(

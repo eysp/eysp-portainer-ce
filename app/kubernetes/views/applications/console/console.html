@@ -64,8 +64,8 @@
                   ng-click="ctrl.connectConsole()"
                   button-spinner="ctrl.state.actionInProgress"
                 >
-                  <span ng-hide="ctrl.state.actionInProgress">Connect</span>
-                  <span ng-show="ctrl.state.actionInProgress">Connection in progress...</span>
+                  <span ng-hide="ctrl.state.actionInProgress">连接</span>
+                  <span ng-show="ctrl.state.actionInProgress">连接中...</span>
                 </button>
                 <button type="button" class="btn btn-primary btn-sm" style="margin: 0" ng-if="ctrl.state.connected" ng-click="ctrl.disconnect()"> Disconnect </button>
               </div>

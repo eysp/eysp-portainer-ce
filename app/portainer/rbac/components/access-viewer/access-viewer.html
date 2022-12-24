@@ -2,16 +2,16 @@
   <rd-widget>
     <rd-widget-header icon="svg-userlock" feather-icon="true">
       <header-title>
-        Effective access viewer
+        有效访问查看器
         <be-feature-indicator feature="$ctrl.limitedFeature" class="space-left"></be-feature-indicator>
       </header-title>
     </rd-widget-header>
     <rd-widget-body>
       <form class="form-horizontal">
-        <div class="col-sm-12 form-section-title"> User </div>
+        <div class="col-sm-12 form-section-title"> 用户 </div>
         <div class="form-group">
           <div class="col-sm-12">
-            <span class="small text-muted" ng-if="$ctrl.users.length === 0"> No user available </span>
+            <span class="small text-muted" ng-if="$ctrl.users.length === 0"> 没有可用用户 </span>
 
             <por-select ng-if="$ctrl.users.length > 0" value="$ctrl.selectedUserId" options="$ctrl.users" on-change="($ctrl.onUserSelect)" placeholder="'Select a user'">
             </por-select>

@@ -6,7 +6,7 @@ import { Filters } from './types';
 
 export const queryKeys = {
   list: (environmentId: EnvironmentId) =>
-    [dockerQueryKeys.root(environmentId), 'containers'] as const,
+    [dockerQueryKeys.root(environmentId), '容器'] as const,
 
   filters: (environmentId: EnvironmentId, all?: boolean, filters?: Filters) =>
     [...queryKeys.list(environmentId), { all, filters }] as const,

@@ -63,7 +63,7 @@ export function ItemView() {
       <PageHeader
         title="Network details"
         breadcrumbs={[
-          { link: 'docker.networks', label: 'Networks' },
+          { link: 'docker.networks', label: '网络' },
           {
             link: 'docker.networks.network',
             label: networkQuery.data.Name,
@@ -102,7 +102,7 @@ export function ItemView() {
   );
 
   async function onRemoveNetworkClicked() {
-    const message = 'Do you want to delete the network?';
+    const message = '是否要删除网络？';
     const confirmed = await confirmDeletionAsync(message);
 
     if (confirmed) {

@@ -2,10 +2,10 @@
   <div class="toolBar vertical-center pl-0 pr-0">
     <div class="toolBarTitle vertical-center">
       <div>
-        <div class="form-section-title mb-1">Access</div>
+        <div class="form-section-title mb-1">访问</div>
         <div class="vertical-center">
           <pr-icon icon="'info'" mode="'primary'" feather="true" size="'sm'" class="vertical-center"></pr-icon>
-          <span class="small text-muted"> Effective role for each environment will be displayed for the selected user </span>
+          <span class="small text-muted"> 每个环境的有效角色将显示给所选用户 </span>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
         <tr>
           <th>
             <table-column-header
-              col-title="'Environment'"
+              col-title="'环境'"
               can-sort="true"
               is-sorted="$ctrl.state.orderBy === 'EndpointName'"
               is-sorted-desc="$ctrl.state.orderBy === 'EndpointName' && $ctrl.state.reverseOrder"
@@ -36,14 +36,14 @@
           </th>
           <th>
             <table-column-header
-              col-title="'Role'"
+              col-title="'角色'"
               can-sort="true"
               is-sorted="$ctrl.state.orderBy === 'RoleName'"
               is-sorted-desc="$ctrl.state.orderBy === 'RoleName' && $ctrl.state.reverseOrder"
               ng-click="$ctrl.changeOrderBy('RoleName')"
             ></table-column-header>
           </th>
-          <th>Access origin</th>
+          <th>访问来源</th>
         </tr>
       </thead>
       <tbody>
@@ -56,18 +56,18 @@
             >{{ item.TeamName ? 'Team' : 'User' }} <code ng-if="item.TeamName">{{ item.TeamName }}</code> access defined on {{ item.AccessLocation }}
             <code ng-if="item.GroupName">{{ item.GroupName }}</code>
             <a ng-if="!item.GroupName && $ctrl.isAdmin" ui-sref="portainer.endpoints.endpoint.access({id: item.EndpointId})"
-              ><pr-icon icon="'users'" feather="true"></pr-icon> Manage access
+              ><pr-icon icon="'users'" feather="true"></pr-icon> 管理访问
             </a>
             <a ng-if="item.GroupName && $ctrl.isAdmin" ui-sref="portainer.groups.group.access({id: item.GroupId})"
-              ><pr-icon icon="'users'" feather="true"></pr-icon> Manage access
+              ><pr-icon icon="'users'" feather="true"></pr-icon> 管理访问
             </a>
           </td>
         </tr>
         <tr ng-if="!$ctrl.dataset">
-          <td colspan="3" class="text-center text-muted">Select a user to show associated access and role</td>
+          <td colspan="3" class="text-center text-muted">选择一个用户以显示相关的访问和角色</td>
         </tr>
         <tr ng-if="$ctrl.state.filteredDataSet.length === 0">
-          <td colspan="3" class="text-center text-muted">The selected user does not have access to any environment(s)</td>
+          <td colspan="3" class="text-center text-muted">所选用户没有访问任何环境的权限</td>
         </tr>
       </tbody>
     </table>

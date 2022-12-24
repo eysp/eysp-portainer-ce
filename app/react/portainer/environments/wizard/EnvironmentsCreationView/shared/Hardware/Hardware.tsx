@@ -15,7 +15,7 @@ export function Hardware() {
   }
 
   return (
-    <FormSection title="Hardware acceleration">
+    <FormSection title="硬件加速">
       <GpusList value={field.value} onChange={onChange} />
     </FormSection>
   );

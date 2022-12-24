@@ -59,7 +59,7 @@ export function NotificationsMenu() {
           headerStyles.menuButton
         )}
         data-cy="notificationsMenu-button"
-        aria-label="Notifications menu toggle"
+        aria-label="通知菜单切换"
       >
         <div
           className={clsx(
@@ -87,7 +87,7 @@ export function NotificationsMenu() {
             )}
           >
             <div>
-              <h4>Notifications</h4>
+              <h4>通知</h4>
             </div>
             <div className={notificationStyles.itemLast}>
               {userNotifications?.length > 0 && (
@@ -100,7 +100,7 @@ export function NotificationsMenu() {
                   }}
                   data-cy="notification-deleteButton"
                 >
-                  Clear all
+                  清除所有
                 </Button>
               )}
             </div>
@@ -121,13 +121,13 @@ export function NotificationsMenu() {
             </div>
 
             <div className={notificationStyles.notificationLink}>
-              <Link to="portainer.notifications">View all notifications</Link>
+              <Link to="portainer.notifications">查看所有通知</Link>
             </div>
           </>
         ) : (
           <div className="flex flex-col items-center">
             <Icon icon="bell" feather size="xl" />
-            <p className="my-5">You have no notifications yet.</p>
+            <p className="my-5">你还没有任何通知。</p>
           </div>
         )}
       </MenuList>

@@ -594,7 +594,7 @@ angular.module('portainer.docker').controller('ServiceController', [
     };
 
     $scope.removeService = function () {
-      ModalService.confirmDeletion('Do you want to remove this service? All the containers associated to this service will be removed too.', function onConfirm(confirmed) {
+      ModalService.confirmDeletion('你想删除这项服务吗？所有与该服务相关的容器也将被删除。', function onConfirm(confirmed) {
         if (!confirmed) {
           return;
         }

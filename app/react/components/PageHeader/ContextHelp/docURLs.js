@@ -134,13 +134,13 @@ const docURLs = [
     examples: ['#!/10/docker/host'],
   },
   {
-    desc: 'Kubernetes / Dashboard',
+    desc: 'Kubernetes / 仪表板',
     docURL: 'https://docs.portainer.io/user/kubernetes/dashboard',
     locationRegex: /#!\/\d+\/kubernetes\/dashboard/,
     examples: ['#!/1/kubernetes/dashboard'],
   },
   {
-    desc: 'Kubernetes / Custom Templates',
+    desc: 'Kubernetes / 自定义模板',
     docURL: 'https://docs.portainer.io/user/kubernetes/templates',
     locationRegex: /#!\/\d+\/kubernetes\/templates\/custom/,
     examples: ['#!/1/kubernetes/templates/custom', '#!/1/kubernetes/templates/custom/new?fileContent='],
@@ -176,7 +176,7 @@ const docURLs = [
     examples: ['#!/1/kubernetes/configurations', '#!/1/kubernetes/configurations/new', '#!/1/kubernetes/configurations/metallb-system/config'],
   },
   {
-    desc: 'Kubernetes / Volumes',
+    desc: 'Kubernetes / 存储卷',
     docURL: 'https://docs.portainer.io/user/kubernetes/volumes',
     locationRegex: /#!\/\d+\/kubernetes\/volumes/,
     examples: ['#!/1/kubernetes/volumes'],
@@ -206,7 +206,7 @@ const docURLs = [
     examples: ['#!/1/kubernetes/registries'],
   },
   {
-    desc: 'Azure ACI / Dashboard',
+    desc: 'Azure ACI / 仪表板',
     docURL: 'https://docs.portainer.io/user/aci/dashboard',
     locationRegex: /#!\/\d+\/azure\/dashboard/,
     examples: ['#!/26/azure/dashboard'],

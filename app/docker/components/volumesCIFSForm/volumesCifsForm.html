@@ -1,10 +1,10 @@
 <!-- CIFS-settings -->
 <div ng-show="$ctrl.data.useCIFS">
   <ng-form class="form-horizontal" name="cifsInformationForm">
-    <div class="col-sm-12 form-section-title"> CIFS Settings </div>
+    <div class="col-sm-12 form-section-title"> CIFS 设置 </div>
     <!-- address-input -->
     <div class="form-group col-md-12">
-      <label for="cifs_address" class="col-sm-2 col-md-1 control-label text-left required">Address</label>
+      <label for="cifs_address" class="col-sm-2 col-md-1 control-label text-left required">地址</label>
       <div class="col-sm-10 col-md-11">
         <input type="text" class="form-control" ng-model="$ctrl.data.serverAddress" name="cifs_address" placeholder="例如 my.cifs-server.com OR xxx.xxx.xxx.xxx" required />
       </div>
@@ -19,7 +19,7 @@
     <!-- !address-input -->
     <!-- mount-point-input -->
     <div class="form-group col-md-12">
-      <label for="cifs_share" class="col-sm-2 col-md-1 control-label text-left required">Share</label>
+      <label for="cifs_share" class="col-sm-2 col-md-1 control-label text-left required">共享</label>
       <div class="col-sm-10 col-md-11">
         <input type="text" class="form-control" ng-model="$ctrl.data.share" name="cifs_share" placeholder="例如 /myshare" required />
       </div>
@@ -34,7 +34,7 @@
     <!-- !mount-point-input -->
     <!-- version-input -->
     <div class="form-group col-md-12">
-      <label for="cifs_version" class="col-sm-2 col-md-1 control-label text-left">CIFS Version</label>
+      <label for="cifs_version" class="col-sm-2 col-md-1 control-label text-left">CIFS 版本</label>
       <div class="col-sm-10 col-md-11">
         <select class="form-control" ng-model="$ctrl.data.version" name="cifs_version" ng-options="version for version in $ctrl.data.versions" required></select>
       </div>

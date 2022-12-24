@@ -101,7 +101,7 @@ angular
           },
         },
       };
-
+v
       var portainer = {
         name: 'portainer',
         parent: 'root',
@@ -111,6 +111,17 @@ angular
       var account = {
         name: 'portainer.account',
         url: '/account',
+        views: {
+          'content@': {
+            templateUrl: './views/account/account.html',
+            controller: 'AccountController',
+          },
+        },
+      };
+
+      var zhans = {
+        name: 'portainer.zhans',
+        url: 'https://jq.qq.com/?_wv=1027&k=5HqPeR7',
         views: {
           'content@': {
             templateUrl: './views/account/account.html',

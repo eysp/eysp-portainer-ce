@@ -1,7 +1,7 @@
 <!-- NFS-settings -->
 <div ng-show="$ctrl.data.useNFS">
   <ng-form class="form-horizontal" name="nfsInformationForm">
-    <div class="col-sm-12 form-section-title"> NFS Settings </div>
+    <div class="col-sm-12 form-section-title"> NFS 设置 </div>
     <!-- address-input -->
     <div class="form-group col-md-12">
       <label for="nfs_address" class="col-sm-2 col-md-1 control-label text-left required">地址</label>
@@ -57,8 +57,8 @@
     <!-- options-input -->
     <div class="form-group col-md-12">
       <label for="nfs_options" class="col-sm-2 col-md-1 control-label text-left"
-        >Options
-        <portainer-tooltip message="'Comma separated list of options'"></portainer-tooltip>
+        >选项
+        <portainer-tooltip message="'以逗号分隔的选项列表'"></portainer-tooltip>
       </label>
       <div class="col-sm-10 col-md-11">
         <input type="text" class="form-control" ng-model="$ctrl.data.options" name="nfs_options" placeholder="例如 rw,noatime,tcp ..." required />

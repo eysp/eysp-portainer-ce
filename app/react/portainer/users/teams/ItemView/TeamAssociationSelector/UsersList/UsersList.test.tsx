@@ -19,5 +19,5 @@ function renderComponent() {
   );
 }
 
-test.todo('when users list is empty, add all users button is disabled');
-test.todo('filter displays expected users');
+test.todo('当用户列表为空时，“添加所有用户”按钮被禁用');
+test.todo('筛选器显示预期用户');

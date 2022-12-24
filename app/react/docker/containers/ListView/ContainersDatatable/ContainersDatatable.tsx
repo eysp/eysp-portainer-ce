@@ -23,11 +23,11 @@ const storageKey = 'containers';
 const useStore = createStore(storageKey);
 
 const actions = [
-  buildAction('logs', 'Logs'),
-  buildAction('inspect', 'Inspect'),
-  buildAction('stats', 'Stats'),
-  buildAction('exec', 'Console'),
-  buildAction('attach', 'Attach'),
+  buildAction('logs', '日志'),
+  buildAction('inspect', '检查'),
+  buildAction('stats', '状态'),
+  buildAction('exec', '控制台'),
+  buildAction('attach', '附加'),
 ];
 
 export interface Props {

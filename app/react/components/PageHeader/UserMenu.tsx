@@ -58,8 +58,9 @@ export function UserMenu() {
           params={{ performApiLogout: true }}
         />
         <MenuLink
-          to="https://jq.qq.com/?_wv=1027&k=5HqPeR7"
+          to="portainer.zhans"
           label="汉化支持"
+          target="_blank"
         />
       </MenuList>
     </Menu>

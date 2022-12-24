@@ -86,7 +86,7 @@ angular.module('portainer.app').controller('porAccessControlFormController', [
           }
         })
         .catch(function error(err) {
-          Notifications.error('失败', err, 'Unable to retrieve access control information');
+          Notifications.error('失败', err, '无法检索访问控制信息');
         });
 
       this.onChangeEnablement = function (enable) {

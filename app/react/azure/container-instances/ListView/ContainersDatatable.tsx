@@ -122,7 +122,7 @@ export function ContainersDatatable({
 
               <Authorized authorizations="AzureContainerGroupCreate">
                 <Link to="azure.containerinstances.new" className="space-left">
-                  <Button icon={Plus}>Add container</Button>
+                  <Button icon={Plus}>添加容器</Button>
                 </Link>
               </Authorized>
             </TableActions>
@@ -166,7 +166,7 @@ export function ContainersDatatable({
                   />
                 )}
                 rows={page}
-                emptyContent="No container available."
+                emptyContent="没有可用的容器。"
               />
             </tbody>
           </Table>
@@ -189,7 +189,7 @@ export function ContainersDatatable({
 
   async function handleRemoveClick(containerIds: string[]) {
     const confirmed = await confirmDeletionAsync(
-      'Are you sure you want to delete the selected containers?'
+      '是否确实要删除所选容器？'
     );
     if (!confirmed) {
       return null;

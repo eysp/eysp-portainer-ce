@@ -6,7 +6,7 @@ import type { DockerContainer } from '@/react/docker/containers/types';
 import { ResourceControlOwnership } from '@/react/portainer/access-control/types';
 
 export const ownership: Column<DockerContainer> = {
-  Header: 'Ownership',
+  Header: '所有权',
   id: 'ownership',
   accessor: (row) =>
     row.ResourceControl?.Ownership || ResourceControlOwnership.ADMINISTRATORS,

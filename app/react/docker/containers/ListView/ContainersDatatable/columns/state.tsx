@@ -9,7 +9,7 @@ import {
 import { DefaultFilter } from '@@/datatables/Filter';
 
 export const state: Column<DockerContainer> = {
-  Header: 'State',
+  Header: '状态',
   accessor: 'Status',
   id: 'state',
   Cell: StatusCell,
@@ -35,7 +35,7 @@ function StatusCell({
       className={clsx('label', `label-${statusClassName}`, {
         interactive: hasHealthCheck,
       })}
-      title={hasHealthCheck ? 'This container has a health check' : ''}
+      title={hasHealthCheck ? '该容器有一个健康检查' : ''}
     >
       {status}
     </span>

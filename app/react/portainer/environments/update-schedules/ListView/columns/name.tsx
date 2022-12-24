@@ -5,7 +5,7 @@ import { Link } from '@@/Link';
 import { EdgeUpdateSchedule } from '../../types';
 
 export const name: Column<EdgeUpdateSchedule> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: 'name',
   id: 'name',
   Cell: NameCell,

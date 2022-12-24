@@ -13,7 +13,7 @@ import { Button } from '@@/buttons';
 import { useRowContext } from './RowContext';
 
 export const name: Column<User> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: (row) => row.Username,
   id: 'name',
   Cell: NameCell,

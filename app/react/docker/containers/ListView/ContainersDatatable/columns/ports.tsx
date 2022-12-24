@@ -6,7 +6,7 @@ import type { DockerContainer, Port } from '@/react/docker/containers/types';
 import { useRowContext } from '../RowContext';
 
 export const ports: Column<DockerContainer> = {
-  Header: 'Published Ports',
+  Header: '已发布端口',
   accessor: 'Ports',
   id: 'ports',
   Cell: PortsCell,

@@ -142,7 +142,7 @@ angular.module('portainer.app').controller('StackController', [
             '这个动作将在目标环境上部署这个堆栈的一个新实例，请注意，这不会重新定位可能连接到这个堆栈的任何持久性存储卷的内容。',
           buttons: {
             confirm: {
-              label: 'Migrate',
+              label: '迁移',
               className: 'btn-danger',
             },
           },

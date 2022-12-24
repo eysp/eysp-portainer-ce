@@ -180,15 +180,15 @@ class KubernetesResourcePoolController {
     if (warnings.quota || warnings.ingress || warnings.registries) {
       const messages = {
         quota:
-          'Reducing the quota assigned to an "in-use" namespace may have unintended consequences, including preventing running applications from functioning correctly and potentially even blocking them from running at all.',
-        ingress: 'Deactivating ingresses may cause applications to be unaccessible. All ingress configurations from affected applications will be removed.',
+          '减少分配给 "使用中 "命名空间的配额可能会产生意想不到的后果，包括阻止正在运行的应用程序正常运行，甚至有可能完全阻止它们运行。',
+        ingress: '停用接入点可能导致应用程序无法访问。受影响的应用程序的所有入口配置将被删除。',
         registries:
-          'Some registries you removed might be used by one or more applications inside this environment. Removing the registries access could lead to a service interruption for these applications.',
+          '你删除的一些注册表可能被这个环境中的一个或多个应用程序使用。移除注册表的访问可能导致这些应用程序的服务中断。',
       };
       const displayedMessage = `${warnings.quota ? messages.quota + '<br/><br/>' : ''}
       ${warnings.ingress ? messages.ingress + '<br/><br/>' : ''}
       ${warnings.registries ? messages.registries + '<br/><br/>' : ''}
-      Do you wish to continue?`;
+      你想继续吗？`;
       this.ModalService.confirmUpdate(displayedMessage, (confirmed) => {
         if (confirmed) {
           return this.$async(this.updateResourcePoolAsync, this.savedFormValues, this.formValues);
@@ -201,8 +201,8 @@ class KubernetesResourcePoolController {
 
   async confirmMarkUnmarkAsSystem() {
     const message = this.isSystem
-      ? 'Unmarking this namespace as system will allow non administrator users to manage it and the resources in contains depending on the access control settings. 你确定吗？'
-      : 'Marking this namespace as a system namespace will prevent non administrator users from managing it and the resources it contains. 你确定吗？';
+      ? '如果不把这个命名空间标记为系统，将允许非管理员用户根据访问控制设置来管理它和其中的资源。 你确定吗？'
+      : '将此命名空间标记为系统命名空间将防止非管理员用户管理它和它包含的资源。 你确定吗？';
 
     return new Promise((resolve) => {
       this.ModalService.confirmUpdate(message, resolve);

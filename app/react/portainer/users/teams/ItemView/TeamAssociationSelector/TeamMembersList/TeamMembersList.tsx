@@ -91,7 +91,7 @@ export function TeamMembersList({ users, roles, disabled, teamId }: Props) {
   return (
     <Widget>
       <Widget.Title icon={Users} title="Team members">
-        Items per page:
+      每页项目数:
         <select
           value={pageSize}
           onChange={handlePageSizeChange}
@@ -114,7 +114,7 @@ export function TeamMembersList({ users, roles, disabled, teamId }: Props) {
               disabled={disabled || users.length === 0}
               icon={UserX}
             >
-              Remove all users
+              删除所有用户
             </Button>
           )}
         </div>

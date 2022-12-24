@@ -73,9 +73,9 @@ export function HomeView() {
 
 async function confirmEndpointSnapshot() {
   return confirmAsync({
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     message:
-      'Triggering a manual refresh will poll each environment to retrieve its information, this may take a few moments.',
+      '触发手动刷新将轮询每个环境以检索其信息，这可能需要几秒钟。',
     buttons: {
       confirm: {
         label: 'Continue',

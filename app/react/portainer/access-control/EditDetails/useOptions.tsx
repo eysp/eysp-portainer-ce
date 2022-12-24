@@ -12,10 +12,10 @@ import { ResourceControlOwnership } from '../types';
 
 const publicOption: BoxSelectorOption<ResourceControlOwnership> = {
   value: ResourceControlOwnership.PUBLIC,
-  label: 'Public',
+  label: '公开的',
   id: 'access_public',
   description:
-    'I want any user with access to this environment to be able to manage this resource',
+    '我希望任何有权限进入这个环境的用户都能管理这个资源',
   icon: <BadgeIcon icon={ownershipIcon('public')} />,
 };
 
@@ -42,15 +42,15 @@ function adminOptions() {
     buildOption(
       'access_administrators',
       <BadgeIcon icon={ownershipIcon('administrators')} />,
-      'Administrators',
-      'I want to restrict the management of this resource to administrators only',
+      '管理员',
+      '我想把这个资源的管理限制在只有管理员可以管理的范围内',
       ResourceControlOwnership.ADMINISTRATORS
     ),
     buildOption(
       'access_restricted',
       <BadgeIcon icon={ownershipIcon('restricted')} />,
-      'Restricted',
-      'I want to restrict the management of this resource to a set of users and/or teams',
+      '受限的',
+      '我想把这个资源的管理限制在一组用户和/或团队中',
       ResourceControlOwnership.RESTRICTED
     ),
   ];
@@ -60,8 +60,8 @@ function nonAdminOptions(teams?: Team[]) {
     buildOption(
       'access_private',
       <BadgeIcon icon={ownershipIcon('private')} />,
-      'Private',
-      'I want to this resource to be manageable by myself only',
+      '私人的',
+      '我希望这个资源仅能由我自己管理。',
       ResourceControlOwnership.PRIVATE
     ),
     teams &&
@@ -69,10 +69,10 @@ function nonAdminOptions(teams?: Team[]) {
       buildOption(
         'access_restricted',
         <BadgeIcon icon={ownershipIcon('restricted')} />,
-        'Restricted',
+        '受限的',
         teams.length === 1
-          ? `I want any member of my team (${teams[0].Name})  to be able to manage this resource`
-          : 'I want to restrict the management of this resource to one or more of my teams',
+          ? `我希望我的团队的任何成员 (${teams[0].Name})  都能管理这个资源`
+          : '我想把这个资源的管理限制在我的一个或多个团队中。',
         ResourceControlOwnership.RESTRICTED
       ),
   ]);

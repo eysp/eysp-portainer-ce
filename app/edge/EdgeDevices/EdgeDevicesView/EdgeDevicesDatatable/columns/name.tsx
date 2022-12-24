@@ -8,7 +8,7 @@ import { ExpandingCell } from '@@/datatables/ExpandingCell';
 import { useRowContext } from './RowContext';
 
 export const name: Column<Environment> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: (row) => row.Name,
   id: 'name',
   Cell: NameCell,

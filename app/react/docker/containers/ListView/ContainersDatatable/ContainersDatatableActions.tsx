@@ -95,7 +95,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0 || !hasStoppedItemsSelected}
             icon={Play}
           >
-            Start
+            启动
           </Button>
         </Authorized>
 
@@ -106,7 +106,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0 || !hasRunningItemsSelected}
             icon={Square}
           >
-            Stop
+            停止
           </Button>
         </Authorized>
 
@@ -117,7 +117,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0 || hasStoppedItemsSelected}
             icon={Slash}
           >
-            Kill
+            终止
           </Button>
         </Authorized>
 
@@ -128,7 +128,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0}
             icon={RefreshCw}
           >
-            Restart
+            终止
           </Button>
         </Authorized>
 
@@ -139,7 +139,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0 || !hasRunningItemsSelected}
             icon={Pause}
           >
-            Pause
+            暂停
           </Button>
         </Authorized>
 
@@ -150,7 +150,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0 || !hasPausedItemsSelected}
             icon={Play}
           >
-            Resume
+            恢复
           </Button>
         </Authorized>
 
@@ -161,7 +161,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0}
             icon={Trash2}
           >
-            Remove
+            删除
           </Button>
         </Authorized>
       </ButtonGroup>
@@ -169,7 +169,7 @@ export function ContainersDatatableActions({
       {isAddActionVisible && (
         <Authorized authorizations="DockerContainerCreate">
           <Link to="docker.containers.new" className="space-left">
-            <Button icon={Plus}>Add container</Button>
+            <Button icon={Plus}>添加容器</Button>
           </Link>
         </Authorized>
       )}
@@ -177,8 +177,8 @@ export function ContainersDatatableActions({
   );
 
   function onStartClick(selectedItems: DockerContainer[]) {
-    const successMessage = 'Container successfully started';
-    const errorMessage = 'Unable to start container';
+    const successMessage = '容器已成功启动';
+    const errorMessage = '无法启动容器';
     executeActionOnContainerList(
       selectedItems,
       startContainer,
@@ -188,8 +188,8 @@ export function ContainersDatatableActions({
   }
 
   function onStopClick(selectedItems: DockerContainer[]) {
-    const successMessage = 'Container successfully stopped';
-    const errorMessage = 'Unable to stop container';
+    const successMessage = '容器已成功停止';
+    const errorMessage = '无法停止容器';
     executeActionOnContainerList(
       selectedItems,
       stopContainer,
@@ -199,8 +199,8 @@ export function ContainersDatatableActions({
   }
 
   function onRestartClick(selectedItems: DockerContainer[]) {
-    const successMessage = 'Container successfully restarted';
-    const errorMessage = 'Unable to restart container';
+    const successMessage = '容器已成功重新启动';
+    const errorMessage = '无法重新启动容器';
     executeActionOnContainerList(
       selectedItems,
       restartContainer,
@@ -210,8 +210,8 @@ export function ContainersDatatableActions({
   }
 
   function onKillClick(selectedItems: DockerContainer[]) {
-    const successMessage = 'Container successfully killed';
-    const errorMessage = 'Unable to kill container';
+    const successMessage = '容器已成功终止';
+    const errorMessage = '无法终止容器';
     executeActionOnContainerList(
       selectedItems,
       killContainer,
@@ -221,8 +221,8 @@ export function ContainersDatatableActions({
   }
 
   function onPauseClick(selectedItems: DockerContainer[]) {
-    const successMessage = 'Container successfully paused';
-    const errorMessage = 'Unable to pause container';
+    const successMessage = '容器已成功暂停';
+    const errorMessage = '无法暂停容器';
     executeActionOnContainerList(
       selectedItems,
       pauseContainer,
@@ -232,8 +232,8 @@ export function ContainersDatatableActions({
   }
 
   function onResumeClick(selectedItems: DockerContainer[]) {
-    const successMessage = 'Container successfully resumed';
-    const errorMessage = 'Unable to resume container';
+    const successMessage = '容器已成功恢复';
+    const errorMessage = '无法恢复容器';
     executeActionOnContainerList(
       selectedItems,
       resumeContainer,
@@ -248,7 +248,7 @@ export function ContainersDatatableActions({
     );
 
     const runningTitle = isOneContainerRunning ? 'running' : '';
-    const title = `You are about to remove one or more ${runningTitle} containers.`;
+    const title = `您将要删除一个或多个 ${runningTitle} 容器。`;
 
     confirmContainerDeletion(title, (result: string[]) => {
       if (!result) {
@@ -294,14 +294,14 @@ export function ContainersDatatableActions({
         setPortainerAgentTargetHeader(container.NodeName);
         await removeContainer(endpointId, container, cleanVolumes);
         notifications.success(
-          'Container successfully removed',
+          '容器已成功删除',
           container.Names[0]
         );
       } catch (err) {
         notifications.error(
           'Failure',
           err as Error,
-          'Unable to remove container'
+          '无法删除容器'
         );
       }
     }

@@ -15,13 +15,13 @@
             class="searchInput"
             ng-model="$ctrl.state.textFilter"
             ng-change="$ctrl.onTextFilterChange()"
-            placeholder="Search for a tag..."
+            placeholder="搜索标记..."
             ng-model-options="{ debounce: 300 }"
           />
         </div>
         <div class="actionBar !gap-3">
           <button type="button" class="btn btn-sm btn-dangerlight h-fit" ng-disabled="$ctrl.state.selectedItemCount === 0" ng-click="$ctrl.removeAction($ctrl.state.selectedItems)">
-            <pr-icon icon="'trash-2'" feather="true"></pr-icon>Remove
+            <pr-icon icon="'trash-2'" feather="true"></pr-icon>删除
           </button>
         </div>
       </div>
@@ -63,7 +63,7 @@
               <td colspan="1" class="text-center text-muted">加载中...</td>
             </tr>
             <tr ng-if="$ctrl.state.filteredDataSet.length === 0">
-              <td colspan="1" class="text-center text-muted">No tag available.</td>
+              <td colspan="1" class="text-center text-muted">没有可用的标记。</td>
             </tr>
           </tbody>
         </table>

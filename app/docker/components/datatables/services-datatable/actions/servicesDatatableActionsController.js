@@ -27,7 +27,7 @@ angular.module('portainer.docker').controller('ServicesDatatableActionsControlle
 
     this.removeAction = function (selectedItems) {
       ModalService.confirmDeletion(
-        'Do you want to remove the selected service(s)? All the containers associated to the selected service(s) will be removed too.',
+        '你想删除选中的服务吗？所有与所选服务相关的容器也将被删除。',
         function onConfirm(confirmed) {
           if (!confirmed) {
             return;
@@ -39,7 +39,7 @@ angular.module('portainer.docker').controller('ServicesDatatableActionsControlle
 
     this.updateAction = function (selectedItems) {
       ModalService.confirmServiceForceUpdate(
-        'Do you want to force an update of the selected service(s)? All the tasks associated to the selected service(s) will be recreated.',
+        '你想强制更新所选服务吗？所有与所选服务相关的任务将被重新创建。',
         function (result) {
           if (!result) {
             return;

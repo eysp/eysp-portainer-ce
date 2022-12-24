@@ -1,4 +1,4 @@
-<page-header ng-if="ctrl.state.viewReady" title="'Dashboard'" breadcrumbs="['Environment summary']" reload="true"></page-header>
+<page-header ng-if="ctrl.state.viewReady" title="'仪表板'" breadcrumbs="['环境总结']" reload="true"></page-header>
 
 <kubernetes-view-loading view-ready="ctrl.state.viewReady"></kubernetes-view-loading>
 
@@ -11,14 +11,14 @@
             <div class="widget-icon space-right">
               <pr-icon icon="'svg-tachometer'"></pr-icon>
             </div>
-            Environment info
+            环境信息
           </div>
         </div>
         <rd-widget-body classes="!px-5 !py-0">
           <table class="table">
             <tbody>
               <tr>
-                <td class="!pl-0 !border-none">Environment</td>
+                <td class="!pl-0 !border-none">环境</td>
                 <td class="!border-none">
                   {{ ctrl.endpoint.Name }}
                 </td>
@@ -28,7 +28,7 @@
                 <td class="!border-t">{{ ctrl.endpoint.URL | stripprotocol }}</td>
               </tr>
               <tr>
-                <td class="!pl-0">Tags</td>
+                <td class="!pl-0">标记</td>
                 <td>{{ ctrl.endpointTags }}</td>
               </tr>
             </tbody>

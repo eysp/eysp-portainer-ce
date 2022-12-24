@@ -11,7 +11,7 @@ import { useTableSettings } from '@@/datatables/useZustandTableSettings';
 import { TableSettings } from '../types';
 
 export const quickActions: Column<DockerContainer> = {
-  Header: 'Quick Actions',
+  Header: '快速操作',
   id: 'actions',
   Cell: QuickActionsCell,
   disableFilters: true,

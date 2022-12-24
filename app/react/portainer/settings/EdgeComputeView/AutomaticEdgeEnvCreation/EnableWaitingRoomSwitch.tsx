@@ -31,16 +31,16 @@ export function EnabledWaitingRoomSwitch() {
     }
 
     const confirmed = await confirmAsync({
-      title: 'Disable Edge Environment Waiting Room',
+      title: '禁用边缘环境等候室',
       message:
-        'By disabling the waiting room feature, all devices requesting association will be automatically associated and could pose a security risk. Are you sure?',
+        '通过禁用等待室功能，所有请求关联的设备都会自动关联，可能会造成安全风险。你确定吗？',
       buttons: {
         cancel: {
-          label: 'Cancel',
+          label: '取消',
           className: 'btn-default',
         },
         confirm: {
-          label: 'Confirm',
+          label: '确认',
           className: 'btn-danger',
         },
       },

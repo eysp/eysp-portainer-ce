@@ -5,7 +5,7 @@ import { ContainerGroup } from '@/react/azure/types';
 import { Link } from '@@/Link';
 
 export const name: Column<ContainerGroup> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: (container) => container.name,
   id: 'name',
   Cell: NameCell,

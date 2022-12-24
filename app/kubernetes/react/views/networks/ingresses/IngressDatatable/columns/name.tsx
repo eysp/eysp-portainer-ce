@@ -7,7 +7,7 @@ import { Link } from '@@/Link';
 import { Ingress } from '../../types';
 
 export const name: Column<Ingress> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: 'Name',
   Cell: ({ row }: CellProps<Ingress>) => (
     <Authorized

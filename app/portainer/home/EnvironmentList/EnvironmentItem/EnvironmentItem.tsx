@@ -85,7 +85,7 @@ export function EnvironmentItem({ environment, onClick, groupName }: Props) {
                 </span>
                 {groupName && (
                   <span className="small space-right">
-                    <span>Group: </span>
+                    <span>群组: </span>
                     <span>{groupName}</span>
                   </span>
                 )}
@@ -166,10 +166,10 @@ function useEnvironmentTagNames(tagIds?: TagId[]) {
   }
 
   if (isLoading) {
-    return 'Loading tags...';
+    return '正在加载标记...';
   }
 
-  return 'No tags';
+  return '没有标记';
 }
 
 function getSnapshotTime(environment: Environment) {

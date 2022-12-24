@@ -73,13 +73,13 @@ export function confirmContainerDeletion(
     inputType: 'checkbox',
     inputOptions: [
       {
-        text: 'Automatically remove non-persistent volumes<i></i>',
+        text: '自动删除非永久性存储卷<i></i>',
         value: '1',
       },
     ],
     buttons: {
       confirm: {
-        label: 'Remove',
+        label: '删除',
         className: 'btn-danger',
       },
     },
@@ -105,7 +105,7 @@ export function confirmUpdateAppIngress(
     ],
     buttons: {
       confirm: {
-        label: 'Update',
+        label: '更新',
         className: 'btn-primary',
       },
     },
@@ -122,25 +122,25 @@ export function confirmContainerRecreation(
   callback: PromptCallback
 ) {
   const box = prompt({
-    title: buildTitle('Are you sure?', ModalTypeIcon.Destructive),
+    title: buildTitle('你确定吗？', ModalTypeIcon.Destructive),
 
     inputType: 'checkbox',
     inputOptions: [
       {
-        text: 'Pull latest image<i></i>',
+        text: '拉取最新镜像<i></i>',
         value: '1',
       },
     ],
     buttons: {
       confirm: {
-        label: 'Recreate',
+        label: '重新创建',
         className: 'btn-danger',
       },
     },
     callback,
   });
 
-  const message = `You're about to recreate this container and any non-persisted data will be lost. This container will be removed and another one will be created using the same configuration.`;
+  const message = `你要重新创建这个容器，任何不存在的数据都会丢失。这个容器将被删除，另一个容器将使用相同的配置被创建。`;
   box.find('.bootbox-body').prepend(`<p>${message}</p>`);
   const label = box.find('.form-check-label');
   label.css('padding-left', '5px');
@@ -155,7 +155,7 @@ export function confirmContainerRecreation(
     formCheck.prop('style', 'height: 45px;');
     const cannotPullImageMessage = `<div class="fa fa-exclamation-triangle text-warning"/>
                <div class="inline-text text-warning">
-                   <span>Cannot pull latest as the image is inaccessible - either it no longer exists or the tag or name is no longer correct.
+                   <span>不能拉取最新的镜像，因为该镜像无法访问--要么它不再存在，要么标签或名称不再正确。
                    </span>
                </div>`;
     formCheck.append(`${cannotPullImageMessage}`);
@@ -169,17 +169,17 @@ export function confirmServiceForceUpdate(
   const sanitizedMessage = sanitize(message);
 
   const box = prompt({
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     inputType: 'checkbox',
     inputOptions: [
       {
-        text: 'Pull latest image version<i></i>',
+        text: '拉取最新镜像版本<i></i>',
         value: '1',
       },
     ],
     buttons: {
       confirm: {
-        label: 'Update',
+        label: '更新',
         className: 'btn-primary',
       },
     },
@@ -198,17 +198,17 @@ export function confirmStackUpdate(
   const sanitizedMessage = sanitize(message);
 
   const box = prompt({
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     inputType: 'checkbox',
     inputOptions: [
       {
-        text: 'Re-pull image and redeploy<i></i>',
+        text: '重新拉取镜像并重新部署<i></i>',
         value: '1',
       },
     ],
     buttons: {
       confirm: {
-        label: 'Update',
+        label: '更新',
         className: 'btn-primary',
       },
     },

@@ -4,7 +4,7 @@ import { useSref } from '@uirouter/react';
 import { Profile } from '@/portainer/hostmanagement/fdo/model';
 
 export const name: Column<Profile> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: 'name',
   id: 'name',
   Cell: NameCell,

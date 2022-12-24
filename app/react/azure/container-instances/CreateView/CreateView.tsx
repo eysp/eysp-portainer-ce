@@ -10,7 +10,7 @@ export function CreateView() {
         title="Create container instance"
         breadcrumbs={[
           { link: 'azure.containerinstances', label: 'Container instances' },
-          { label: 'Add container' },
+          { label: '添加容器' },
         ]}
       />
 

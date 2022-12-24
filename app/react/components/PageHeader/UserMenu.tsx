@@ -24,7 +24,7 @@ export function UserMenu() {
           styles.menuButton
         )}
         data-cy="userMenu-button"
-        aria-label="User menu toggle"
+        aria-label="用户菜单切换"
       >
         <div
           className={clsx(
@@ -42,18 +42,18 @@ export function UserMenu() {
 
       <MenuList
         className={styles.menuList}
-        aria-label="User Menu"
+        aria-label="用户菜单"
         data-cy="userMenu"
       >
         <MenuLink
           to="portainer.account"
-          label="My account"
+          label="我的帐户"
           data-cy="userMenu-myAccount"
         />
 
         <MenuLink
           to="portainer.logout"
-          label="Log out"
+          label="注销"
           data-cy="userMenu-logOut"
           params={{ performApiLogout: true }}
         />

@@ -23,12 +23,12 @@ interface ConfirmOptions extends ConfirmAsyncOptions {
 
 export function confirmWebEditorDiscard() {
   const options = {
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     message:
-      'You currently have unsaved changes in the editor. Are you sure you want to leave?',
+      '你目前在编辑器中有未保存的修改。你确定你要离开吗？',
     buttons: {
       confirm: {
-        label: 'Yes',
+        label: '是的',
         className: 'btn-danger',
       },
     },
@@ -85,12 +85,12 @@ export function confirmDestructive(options: ConfirmOptions) {
 
 export function confirmImageForceRemoval(callback: ConfirmCallback) {
   confirm({
-    title: buildTitle('Are you sure?', ModalTypeIcon.Destructive),
+    title: buildTitle('你确定吗？', ModalTypeIcon.Destructive),
     message:
-      'Forcing the removal of the image will remove the image even if it has multiple tags or if it is used by stopped containers.',
+      '强制删除镜像将删除该镜像，即使它有多个标签，或者它被停止的容器使用。',
     buttons: {
       confirm: {
-        label: 'Remove the image',
+        label: '移除镜像',
         className: 'btn-danger',
       },
     },
@@ -100,12 +100,12 @@ export function confirmImageForceRemoval(callback: ConfirmCallback) {
 
 export function cancelRegistryRepositoryAction(callback: ConfirmCallback) {
   confirm({
-    title: buildTitle('Are you sure?', ModalTypeIcon.Destructive),
+    title: buildTitle('你确定吗？', ModalTypeIcon.Destructive),
     message:
-      'WARNING: interrupting this operation before it has finished will result in the loss of all tags. Are you sure you want to do this?',
+      '警告：在此操作完成之前中断，将导致所有标签丢失。你确定你要这样做吗？',
     buttons: {
       confirm: {
-        label: 'Stop',
+        label: '停止',
         className: 'btn-danger',
       },
     },
@@ -116,11 +116,11 @@ export function cancelRegistryRepositoryAction(callback: ConfirmCallback) {
 export function confirmDeletion(message: string, callback: ConfirmCallback) {
   const messageSanitized = sanitize(message);
   confirm({
-    title: buildTitle('Are you sure?', ModalTypeIcon.Destructive),
+    title: buildTitle('你确定吗？', ModalTypeIcon.Destructive),
     message: messageSanitized,
     buttons: {
       confirm: {
-        label: 'Remove',
+        label: '删除',
         className: 'btn-danger',
       },
     },
@@ -139,7 +139,7 @@ export function confirmWithTitle(
     message: messageSanitized,
     buttons: {
       confirm: {
-        label: 'Remove',
+        label: '删除',
         className: 'btn-danger',
       },
     },
@@ -150,11 +150,11 @@ export function confirmWithTitle(
 export function confirmDetachment(message: string, callback: ConfirmCallback) {
   const messageSanitized = sanitize(message);
   confirm({
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     message: messageSanitized,
     buttons: {
       confirm: {
-        label: 'Detach',
+        label: '断开',
         className: 'btn-primary',
       },
     },
@@ -164,11 +164,11 @@ export function confirmDetachment(message: string, callback: ConfirmCallback) {
 
 export function confirmDisassociate(callback: ConfirmCallback) {
   const message =
-    '<p>Disassociating this Edge environment will mark it as non associated and will clear the registered Edge ID.</p>' +
-    '<p>Any agent started with the Edge key associated to this environment will be able to re-associate with this environment.</p>' +
-    '<p>You can re-use the Edge ID and Edge key that you used to deploy the existing Edge agent to associate a new Edge device to this environment.</p>';
+    '<p>解除这个边缘环境的关联将把它标记为非关联，并将清除注册的边缘ID。</p>' +
+    '<p>任何用与此环境相关的Edge密钥启动的代理将能够与此环境重新关联。</p>' +
+    '<p>你可以重新使用你用来部署现有Edge代理的Edge ID和Edge密钥，将一个新的Edge设备关联到这个环境。</p>';
   confirm({
-    title: buildTitle('About disassociating'),
+    title: buildTitle('关于取消关联'),
     message: sanitize(message),
     buttons: {
       confirm: {
@@ -184,11 +184,11 @@ export function confirmUpdate(message: string, callback: ConfirmCallback) {
   const messageSanitized = sanitize(message);
 
   confirm({
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     message: messageSanitized,
     buttons: {
       confirm: {
-        label: 'Update',
+        label: '更新',
         className: 'btn-primary',
       },
     },
@@ -204,11 +204,11 @@ export function confirmRedeploy(message: string, callback: ConfirmCallback) {
     message: messageSanitized,
     buttons: {
       confirm: {
-        label: 'Redeploy the applications',
+        label: '重新部署应用程序,
         className: 'btn-primary',
       },
       cancel: {
-        label: "I'll do it later",
+        label: "我稍后再做",
       },
     },
     callback,
@@ -223,12 +223,12 @@ export function confirmDeletionAsync(message: string) {
 
 export function confirmImageExport(callback: ConfirmCallback) {
   confirm({
-    title: buildTitle('Caution'),
+    title: buildTitle('警告'),
     message:
-      'The export may take several minutes, do not navigate away whilst the export is in progress.',
+      '导出可能需要数分钟，在导出过程中不要浏览。',
     buttons: {
       confirm: {
-        label: 'Continue',
+        label: '继续',
         className: 'btn-primary',
       },
     },
@@ -238,12 +238,12 @@ export function confirmImageExport(callback: ConfirmCallback) {
 
 export function confirmChangePassword() {
   return confirmAsync({
-    title: buildTitle('Are you sure?'),
+    title: buildTitle('你确定吗？'),
     message:
-      'You will be logged out after the password change. Do you want to change your password?',
+      '更改密码后，你将被注销。你想改变你的密码吗？',
     buttons: {
       confirm: {
-        label: 'Change',
+        label: '更改',
         className: 'btn-primary',
       },
     },
@@ -253,7 +253,7 @@ export function confirmChangePassword() {
 export function confirmForceChangePassword() {
   const box = bootbox.dialog({
     message:
-      'Please update your password to a stronger password to continue using Portainer',
+      '请将您的密码更新为更强的密码，以便继续使用Portainer。',
     buttons: {
       confirm: {
         label: 'OK',

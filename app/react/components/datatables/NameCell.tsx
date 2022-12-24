@@ -8,7 +8,7 @@ export function buildNameColumn<T extends Record<string, unknown>>(
   path: string
 ) {
   const name: Column<T> = {
-    Header: 'Name',
+    Header: '名称',
     accessor: (row) => row[nameKey],
     id: 'name',
     Cell: NameCell,

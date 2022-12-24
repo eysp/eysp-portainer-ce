@@ -54,9 +54,9 @@ const status = [
 ];
 
 const sortByOptions = [
-  { value: 1, label: 'Name' },
-  { value: 2, label: 'Group' },
-  { value: 3, label: 'Status' },
+  { value: 1, label: '名称' },
+  { value: 2, label: '群组' },
+  { value: 3, label: '状态' },
 ];
 
 enum ConnectionType {
@@ -180,11 +180,11 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
       <div className="row">
         <div className="col-sm-12">
           <TableContainer>
-            <TableTitle icon="hard-drive" featherIcon label="Environments" />
+            <TableTitle icon="hard-drive" featherIcon label="环境" />
 
             <TableActions className={styles.actionBar}>
               <div className={styles.description}>
-                Click on an environment to manage
+              单击要管理的环境
               </div>
               <div className={styles.actionButton}>
                 <div className={styles.refreshButton}>
@@ -203,7 +203,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                         className="feather icon-sm icon-white"
                         aria-hidden="true"
                       />
-                      Refresh
+                      刷新
                     </Button>
                   )}
                 </div>
@@ -221,7 +221,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                   <FilterSearchBar
                     value={searchBarValue}
                     onChange={setSearchBarValue}
-                    placeholder="Search by name, group, tag, status, URL..."
+                    placeholder="按名称、组、标记、状态和URL搜索..."
                     data-cy="home-endpointsSearchInput"
                   />
                 </div>
@@ -232,7 +232,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                 <HomepageFilter
                   filterOptions={platformTypeOptions}
                   onChange={setPlatformTypes}
-                  placeHolder="Platform"
+                  placeHolder="平台"
                   value={platformTypes}
                 />
               </div>
@@ -240,7 +240,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                 <HomepageFilter
                   filterOptions={connectionTypeOptions}
                   onChange={setConnectionTypes}
-                  placeHolder="Connection Type"
+                  placeHolder="连接类型"
                   value={connectionTypes}
                 />
               </div>
@@ -248,7 +248,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                 <HomepageFilter
                   filterOptions={status}
                   onChange={statusOnChange}
-                  placeHolder="Status"
+                  placeHolder="状态"
                   value={statusState}
                 />
               </div>
@@ -256,7 +256,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                 <HomepageFilter
                   filterOptions={uniqueTag}
                   onChange={tagOnChange}
-                  placeHolder="Tags"
+                  placeHolder="标记"
                   value={tagState}
                 />
               </div>
@@ -264,7 +264,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                 <HomepageFilter
                   filterOptions={uniqueGroup}
                   onChange={groupOnChange}
-                  placeHolder="Groups"
+                  placeHolder="群组"
                   value={groupState}
                 />
               </div>
@@ -277,7 +277,7 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                     })) || []
                   }
                   onChange={setAgentVersions}
-                  placeHolder="Agent Version"
+                  placeHolder="代理版本"
                   value={agentVersions}
                 />
               </div>
@@ -286,14 +286,14 @@ export function EnvironmentList({ onClickItem, onRefresh }: Props) {
                 className={styles.clearButton}
                 onClick={clearFilter}
               >
-                Clear all
+                清除全部
               </button>
               <div className={styles.filterRight}>
                 <SortbySelector
                   filterOptions={sortByOptions}
                   onChange={sortOnchange}
                   onDescending={sortOnDescending}
-                  placeHolder="Sort By"
+                  placeHolder="排序依据"
                   sortByDescending={sortByDescending}
                   sortByButton={sortByButton}
                   value={sortByState}
@@ -531,7 +531,7 @@ function renderItems(
   if (isLoading) {
     return (
       <div className="text-center text-muted" data-cy="home-loadingEndpoints">
-        Loading...
+        加载中...
       </div>
     );
   }
@@ -539,7 +539,7 @@ function renderItems(
   if (!totalCount) {
     return (
       <div className="text-center text-muted" data-cy="home-noEndpoints">
-        No environments available.
+        没有可用的环境。
       </div>
     );
   }

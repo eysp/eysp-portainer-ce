@@ -24,7 +24,7 @@ import { TableSettings } from './types';
 
 const columns: readonly Column<Environment>[] = [
   {
-    Header: 'Name',
+    Header: '名称',
     accessor: (row) => row.Name,
     id: 'name',
     disableFilters: true,

@@ -17,7 +17,7 @@ export function ContainersDatatableSettings({
     <>
       <Checkbox
         id="settings-container-truncate-nae"
-        label="Truncate container name"
+        label="截断容器名称"
         checked={settings.truncateContainerName > 0}
         onChange={() =>
           settings.setTruncateContainerName(

@@ -72,7 +72,7 @@ export function UsersList({ users, disabled, teamId }: Props) {
   return (
     <Widget>
       <Widget.Title icon={Users} title="Users">
-        Items per page:
+      每页项目数:
         <select
           value={pageSize}
           onChange={handlePageSizeChange}
@@ -95,7 +95,7 @@ export function UsersList({ users, disabled, teamId }: Props) {
               disabled={disabled || rows.length === 0}
               icon={UserPlus}
             >
-              Add all users
+              添加所有用户
             </Button>
           )}
         </div>

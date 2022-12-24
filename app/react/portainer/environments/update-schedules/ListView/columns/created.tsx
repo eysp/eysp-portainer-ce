@@ -5,7 +5,7 @@ import { isoDateFromTimestamp } from '@/portainer/filters/filters';
 import { EdgeUpdateSchedule } from '../../types';
 
 export const created: Column<EdgeUpdateSchedule> = {
-  Header: 'Created',
+  Header: '创建于',
   accessor: (row) => isoDateFromTimestamp(row.created),
   disableFilters: true,
   Filter: () => null,

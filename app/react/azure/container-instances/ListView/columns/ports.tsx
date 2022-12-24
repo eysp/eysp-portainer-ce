@@ -4,7 +4,7 @@ import { ContainerGroup } from '@/react/azure/types';
 import { getPorts } from '@/react/azure/utils';
 
 export const ports: Column<ContainerGroup> = {
-  Header: 'Published Ports',
+  Header: '已发布端口',
   accessor: (container) => getPorts(container),
   id: 'ports',
   disableFilters: true,

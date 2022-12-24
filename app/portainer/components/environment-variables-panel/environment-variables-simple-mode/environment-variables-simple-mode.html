@@ -1,15 +1,15 @@
 <div class="environment-variables-simple-mode">
   <div class="col-sm-12">
     <button type="button" class="btn btn-link btn-sm hover:no-underline !ml-0 p-0" ng-click="$ctrl.onSwitchModeClick()">
-      <pr-icon icon="'edit'" feather="true"></pr-icon> Advanced mode
+      <pr-icon icon="'edit'" feather="true"></pr-icon> 高级模式
     </button>
   </div>
   <div class="col-sm-12 small text-muted">
     <pr-icon icon="'alert-circle'" mode="'primary'" feather="true"></pr-icon>
-    Switch to advanced mode to copy & paste multiple variables
+    切换到高级模式来复制和粘贴多个变量
   </div>
   <div class="col-sm-12 environment-variables-simple-mode--actions">
-    <button type="button" class="btn btn-sm btn-default" ng-click="$ctrl.add()"> <pr-icon icon="'plus'" feather="true"></pr-icon> Add an environment variable </button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="$ctrl.add()"> <pr-icon icon="'plus'" feather="true"></pr-icon> 添加环境变量 </button>
     <button
       type="button"
       class="btn btn-sm btn-default"
@@ -19,11 +19,11 @@
       ngf-max-size="1MB"
       ngf-model-invalid="errorFile"
     >
-      <pr-icon icon="'upload'" feather="true"></pr-icon> Load variables from .env file
+      <pr-icon icon="'upload'" feather="true"></pr-icon> 从.env文件加载变量
     </button>
     <span class="space-left" ng-if="errorFile.$error == 'maxSize'">
       <i class="fa fa-times red-icon space-right" aria-hidden="true"></i>
-      File too large! Try uploading a file smaller than 1MB
+      文件太大！尝试上传小于1MB的文件
     </span>
   </div>
   <div class="col-sm-12 form-inline env-items-list">
@@ -37,6 +37,6 @@
   </div>
   <div class="col-sm-12 small text-muted" ng-if="$ctrl.ngModel.length > 0 && $ctrl.showHelpMessage">
     <pr-icon icon="'alert-circle'" mode="'primary'" feather="true"></pr-icon>
-    Environment changes will not take effect until redeployment occurs manually or via webhook.
+    在手动或通过webhook进行重新部署之前，环境变化将不会生效。
   </div>
 </div>

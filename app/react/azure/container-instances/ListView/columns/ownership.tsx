@@ -7,7 +7,7 @@ import { ContainerGroup } from '@/react/azure/types';
 import { determineOwnership } from '@/react/portainer/access-control/models/ResourceControlViewModel';
 
 export const ownership: Column<ContainerGroup> = {
-  Header: 'Ownership',
+  Header: '所有权',
   id: 'ownership',
   accessor: (row) =>
     row.Portainer && row.Portainer.ResourceControl

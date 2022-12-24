@@ -16,7 +16,7 @@ test('renders correctly', async () => {
 
   const { findByText } = await renderComponent(values);
 
-  expect(await findByText('Access control')).toBeVisible();
+  expect(await findByText('访问控制')).toBeVisible();
 });
 
 test.each([
@@ -24,7 +24,7 @@ test.each([
   [ResourceControlOwnership.PRIVATE],
   [ResourceControlOwnership.RESTRICTED],
 ])(
-  `when ownership is %s, ownership selector should be visible`,
+  `当所有权为 %s 时，所有权选择器应该是可见的`,
   async (ownership) => {
     const values = buildFormData(ownership);
 
@@ -42,7 +42,7 @@ test.each([
   [ResourceControlOwnership.PRIVATE],
   [ResourceControlOwnership.RESTRICTED],
 ])(
-  'when isAdmin and ownership is %s, ownership selector should show admin and restricted options',
+  '当是管理员且所有权为 %s 时，所有权选择器应显示管理员和限制性选项。',
   async (ownership) => {
     const values = buildFormData(ownership);
 
@@ -70,7 +70,7 @@ test.each([
   [ResourceControlOwnership.PRIVATE],
   [ResourceControlOwnership.RESTRICTED],
 ])(
-  `when user is not an admin and %s and no teams, should have only private option`,
+  `当用户不是管理员和 %s 并且没有团队时，应该只有私人选项。`,
   async (ownership) => {
     const values = buildFormData(ownership);
 
@@ -93,7 +93,7 @@ test.each([
   [ResourceControlOwnership.PRIVATE],
   [ResourceControlOwnership.RESTRICTED],
 ])(
-  `when user is not an admin and %s and there is 1 team, should have private and restricted options`,
+  `当用户不是管理员和 %s 并且有一个团队时，应该有私人和限制选项`,
   async (ownership) => {
     const values = buildFormData(ownership);
 
@@ -111,7 +111,7 @@ test.each([
   }
 );
 
-test('when ownership is public, ownership selector should be hidden', async () => {
+test('当所有权是公开的，所有权选择器应被隐藏。', async () => {
   const values = buildFormData(ResourceControlOwnership.PUBLIC);
 
   const { queryByRole } = await renderComponent(values);
@@ -126,10 +126,10 @@ test('when hideTitle is true, title should be hidden', async () => {
     hideTitle: true,
   });
 
-  expect(queryByRole('Access control')).toBeNull();
+  expect(queryByRole('访问控制')).toBeNull();
 });
 
-test('when isAdmin and admin ownership is selected, no extra options are visible', async () => {
+test('当 "管理" 和 "管理所有权"被选中时，没有额外的选项是可见的。', async () => {
   const values = buildFormData(ResourceControlOwnership.ADMINISTRATORS);
 
   const { findByRole, queryByLabelText } = await renderComponent(
@@ -155,7 +155,7 @@ test('when isAdmin and admin ownership is selected, no extra options are visible
   expect(queryByLabelText('extra-options')).toBeNull();
 });
 
-test('when isAdmin and restricted ownership is selected, show team and users selectors', async () => {
+test('当选择 "管理员" 和 "限制性所有权" 时，显示团队和用户选择器。', async () => {
   const values = buildFormData(ResourceControlOwnership.RESTRICTED);
 
   const { findByRole, findByLabelText } = await renderComponent(
@@ -193,7 +193,7 @@ test('when isAdmin and restricted ownership is selected, show team and users sel
   expect(await extraQueries.findByText(/Authorized teams/)).toBeVisible();
 });
 
-test('when user is not an admin, there are more then 1 team and ownership is restricted, team selector should be visible', async () => {
+test('当用户不是管理员，有超过1个团队并且所有权受到限制时，团队选择器应该是可见的。', async () => {
   const values = buildFormData(ResourceControlOwnership.RESTRICTED);
 
   const { findByRole, findByLabelText } = await renderComponent(
@@ -224,7 +224,7 @@ test('when user is not an admin, there are more then 1 team and ownership is res
   expect(extraQueries.queryByLabelText(/Authorized teams/)).toBeVisible();
 });
 
-test('when user is not an admin, there is 1 team and ownership is restricted, team selector not should be visible', async () => {
+test('当用户不是管理员，有一个团队，并且所有权受到限制时，团队选择器不应该是可见的。', async () => {
   const values = buildFormData(ResourceControlOwnership.RESTRICTED);
 
   const { findByRole, findByLabelText } = await renderComponent(
@@ -259,7 +259,7 @@ test('when user is not an admin, there is 1 team and ownership is restricted, te
   expect(extraQueries.queryByText(/Authorized teams/)).toBeNull();
 });
 
-test('when user is not an admin, and ownership is restricted, user selector not should be visible', async () => {
+test('当用户不是管理员，并且所有权受到限制时，用户选择器不应该是可见的。', async () => {
   const values = buildFormData(ResourceControlOwnership.RESTRICTED);
 
   const { findByRole, findByLabelText } = await renderComponent(

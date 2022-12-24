@@ -14,34 +14,34 @@ function createEventDetails(event) {
     case 'container':
       switch (action) {
         case 'stop':
-          details = 'Container ' + eventAttr.name + ' stopped';
+          details = '容器 ' + eventAttr.name + ' 已停止';
           break;
         case 'destroy':
-          details = 'Container ' + eventAttr.name + ' deleted';
+          details = '容器 ' + eventAttr.name + ' 已删除';
           break;
         case 'create':
-          details = 'Container ' + eventAttr.name + ' created';
+          details = '容器 ' + eventAttr.name + ' 已创建';
           break;
         case 'start':
-          details = 'Container ' + eventAttr.name + ' started';
+          details = '容器 ' + eventAttr.name + ' 已启动';
           break;
         case 'kill':
-          details = 'Container ' + eventAttr.name + ' killed';
+          details = '容器 ' + eventAttr.name + ' 已终止';
           break;
         case 'die':
-          details = 'Container ' + eventAttr.name + ' exited with status code ' + eventAttr.exitCode;
+          details = '容器 ' + eventAttr.name + ' 已退出，状态代码为 ' + eventAttr.exitCode;
           break;
         case 'commit':
           details = 'Container ' + eventAttr.name + ' committed';
           break;
         case 'restart':
-          details = 'Container ' + eventAttr.name + ' restarted';
+          details = '容器 ' + eventAttr.name + ' 重新启动';
           break;
         case 'pause':
-          details = 'Container ' + eventAttr.name + ' paused';
+          details = '容器 ' + eventAttr.name + ' 已暂停';
           break;
         case 'unpause':
-          details = 'Container ' + eventAttr.name + ' unpaused';
+          details = '容器 ' + eventAttr.name + ' 已恢复';
           break;
         case 'attach':
           details = 'Container ' + eventAttr.name + ' attached';
@@ -50,40 +50,40 @@ function createEventDetails(event) {
           details = 'Container ' + eventAttr.name + ' detached';
           break;
         case 'copy':
-          details = 'Container ' + eventAttr.name + ' copied';
+          details = '容器 ' + eventAttr.name + ' 已复制';
           break;
         case 'export':
-          details = 'Container ' + eventAttr.name + ' exported';
+          details = '容器 ' + eventAttr.name + ' 已导出';
           break;
         case 'health_status':
-          details = 'Container ' + eventAttr.name + ' executed health status';
+          details = '容器 ' + eventAttr.name + ' 被执行健康检查';
           break;
         case 'oom':
-          details = 'Container ' + eventAttr.name + ' goes in out of memory';
+          details = '容器 ' + eventAttr.name + ' 内存不足';
           break;
         case 'rename':
-          details = 'Container ' + eventAttr.name + ' renamed';
+          details = '容器 ' + eventAttr.name + ' 重命名';
           break;
         case 'resize':
-          details = 'Container ' + eventAttr.name + ' resized';
+          details = '容器 ' + eventAttr.name + ' 重置大小';
           break;
         case 'top':
-          details = 'Showed running processes for container ' + eventAttr.name;
+          details = '显示容器的运行进程 ' + eventAttr.name;
           break;
         case 'update':
-          details = 'Container ' + eventAttr.name + ' updated';
+          details = '容器 ' + eventAttr.name + ' 已更新';
           break;
         case 'exec_create':
-          details = 'Exec instance created';
+          details = '创建的执行实例';
           break;
         case 'exec_start':
-          details = 'Exec instance started';
+          details = '开始执行实例';
           break;
         case 'exec_die':
-          details = 'Exec instance exited';
+          details = '执行实例已退出';
           break;
         default:
-          details = 'Unsupported event';
+          details = '不支持的事件';
       }
       break;
     case 'image':
@@ -92,25 +92,25 @@ function createEventDetails(event) {
           details = 'Image deleted';
           break;
         case 'import':
-          details = 'Image ' + event.Actor.ID + ' imported';
+          details = '镜像 ' + event.Actor.ID + ' 导入';
           break;
         case 'load':
-          details = 'Image ' + event.Actor.ID + ' loaded';
+          details = '镜像 ' + event.Actor.ID + ' 加载';
           break;
         case 'tag':
-          details = 'New tag created for ' + eventAttr.name;
+          details = '创建新标记为 ' + eventAttr.name;
           break;
         case 'untag':
           details = 'Image untagged';
           break;
         case 'save':
-          details = 'Image ' + event.Actor.ID + ' saved';
+          details = '镜像 ' + event.Actor.ID + ' 已保存';
           break;
         case 'pull':
-          details = 'Image ' + event.Actor.ID + ' pulled';
+          details = '镜像 ' + event.Actor.ID + ' 已拉取';
           break;
         case 'push':
-          details = 'Image ' + event.Actor.ID + ' pushed';
+          details = '镜像 ' + event.Actor.ID + ' 已推送';
           break;
         default:
           details = 'Unsupported event';
@@ -119,19 +119,19 @@ function createEventDetails(event) {
     case 'network':
       switch (action) {
         case 'create':
-          details = 'Network ' + eventAttr.name + ' created';
+          details = '网络 ' + eventAttr.name + ' 已创建';
           break;
         case 'destroy':
-          details = 'Network ' + eventAttr.name + ' deleted';
+          details = '网络 ' + eventAttr.name + ' 已删除';
           break;
         case 'remove':
-          details = 'Network ' + eventAttr.name + ' removed';
+          details = '网络 ' + eventAttr.name + ' 重命名';
           break;
         case 'connect':
-          details = 'Container connected to ' + eventAttr.name + ' network';
+          details = '容器已连接到 ' + eventAttr.name + ' 网络';
           break;
         case 'disconnect':
-          details = 'Container disconnected from ' + eventAttr.name + ' network';
+          details = '容器已从 ' + eventAttr.name + ' 网络断开连接';
           break;
         default:
           details = 'Unsupported event';
@@ -140,16 +140,16 @@ function createEventDetails(event) {
     case 'volume':
       switch (action) {
         case 'create':
-          details = 'Volume ' + event.Actor.ID + ' created';
+          details = '存储卷 ' + event.Actor.ID + ' 已创建';
           break;
         case 'destroy':
-          details = 'Volume ' + event.Actor.ID + ' deleted';
+          details = '存储卷 ' + event.Actor.ID + ' 已删除';
           break;
         case 'mount':
-          details = 'Volume ' + event.Actor.ID + ' mounted';
+          details = '存储卷 ' + event.Actor.ID + ' 已挂载';
           break;
         case 'unmount':
-          details = 'Volume ' + event.Actor.ID + ' unmounted';
+          details = '存储卷 ' + event.Actor.ID + ' 已卸载';
           break;
         default:
           details = 'Unsupported event';

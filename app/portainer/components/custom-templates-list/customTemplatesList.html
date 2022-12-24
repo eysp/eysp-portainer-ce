@@ -4,7 +4,7 @@
       <div class="toolBar vertical-center !gap-x-5 !gap-y-1 flex-wrap">
         <div class="toolBarTitle vertical-center">
           <pr-icon icon="$ctrl.titleIcon" feather="true" class-name="'icon-nested-blue'" mode="'primary'"></pr-icon>
-          Custom Templates
+          自定义模板
         </div>
         <div class="searchBar vertical-center !mr-0">
           <pr-icon icon="'search'" feather="true" class-name="'searchIcon'"></pr-icon>
@@ -13,7 +13,7 @@
             class="searchInput"
             ng-model="$ctrl.state.textFilter"
             ng-change="$ctrl.onTextFilterChange()"
-            placeholder="Search for a template..."
+            placeholder="搜索模板..."
             auto-focus
             ng-model-options="{ debounce: 300 }"
           />
@@ -21,7 +21,7 @@
         <div class="actionBar">
           <button type="button" class="btn btn-sm btn-primary" ui-state="$ctrl.createPath">
             <pr-icon icon="'plus'" feather="true"></pr-icon>
-            Add Custom Template
+            添加自定义模板
           </button>
         </div>
       </div>
@@ -37,17 +37,17 @@
             <div ng-if="$ctrl.isEditAllowed(template)" class="vertical-center">
               <a ui-state="$ctrl.editPath" ui-state-params="{id: template.Id}" ng-click="$event.stopPropagation();" class="btn btn-secondary btn-sm vertical-center">
                 <pr-icon icon="'edit'" feather="true"></pr-icon>
-                Edit
+                编辑
               </a>
               <button class="btn btn-dangerlight btn-sm vertical-center" ng-click="$ctrl.onDeleteClick(template.Id); $event.stopPropagation();">
                 <pr-icon icon="'trash-2'" feather="true"></pr-icon>
-                Delete
+                删除
               </button>
             </div>
           </template-item-actions>
         </template-item>
         <div ng-if="!$ctrl.templates" class="text-center text-muted"> 加载中... </div>
-        <div ng-if="($ctrl.templates | filter: $ctrl.state.textFilter).length === 0" class="text-center text-muted"> No templates available. </div>
+        <div ng-if="($ctrl.templates | filter: $ctrl.state.textFilter).length === 0" class="text-center text-muted"> 没有可用的模板。 </div>
       </div>
     </rd-widget-body>
   </rd-widget>

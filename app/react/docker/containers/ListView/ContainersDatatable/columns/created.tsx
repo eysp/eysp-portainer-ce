@@ -4,7 +4,7 @@ import { isoDateFromTimestamp } from '@/portainer/filters/filters';
 import type { DockerContainer } from '@/react/docker/containers/types';
 
 export const created: Column<DockerContainer> = {
-  Header: 'Created',
+  Header: '创建于',
   accessor: 'Created',
   id: 'created',
   Cell: ({ value }) => isoDateFromTimestamp(value),

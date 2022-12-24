@@ -7,7 +7,7 @@ import { isOfflineEndpoint } from '@/portainer/helpers/endpointHelper';
 import { useRowContext } from '../RowContext';
 
 export const image: Column<DockerContainer> = {
-  Header: 'Image',
+  Header: '镜像',
   accessor: 'Image',
   id: 'image',
   disableFilters: true,

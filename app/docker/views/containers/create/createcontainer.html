@@ -52,7 +52,7 @@
                     label-class="'col-sm-2'"
                     checked="formValues.alwaysPull"
                     disabled="!state.pullImageValidity"
-                    label="'Always pull the image'"
+                    label="'始终拉取镜像'"
                     on-change="(onAlwaysPullChange)"
                     tooltip="'启用后，Portainer会在创建容器前自动尝试拉取指定的镜像。'"
                   ></por-switch-field>
@@ -71,7 +71,7 @@
                 <por-switch-field
                   feature-id="'container-webhook'"
                   label-class="'col-sm-2'"
-                  label="'Create a container webhook'"
+                  label="'创建容器webhook'"
                   tooltip="'创建一个webhook（或回调URI）来自动重新创建这个容器。向这个回调URI发送一个POST请求（不需要任何认证）将拉出相关图像的最新版本并重新创建这个容器。'"
                 ></por-switch-field>
               </div>
@@ -79,14 +79,14 @@
           </div>
           <!-- !create-webhook  -->
 
-          <div class="col-sm-12 form-section-title"> Network ports configuration </div>
+          <div class="col-sm-12 form-section-title"> 网络端口配置 </div>
           <!-- publish-exposed-ports -->
           <div class="form-group">
             <div class="col-sm-12">
               <por-switch-field
                 label-class="'col-sm-2'"
                 checked="config.HostConfig.PublishAllPorts"
-                label="'Publish all exposed network ports to random host ports'"
+                label="'将所有暴露的网络端口发布为随机主机端口'"
                 on-change="(handlePublishAllPortsChange)"
                 tooltip="'启用后，Portainer会让Docker自动将主机上的一个随机端口映射到镜像Docker文件中定义的每个端口。'"
               ></por-switch-field>
@@ -103,7 +103,7 @@
                 ></portainer-tooltip>
               </label>
               <span class="label label-default interactive" style="margin-left: 10px" ng-click="addPortBinding()">
-                <pr-icon icon="'plus'" mode="'alt'" feather="true"></pr-icon> publish a new network port
+                <pr-icon icon="'plus'" mode="'alt'" feather="true"></pr-icon> 发布新的网络端口
               </span>
             </div>
             <!-- port-mapping-input-list -->
@@ -157,7 +157,7 @@
               <por-switch-field
                 label-class="'col-sm-2'"
                 checked="config.HostConfig.AutoRemove"
-                label="'Auto remove'"
+                label="'自动删除'"
                 on-change="(handleAutoRemoveChange)"
                 tooltip="'启用后，Portainer将在退出时自动删除容器。当你想只使用一次容器时，这很有用。'"
               ></por-switch-field>
@@ -199,8 +199,8 @@
           <li class="interactive"><a data-target="#env" data-toggle="tab">环境变量</a></li>
           <li class="interactive"><a data-target="#labels" data-toggle="tab">标签</a></li>
           <li class="interactive"><a data-target="#restart-policy" data-toggle="tab">重启策略</a></li>
-          <li class="interactive"><a data-target="#runtime-resources" ng-mouseup="refreshSlider()" data-toggle="tab">Runtime & Resources</a></li>
-          <li ng-if="areContainerCapabilitiesEnabled" class="interactive"><a data-target="#container-capabilities" data-toggle="tab">Capabilities</a></li>
+          <li class="interactive"><a data-target="#runtime-resources" ng-mouseup="refreshSlider()" data-toggle="tab">运行时 & 资源</a></li>
+          <li ng-if="areContainerCapabilitiesEnabled" class="interactive"><a data-target="#container-capabilities" data-toggle="tab">容器能力</a></li>
         </ul>
         <!-- tab-content -->
         <div class="tab-content">
@@ -231,7 +231,7 @@
               <!-- entrypoint-input -->
               <div class="form-group">
                 <label for="container_entrypoint" class="col-sm-2 col-lg-1 control-label text-left">
-                  Entrypoint
+                  环境
                   <portainer-tooltip
                     message="'当容器入口点作为命令字段的一部分被输入时，将入口点设置为覆盖模式并留空，否则将恢复为默认。'"
                   ></portainer-tooltip>
@@ -613,7 +613,7 @@
                   <por-switch-field
                     label-class="'col-sm-2'"
                     checked="config.HostConfig.Privileged"
-                    label="'Privileged mode'"
+                    label="'特权模式'"
                     on-change="(handlePrivilegedChange)"
                   ></por-switch-field>
                 </div>
@@ -670,7 +670,7 @@
                 <div class="col-sm-12" style="margin-top: 5px">
                   <label class="control-label text-left">Sysctls</label>
                   <span class="label label-default interactive" style="margin-left: 10px" ng-click="addSysctl()">
-                    <pr-icon icon="'plus'" feather="true"></pr-icon> add sysctl
+                    <pr-icon icon="'plus'" feather="true"></pr-icon> 添加 sysctl
                   </span>
                 </div>
                 <!-- sysctls-input-list -->
@@ -699,7 +699,7 @@
                   <input type="number" min="1" class="form-control" ng-model="formValues.ShmSize" id="shm-size" />
                 </div>
                 <div class="col-sm-2">
-                  <p class="small text-muted mt-2"> Size of /dev/shm (<b>MB</b>) </p>
+                  <p class="small text-muted mt-2"> /dev/shm 的大小 (<b>MB</b>) </p>
                 </div>
               </div>
               <!-- !shm-size-input -->

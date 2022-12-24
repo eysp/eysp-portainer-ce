@@ -29,15 +29,15 @@ export function AccessControlForm({
     values.ownership !== ResourceControlOwnership.PUBLIC;
   return (
     <>
-      {!hideTitle && <FormSectionTitle>Access control</FormSectionTitle>}
+      {!hideTitle && <FormSectionTitle>访问控制</FormSectionTitle>}
 
       <div className="form-group">
         <div className="col-sm-12">
           <SwitchField
             checked={accessControlEnabled}
             name={withNamespace('accessControlEnabled')}
-            label="Enable access control"
-            tooltip="When enabled, you can restrict the access and management of this resource."
+            label="启用访问控制"
+            tooltip="启用后，你可以限制对该资源的访问和管理。"
             onChange={handleToggleEnable}
             dataCy="portainer-accessMgmtToggle"
           />

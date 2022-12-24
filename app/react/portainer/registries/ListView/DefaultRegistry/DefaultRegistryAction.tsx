@@ -34,13 +34,13 @@ export function DefaultRegistryAction() {
             disabled={isLimited}
           >
             <Icon icon="eye-off" feather />
-            Hide for all users
+            对所有用户隐藏
           </Button>
           <BEFeatureIndicator featureId={FeatureId.HIDE_DOCKER_HUB_ANONYMOUS} />
           {isLimited ? null : (
             <Tooltip
-              message="This hides the option in any registry dropdown prompts but does not prevent a user from deploying anonymously from Docker Hub directly via YAML.
-            Note: Docker Hub (anonymous) will continue to show as the ONLY option if there are NO other registries available to the user."
+              message="这将在任何注册表下拉提示中隐藏该选项，但并不妨碍用户通过YAML直接从Docker Hub匿名部署。
+              注意：如果用户没有其他注册表可用，Docker Hub（匿名）将继续显示为唯一的选项。"
             />
           )}
         </div>
@@ -54,8 +54,8 @@ export function DefaultRegistryAction() {
             Show for all users
           </Button>
           <Tooltip
-            message="This reveals the option in any registry dropdown prompts.
-                    (but note that the Docker Hub (anonymous) option only shows if there is no credentialled Docker Hub option available to the user)."
+            message="这将显示任何注册表下拉提示中的选项。
+            (但请注意，Docker Hub（匿名）选项只在用户没有可信的Docker Hub选项时显示）。"
           />
         </div>
       )}
@@ -71,7 +71,7 @@ export function DefaultRegistryAction() {
         onSuccess() {
           notifySuccess(
             'Success',
-            'Default registry Settings updated successfully'
+            '默认注册表设置更新成功'
           );
         },
       }

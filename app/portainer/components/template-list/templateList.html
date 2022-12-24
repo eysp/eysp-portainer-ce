@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-sm-12">
             <button type="button" class="btn btn-sm btn-primary" ui-sref="docker.templates.new" ng-if="$ctrl.showAddAction">
-              <i class="fa fa-plus space-right" aria-hidden="true"></i>Add template
+              <i class="fa fa-plus space-right" aria-hidden="true"></i>添加模板
             </button>
           </div>
         </div>
@@ -15,7 +15,7 @@
             <template-list-dropdown
               options="$ctrl.state.categories"
               on-change="($ctrl.applyCategoriesFilter)"
-              placeholder="'Category'"
+              placeholder="'类别'"
               value="$ctrl.state.selectedCategory"
             ></template-list-dropdown>
           </div>
@@ -23,7 +23,7 @@
             <template-list-dropdown
               options="$ctrl.state.typeFilters"
               on-change="($ctrl.applyTypeFilter)"
-              placeholder="'Type'"
+              placeholder="'类型'"
               value="$ctrl.state.filterByType"
             ></template-list-dropdown>
           </div>
@@ -34,7 +34,7 @@
               options="$ctrl.state.orderByFields"
               sort-by-button="true"
               sort-by-descending="$ctrl.state.orderDesc"
-              placeholder="'Sort By'"
+              placeholder="'排序依据'"
               value="$ctrl.state.selectedOrderBy"
             ></template-list-sort>
           </div>
@@ -64,7 +64,7 @@
           on-select="($ctrl.selectAction)"
         >
           <template-item-actions ng-if="template.Type === 2 || template.Type === 3">
-            <button ng-click="$event.stopPropagation(); $ctrl.duplicateTemplate(template)" class="btn btn-primary btn-xs"> Copy as Custom </button>
+            <button ng-click="$event.stopPropagation(); $ctrl.duplicateTemplate(template)" class="btn btn-primary btn-xs"> 复制为自定义 </button>
           </template-item-actions>
         </template-item>
         <div ng-if="!$ctrl.templates" class="text-center text-muted"> 加载中... </div>
@@ -72,7 +72,7 @@
           ng-if="($ctrl.templates | filter: $ctrl.filterByTemplateType | filter: $ctrl.filterByCategory | filter: $ctrl.state.textFilter).length === 0"
           class="text-center text-muted"
         >
-          No templates available.
+        没有可用的模板。
         </div>
       </div>
     </rd-widget-body>

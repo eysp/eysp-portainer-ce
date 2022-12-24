@@ -1,6 +1,6 @@
 <page-header
   ng-if="ctrl.state.viewReady"
-  title="'Volume details'"
+  title="'存储卷详情'"
   breadcrumbs="[
     { label:'Namespaces', link:'kubernetes.resourcePools' },
     {
@@ -8,7 +8,7 @@
       link: 'kubernetes.resourcePools.resourcePool',
       linkParams:{ id: ctrl.volume.ResourcePool.Namespace.Name }
     },
-    { label:'Volumes', link:'kubernetes.volumes' },
+    { label:'存储卷', link:'kubernetes.volumes' },
      ctrl.volume.PersistentVolumeClaim.Name,
      ]"
   reload="true"
@@ -26,7 +26,7 @@
             <uib-tab index="0" classes="btn-sm" select="ctrl.selectTab(0)">
               <uib-tab-heading class="vertical-center" data-cy="k8sVolDetail-volTab">
                 <pr-icon icon="'database'" feather="true"></pr-icon>
-                Volume
+                存储卷
               </uib-tab-heading>
               <div style="padding: 20px">
                 <table class="table">
@@ -49,28 +49,28 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>Storage</td>
+                      <td>存储</td>
                       <td data-cy="k8sVolDetail-volStorageClassname">{{ ctrl.volume.PersistentVolumeClaim.StorageClass.Name }}</td>
                     </tr>
                     <tr>
-                      <td>Shared Access Policy</td>
+                      <td>共享访问策略</td>
                       <td data-cy="k8sVolDetail-volAccessPolicy"
                         >{{ ctrl.state.volumeSharedAccessPolicy }}
                         <portainer-tooltip ng-if="ctrl.state.volumeSharedAccessPolicyTooltip" message="ctrl.state.volumeSharedAccessPolicyTooltip"></portainer-tooltip
                       ></td>
                     </tr>
                     <tr>
-                      <td>Provisioner</td>
+                      <td>配置程序</td>
                       <td data-cy="k8sVolDetail-volProvisioner">{{
                         ctrl.volume.PersistentVolumeClaim.StorageClass.Provisioner ? ctrl.volume.PersistentVolumeClaim.StorageClass.Provisioner : '-'
                       }}</td>
                     </tr>
                     <tr>
-                      <td>Creation date</td>
+                      <td>创建日期</td>
                       <td data-cy="k8sVolDetail-volCreatedAt">{{ ctrl.volume.PersistentVolumeClaim.CreationDate | getisodate }}</td>
                     </tr>
                     <tr>
-                      <td>Size</td>
+                      <td>大小</td>
                       <td ng-if="!ctrl.state.increaseSize">
                         {{ ctrl.volume.PersistentVolumeClaim.Storage }}
                         <button
@@ -79,7 +79,7 @@
                           ng-click="ctrl.state.increaseSize = true"
                           ng-if="ctrl.volume.PersistentVolumeClaim.StorageClass.AllowVolumeExpansion"
                           data-cy="k8sVolDetail-increaseSizeButton"
-                          >Increase size</button
+                          >增加大小</button
                         >
                       </td>
                       <td ng-if="ctrl.state.increaseSize">
@@ -115,10 +115,10 @@
                               ng-click="ctrl.updateVolume()"
                               data-cy="k8sVolDetail-updateSizeConfirm"
                             >
-                              Update size
+                              更新大小
                             </button>
                             <button type="button" class="btn btn-sm btn-default" ng-click="ctrl.state.increaseSize = false" data-cy="k8sVolDetail-cancelUpdateSize">
-                              Cancel
+                              取消
                             </button>
                           </div>
 
@@ -128,7 +128,7 @@
                                 <p ng-message="required"><pr-icon icon="'alert-triangle'" feather="true" mode="'warning'"></pr-icon> 本栏为必填项。</p>
                               </div>
                               <p class="vertical-center" ng-show="ctrl.state.errors.volumeSize"
-                                ><pr-icon icon="'alert-triangle'" feather="true" mode="'warning'"></pr-icon> The new size must be greater than the actual size.</p
+                                ><pr-icon icon="'alert-triangle'" feather="true" mode="'warning'"></pr-icon> 新大小必须大于实际大小。</p
                               >
                             </div>
                           </div>

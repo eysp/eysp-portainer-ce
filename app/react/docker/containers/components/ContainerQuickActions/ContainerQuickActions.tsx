@@ -49,7 +49,7 @@ export function ContainerQuickActions({
           <Link
             to="docker.containers.container.logs"
             params={{ id: containerId, nodeName }}
-            title="Logs"
+            title="日志"
           >
             <Icon icon="file-text" feather className="space-right" />
           </Link>
@@ -61,7 +61,7 @@ export function ContainerQuickActions({
           <Link
             to="docker.containers.container.inspect"
             params={{ id: containerId, nodeName }}
-            title="Inspect"
+            title="检查"
           >
             <Icon icon="info" feather className="space-right" />
           </Link>
@@ -73,7 +73,7 @@ export function ContainerQuickActions({
           <Link
             to="docker.containers.container.stats"
             params={{ id: containerId, nodeName }}
-            title="Stats"
+            title="状态"
           >
             <Icon icon="bar-chart" feather className="space-right" />
           </Link>
@@ -85,7 +85,7 @@ export function ContainerQuickActions({
           <Link
             to="docker.containers.container.exec"
             params={{ id: containerId, nodeName }}
-            title="Exec Console"
+            title="执行控制台"
           >
             <Icon icon="terminal" feather className="space-right" />
           </Link>
@@ -97,7 +97,7 @@ export function ContainerQuickActions({
           <Link
             to="docker.containers.container.attach"
             params={{ id: containerId, nodeName }}
-            title="Attach Console"
+            title="附加控制台"
           >
             <Icon icon="paperclip" feather className="space-right" />
           </Link>
@@ -120,7 +120,7 @@ function TaskQuickActions({ taskId, state }: TaskProps) {
           <Link
             to="docker.tasks.task.logs"
             params={{ id: taskId }}
-            title="Logs"
+            title="日志"
           >
             <Icon icon="file-text" feather className="space-right" />
           </Link>

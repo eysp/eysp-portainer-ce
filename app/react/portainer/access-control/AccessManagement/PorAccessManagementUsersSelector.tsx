@@ -22,11 +22,11 @@ export function PorAccessManagementUsersSelector({
         className="col-sm-3 col-lg-2 control-label text-left"
         htmlFor="users-selector"
       >
-        Select user(s) and/or team(s)
+        选择用户/或团队
       </label>
       <div className="col-sm-9 col-lg-4">
         {options.length === 0 ? (
-          <span className="small text-muted">No users or teams available.</span>
+          <span className="small text-muted">没有用户或团队可用。</span>
         ) : (
           <Select
             isMulti

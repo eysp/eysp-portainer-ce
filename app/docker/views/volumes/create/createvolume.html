@@ -1,4 +1,4 @@
-<page-header title="'创建存储卷'" breadcrumbs="[{label:'Volumes', link:'docker.volumes'}, 'Add volume']"> </page-header>
+<page-header title="'创建存储卷'" breadcrumbs="[{label:'存储卷', link:'docker.volumes'}, '添加存储卷']"> </page-header>
 
 <div class="row">
   <div class="col-sm-12">
@@ -57,14 +57,14 @@
           <!-- !driver-options -->
           <!-- nfs-management -->
           <div class="form-group col-md-12">
-            <por-switch-field checked="formValues.NFSData.useNFS" label="'Use NFS volume'" on-change="(onUseNFSChange)"></por-switch-field>
+            <por-switch-field checked="formValues.NFSData.useNFS" label="'使用 NFS 存储卷'" on-change="(onUseNFSChange)"></por-switch-field>
             <div ng-if="formValues.NFSData.useNFS" class="small text-muted" style="margin-top: 10px"> 确保<code>nfs-utils</code>已安装在你的宿主机上。 </div>
           </div>
           <volumes-nfs-form data="formValues.NFSData" ng-show="formValues.Driver === 'local'"></volumes-nfs-form>
           <!-- !nfs-management -->
           <!-- cifs-management -->
           <div class="form-group col-md-12">
-            <por-switch-field checked="formValues.CIFSData.useCIFS" label="'Use CIFS volume'" on-change="(onUseCIFSChange)"></por-switch-field>
+            <por-switch-field checked="formValues.CIFSData.useCIFS" label="'使用 CIFS 存储卷'" on-change="(onUseCIFSChange)"></por-switch-field>
             <div ng-if="formValues.CIFSData.useCIFS" class="small text-muted" style="margin-top: 10px"> 确保<code>cifs-utils</code>已安装在你的宿主机上。 </div>
           </div>
           <volumes-cifs-form data="formValues.CIFSData" ng-show="formValues.Driver === 'local'"></volumes-cifs-form>

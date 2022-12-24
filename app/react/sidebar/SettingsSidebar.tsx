@@ -35,24 +35,24 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
     !window.ddExtension && (isAdmin || (isTeamLeader && !teamSyncQuery.data));
 
   return (
-    <SidebarSection title="Settings">
+    <SidebarSection title="设置">
       {showUsersSection && (
         <SidebarItem
           to="portainer.users"
-          label="Users"
+          label="用户"
           icon={Users}
           data-cy="portainerSidebar-users"
         >
           <SidebarItem
             to="portainer.teams"
-            label="Teams"
+            label="团队"
             data-cy="portainerSidebar-teams"
           />
 
           {isAdmin && (
             <SidebarItem
               to="portainer.roles"
-              label="Roles"
+              label="角色"
               data-cy="portainerSidebar-roles"
             />
           )}
@@ -61,7 +61,7 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
       {isAdmin && (
         <>
           <SidebarItem
-            label="Environments"
+            label="环境"
             to="portainer.endpoints"
             icon={HardDrive}
             openOnPaths={['portainer.wizard.endpoints']}
@@ -69,25 +69,25 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
           >
             <SidebarItem
               to="portainer.groups"
-              label="Groups"
+              label="群组"
               data-cy="portainerSidebar-environmentGroups"
             />
             <SidebarItem
               to="portainer.tags"
-              label="Tags"
+              label="标记"
               data-cy="portainerSidebar-environmentTags"
             />
             {isEdgeRemoteUpgradeEnabledQuery.data && (
               <SidebarItem
                 to="portainer.endpoints.updateSchedules"
-                label="Update & Rollback"
+                label="更新 & 回滚"
                 data-cy="portainerSidebar-updateSchedules"
               />
             )}
           </SidebarItem>
 
           <SidebarItem
-            label="Registries"
+            label="注册表"
             to="portainer.registries"
             icon={Radio}
             data-cy="portainerSidebar-registries"
@@ -96,21 +96,21 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
           {process.env.PORTAINER_EDITION !== 'CE' && (
             <SidebarItem
               to="portainer.licenses"
-              label="Licenses"
+              label="许可"
               icon={Award}
               data-cy="portainerSidebar-licenses"
             />
           )}
 
           <SidebarItem
-            label="Authentication logs"
+            label="身份验证日志"
             to="portainer.authLogs"
             icon={FileText}
             data-cy="portainerSidebar-authLogs"
           >
             <SidebarItem
               to="portainer.activityLogs"
-              label="Activity Logs"
+              label="活动日志"
               data-cy="portainerSidebar-activityLogs"
             />
           </SidebarItem>
@@ -119,20 +119,20 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
       <SidebarItem
         to="portainer.notifications"
         icon={Bell}
-        label="Notifications"
+        label="通知"
         data-cy="portainerSidebar-notifications"
       />
       {isAdmin && (
         <SidebarItem
           to="portainer.settings"
-          label="Settings"
+          label="设置"
           icon={Settings}
           data-cy="portainerSidebar-settings"
         >
           {!window.ddExtension && (
             <SidebarItem
               to="portainer.settings.authentication"
-              label="Authentication"
+              label="身份验证"
               data-cy="portainerSidebar-authentication"
             />
           )}
@@ -145,11 +145,11 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
           )}
           <SidebarItem
             to="portainer.settings.edgeCompute"
-            label="Edge Compute"
+            label="边缘计算"
             data-cy="portainerSidebar-edgeCompute"
           />
 
-          <SidebarItem.Wrapper label="Help / About">
+          <SidebarItem.Wrapper label="帮助 / 关于">
             <a
               href={
                 process.env.PORTAINER_EDITION === 'CE'
@@ -160,7 +160,7 @@ export function SettingsSidebar({ isAdmin, isTeamLeader }: Props) {
               rel="noreferrer"
               className="px-3 rounded flex h-8 items-center"
             >
-              Help / About
+              帮助 / 关于
             </a>
           </SidebarItem.Wrapper>
         </SidebarItem>

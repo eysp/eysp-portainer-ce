@@ -11,7 +11,7 @@ import { FormValues } from './types';
 export function validation(): SchemaOf<FormValues> {
   return object({
     name: nameValidation(),
-    url: string().required('This field is required.'),
+    url: string().required('此字段必填。'),
     tls: boolean().default(false),
     skipVerify: boolean(),
     meta: metadataValidation(),

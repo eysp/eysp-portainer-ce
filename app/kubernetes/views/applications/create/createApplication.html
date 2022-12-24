@@ -300,15 +300,15 @@
                             >
                               <ng-messages for="kubernetesApplicationCreationForm['environment_variable_name_' + $index].$error">
                                 <p ng-message="required" class="text-warning vertical-center"
-                                  ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true" class-="vertical-center"></pr-icon> Environment variable name is required.</p
+                                  ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true" class-="vertical-center"></pr-icon> 环境变量名称是必需的。</p
                                 >
                                 <p ng-message="pattern" class="text-warning vertical-center"
-                                  ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> This field must consist of alphabetic characters, digits, '_', '-',
-                                  or '.', and must not start with a digit (例如 'my.env-name', or 'MY_ENV.NAME', or 'MyEnvName1'.</p
+                                  ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 这个字段必须由英文字母、数字、 '_', '-',
+                                  或 '.', 并且不能以数字开头 (例如 'my.env-name', 或 'MY_ENV.NAME', 或 'MyEnvName1'.</p
                                 >
                               </ng-messages>
                               <p class="text-warning vertical-center" ng-if="ctrl.state.duplicates.environmentVariables.refs[$index] !== undefined"
-                                ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> This environment variable is already defined.</p
+                                ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 这个环境变量已经被定义了。</p
                               >
                             </div>
                           </div>
@@ -318,11 +318,11 @@
                   </div>
                   <!-- #endregion -->
 
-                  <div class="col-sm-12 form-section-title"> Configurations </div>
+                  <div class="col-sm-12 form-section-title"> 配置 </div>
                   <!-- #region CONFIGURATIONS -->
                   <div class="form-group">
                     <div class="col-sm-12 vertical-center pt-2.5">
-                      <label class="control-label text-left !pt-0">Configurations</label>
+                      <label class="control-label text-left !pt-0">配置</label>
                       <span
                         class="label label-default interactive vertical-center"
                         style="margin-left: 10px"
@@ -330,13 +330,13 @@
                         ng-if="ctrl.formValues.Containers.length <= 1"
                         data-cy="k8sAppCreate-addConfigButton"
                       >
-                        <pr-icon icon="'plus'" mode="'alt'" size="'sm'" feather="true"></pr-icon> add configuration
+                        <pr-icon icon="'plus'" mode="'alt'" size="'sm'" feather="true"></pr-icon> 添加配置
                       </span>
                     </div>
                     <div class="col-sm-12 small text-muted vertical-center" style="margin-top: 15px" ng-if="ctrl.formValues.Configurations.length">
                       <pr-icon icon="'info'" mode="'primary'" feather="true"></pr-icon>
-                      Portainer will automatically expose all the keys of a configuration as environment variables. This behavior can be overridden to filesystem mounts for each
-                      key via the override button.
+                      Portainer会自动将配置的所有键作为环境变量公开。这种行为可以通过覆盖按钮覆盖到每个
+                      键都可以通过覆盖按钮覆盖到文件系统挂载。
                     </div>
                   </div>
 
@@ -362,7 +362,7 @@
                         ng-disabled="!config.SelectedConfiguration || ctrl.formValues.Containers.length > 1"
                         data-cy="k8sAppCreate-configOverrideButton_{{ $index }}"
                       >
-                        <pr-icon icon="'list'" size="'md'" feather="true"></pr-icon> Override
+                        <pr-icon icon="'list'" size="'md'" feather="true"></pr-icon> 覆盖
                       </button>
                       <button
                         class="btn btn-md btn-light vertical-center !ml-0"
@@ -388,7 +388,7 @@
                     <div class="col-sm-12" style="margin-top: 10px" ng-if="config.SelectedConfiguration && !config.Overriden">
                       <div class="col-sm-3 col-lg-2"></div>
                       <div class="col-sm-6 small text-muted" style="padding-left: 5px">
-                        The following keys will be loaded from the <code>{{ config.SelectedConfiguration.Name }}</code> configuration as environment variables:
+                        以下键值将从 <code>{{ config.SelectedConfiguration.Name }}</code> 配置中作为环境变量加载:
                         <span ng-repeat="(key, _) in config.SelectedConfiguration.Data">
                           <code>{{ key }}</code
                           >{{ $last ? '' : ', ' }}
@@ -404,14 +404,14 @@
                           <div class="col-sm-3 col-lg-2 form-group !m-0"><span>&nbsp;</span></div>
                           <div class="col-sm-3 form-group !mr-1" style="margin-left: -11px">
                             <div class="input-group input-group-sm">
-                              <span class="input-group-addon">configuration key</span>
+                              <span class="input-group-addon">配置 key</span>
                               <input type="text" class="form-control" ng-value="overridenKey.Key" disabled />
                             </div>
                           </div>
 
                           <div class="col-sm-3 form-group !mr-1" ng-if="overridenKey.Type === ctrl.ApplicationConfigurationFormValueOverridenKeyTypes.FILESYSTEM">
                             <div class="input-group input-group-sm">
-                              <span class="input-group-addon required">path on disk</span>
+                              <span class="input-group-addon required">磁盘上的路径</span>
                               <input
                                 type="text"
                                 class="form-control"
@@ -441,11 +441,11 @@
                                 >
                                   <ng-messages for="kubernetesApplicationCreationForm['overriden_key_path_' + index + '_' + keyIndex].$error">
                                     <p class="vertical-center" ng-message="required"
-                                      ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> Path is required.</p
+                                      ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 需要路径。</p
                                     >
                                   </ng-messages>
                                   <p class="vertical-center" ng-if="ctrl.state.duplicates.configurationPaths.refs[index + '_' + keyIndex] !== undefined"
-                                    ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> This path is already used.</p
+                                    ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 此路径已被使用。</p
                                   >
                                 </div>
                               </div>
@@ -455,10 +455,10 @@
                           <div class="col-sm-4 form-group">
                             <div class="input-group btn-group btn-group-sm">
                               <label class="btn btn-light" ng-model="overridenKey.Type" uib-btn-radio="ctrl.ApplicationConfigurationFormValueOverridenKeyTypes.ENVIRONMENT">
-                                <pr-icon icon="'list'" feather="true"></pr-icon> Environment
+                                <pr-icon icon="'list'" feather="true"></pr-icon> 环境
                               </label>
                               <label class="btn btn-light" ng-model="overridenKey.Type" uib-btn-radio="ctrl.ApplicationConfigurationFormValueOverridenKeyTypes.FILESYSTEM">
-                                <pr-icon icon="'file-text'" feather="true"></pr-icon> Filesystem
+                                <pr-icon icon="'file-text'" feather="true"></pr-icon> 文件系统
                               </label>
                             </div>
                           </div>
@@ -669,13 +669,13 @@
                             <ng-messages for="kubernetesApplicationCreationForm['persisted_folder_size_' + $index].$error">
                               <p class="vertical-center" ng-message="required"><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> Size is required.</p>
                               <p class="vertical-center" ng-message="min"
-                                ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> This value must be greater than zero.</p
+                                ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 此值必须大于零。</p
                               >
                             </ng-messages>
                             <p class="vertical-center" ng-if="ctrl.state.exceeded.persistedFolders.refs[$index] !== undefined">
                               <pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon>
-                              You can only request up to
-                              {{ ctrl.state.storages.availabilities[persistedFolder.StorageClass.Name] | kubernetesAppStorageRequestSizeHumanReadable }} for
+                              你最多只能要求
+                              {{ ctrl.state.storages.availabilities[persistedFolder.StorageClass.Name] | kubernetesAppStorageRequestSizeHumanReadable }} 到
                               {{ persistedFolder.StorageClass.Name }}
                             </p>
                           </div>
@@ -684,10 +684,10 @@
                             ng-show="kubernetesApplicationCreationForm['existing_volumes_' + $index].$invalid || ctrl.state.duplicates.existingVolumes.refs[$index] !== undefined"
                           >
                             <ng-messages for="kubernetesApplicationCreationForm['existing_volumes_' + $index].$error">
-                              <p ng-message="required"><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> Volume is required.</p>
+                              <p ng-message="required"><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 存储卷必须要填写.</p>
                             </ng-messages>
                             <p ng-if="ctrl.state.duplicates.existingVolumes.refs[$index] !== undefined"
-                              ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> This volume is already used.</p
+                              ><pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 此存储卷已被使用。</p
                             >
                           </div>
                         </div>

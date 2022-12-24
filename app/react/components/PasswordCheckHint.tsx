@@ -19,8 +19,8 @@ export function PasswordCheckHint({
       <p className="text-warning vertical-center">
         <Icon icon="alert-triangle" className="icon-warning" feather />
         {forceChangePassword &&
-          'An administrator has changed your password requirements, '}
-        The password must be at least {minPasswordLength} characters long.
+          '管理员已经改变了你的密码要求， '}
+        密码必须至少是 {minPasswordLength} 字符的长度。
         {passwordValid && (
           <i className="fa fa-check green-icon space-left" aria-hidden="true" />
         )}

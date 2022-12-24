@@ -132,17 +132,17 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Type'"
+                  col-title="'类型'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Type'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Type' && $ctrl.state.reverseOrder"
                   ng-click="$ctrl.changeOrderBy('Type')"
                 ></table-column-header>
               </th>
-              <th><table-column-header col-title="'Control'" can-sort="false"></table-column-header></th>
+              <th><table-column-header col-title="'控制权'" can-sort="false"></table-column-header></th>
               <th>
                 <table-column-header
-                  col-title="'Created'"
+                  col-title="'创建于'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'ResourceControl.CreationDate'"
                   is-sorted-desc="$ctrl.state.orderBy === 'ResourceControl.CreationDate' && $ctrl.state.reverseOrder"
@@ -151,7 +151,7 @@
               </th>
               <th ng-if="$ctrl.columnVisibility.columns.updated.display">
                 <table-column-header
-                  col-title="'Updated'"
+                  col-title="'更新于'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'ResourceControl.UpdateDate'"
                   is-sorted-desc="$ctrl.state.orderBy === 'ResourceControl.UpdateDate' && $ctrl.state.reverseOrder"
@@ -160,7 +160,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Ownership'"
+                  col-title="'所有权'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'ResourceControl.Ownership'"
                   is-sorted-desc="$ctrl.state.orderBy === 'ResourceControl.Ownership' && $ctrl.state.reverseOrder"

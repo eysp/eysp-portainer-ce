@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="col-sm-12 form-section-title"> Group type </div>
+  <div class="col-sm-12 form-section-title"> 组类型 </div>
   <div class="form-group">
     <div class="col-sm-12">
       <div class="boxselector_wrapper">
@@ -34,9 +34,9 @@
           <label for="static-group">
             <div class="boxselector_header vertical-center">
               <pr-icon icon="'list'" feather="true"></pr-icon>
-              Static
+              静态
             </div>
-            <p>Manually select Edge environments</p>
+            <p>手动选择边缘环境</p>
           </label>
         </div>
         <div class="boxselector">
@@ -44,9 +44,9 @@
           <label for="dynamic-group">
             <div class="boxselector_header vertical-center">
               <pr-icon icon="'tag'" feather="true"></pr-icon>
-              Dynamic
+              动态
             </div>
-            <p>Automatically associate environments via tags</p>
+            <p>通过标记自动关联环境</p>
           </label>
         </div>
       </div>
@@ -57,7 +57,7 @@
   <div ng-if="!$ctrl.model.Dynamic">
     <div ng-if="!$ctrl.noEndpoints">
       <!-- environments -->
-      <div class="col-sm-12 form-section-title"> Associated environments </div>
+      <div class="col-sm-12 form-section-title"> 相关环境 </div>
       <div class="form-group">
         <associated-endpoints-selector
           endpoint-ids="$ctrl.model.Endpoints"
@@ -71,7 +71,7 @@
     </div>
     <div class="form-group" ng-if="$ctrl.noEndpoints">
       <div class="col-sm-12 small text-muted">
-        No Edge environments are available. Head over to the <a ui-sref="portainer.endpoints">Environments view</a> to add environments.
+        没有可用的边缘环境。请到 <a ui-sref="portainer.endpoints">环境视图</a> 中添加环境。
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@
 
   <!-- DynamicGroup -->
   <div ng-if="$ctrl.model.Dynamic">
-    <div class="col-sm-12 form-section-title"> Tags </div>
+    <div class="col-sm-12 form-section-title"> 标记 </div>
     <div class="form-group">
       <div class="col-sm-12">
         <div class="boxselector_wrapper">
@@ -88,9 +88,9 @@
             <label for="or-selector">
               <div class="boxselector_header vertical-center">
                 <pr-icon icon="'tag'" feather="true"></pr-icon>
-                Partial match
+                部分匹配
               </div>
-              <p>Associate any environment matching at least one of the selected tags</p>
+              <p>关联任何与所选标签中的至少一个相匹配的环境</p>
             </label>
           </div>
           <div class="boxselector">
@@ -98,9 +98,9 @@
             <label for="and-selector">
               <div class="boxselector_header vertical-center">
                 <pr-icon icon="'tag'" feather="true"></pr-icon>
-                Full match
+                完全匹配
               </div>
-              <p>Associate any environment matching all of the selected tags</p>
+              <p>关联任何符合所有选定标签的环境</p>
             </label>
           </div>
         </div>
@@ -123,7 +123,7 @@
         groups="$ctrl.groups"
         show-groups="true"
         has-backend-pagination="true"
-        title="Associated environments by tags"
+        title="按标签划分的相关环境"
       ></group-association-table>
     </div>
   </div>

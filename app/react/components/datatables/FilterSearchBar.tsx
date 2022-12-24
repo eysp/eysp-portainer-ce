@@ -10,7 +10,7 @@ interface Props {
 
 export function FilterSearchBar({
   value,
-  placeholder = 'Search...',
+  placeholder = '搜索...',
   onChange,
 }: Props) {
   return (

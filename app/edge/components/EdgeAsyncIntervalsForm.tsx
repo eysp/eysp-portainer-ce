@@ -144,12 +144,12 @@ const intervals = options.map((option) => option.value);
 
 export function edgeAsyncIntervalsValidation(): SchemaOf<EdgeAsyncIntervalsValues> {
   return object({
-    PingInterval: number().required('This field is required.').oneOf(intervals),
+    PingInterval: number().required('此字段必填。').oneOf(intervals),
     SnapshotInterval: number()
-      .required('This field is required.')
+      .required('此字段必填。')
       .oneOf(intervals),
     CommandInterval: number()
-      .required('This field is required.')
+      .required('此字段必填。')
       .oneOf(intervals),
   });
 }

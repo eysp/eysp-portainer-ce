@@ -16,10 +16,10 @@
     <div class="form-group" style="margin-top: 5px" ng-show="$ctrl[$ctrl.formName].name.$invalid">
       <div class="col-sm-12 small">
         <div ng-messages="$ctrl[$ctrl.formName].name.$error">
-          <p ng-message="required"> <pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> Name is required. </p>
+          <p ng-message="required"> <pr-icon icon="'alert-triangle'" mode="'warning'" feather="true"></pr-icon> 名称是必填项。 </p>
           <p ng-message="pattern">
             <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-            This field must consist alphanumeric characters, '-' or '_', start with an alphabetic character, and end with an alphanumeric character (例如 'my-var', or 'MY_VAR123').
+            这个字段必须由字母数字字符'-'或'_'组成，以一个字母字符开始，以一个字母数字字符结束 (例如 'my-var'或 'MY_VAR123').
           </p>
         </div>
       </div>
@@ -43,7 +43,7 @@
     <div class="form-group" ng-show="$ctrl[$ctrl.formName].value.$invalid">
       <div class="col-sm-12 small text-warning">
         <div ng-messages="$ctrl[$ctrl.formName].value.$error">
-          <p ng-message="pattern"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Value is invalid. </p>
+          <p ng-message="pattern"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Value 必须填写。 </p>
         </div>
       </div>
     </div>

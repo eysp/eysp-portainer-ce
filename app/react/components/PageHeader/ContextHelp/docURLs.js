@@ -30,7 +30,7 @@ const docURLs = [
     examples: ['#!/10/docker/stacks', '#!/10/docker/stacks/newstack', '#!/10/docker/stacks/s4?id=3&type=1&regular=true&external=false&orphaned=false'],
   },
   {
-    desc: 'Swarm / Services',
+    desc: 'Swarm / 服务',
     docURL: 'https://docs.portainer.io/user/docker/services',
     locationRegex: /#!\/\d+\/docker\/(services|tasks)/,
     examples: [

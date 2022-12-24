@@ -15,7 +15,7 @@
             class="searchInput"
             ng-model="$ctrl.state.textFilter"
             ng-change="$ctrl.onTextFilterChange()"
-            placeholder="Search for an event..."
+            placeholder="搜索事件..."
             auto-focus
             ng-model-options="{ debounce: 300 }"
             data-cy="event-searchInput"
@@ -28,7 +28,7 @@
             <tr>
               <th>
                 <table-column-header
-                  col-title="'Date'"
+                  col-title="'日期'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Time'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Time' && $ctrl.state.reverseOrder"
@@ -37,7 +37,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Category'"
+                  col-title="'类别'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Type'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Type' && $ctrl.state.reverseOrder"
@@ -46,7 +46,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Details'"
+                  col-title="'详情'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Details'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Details' && $ctrl.state.reverseOrder"

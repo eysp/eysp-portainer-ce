@@ -63,19 +63,19 @@ export function EnvironmentCreationView() {
     <>
       <PageHeader
         title="Quick Setup"
-        breadcrumbs={[{ label: 'Environment Wizard' }]}
+        breadcrumbs={[{ label: '环境向导' }]}
       />
 
       <div className={styles.wizardWrapper}>
         <Widget>
-          <WidgetTitle icon="svg-magic" title="Environment Wizard" />
+          <WidgetTitle icon="svg-magic" title="环境向导" />
           <WidgetBody>
             <Stepper steps={steps} currentStep={currentStepIndex + 1} />
 
             <div className="mt-12">
               <FormSection
-                title={`Connect to your ${currentStep.title}
-                    environment`}
+                title={`连接到你的 ${currentStep.title}
+                    环境`}
               >
                 <Component
                   onCreate={handleCreateEnvironment}
@@ -141,7 +141,7 @@ function useParamEnvironmentTypes(): EnvironmentSelectorValue[] {
   const router = useRouter();
 
   if (!envType) {
-    notifyError('No environment type provided');
+    notifyError('没有提供环境类型');
     router.stateService.go('portainer.wizard.endpoints');
     return [];
   }
@@ -191,7 +191,7 @@ function useStepper(
       case 'kubernetes':
         return WizardKubernetes;
       default:
-        throw new Error(`Unknown environment type ${id}`);
+        throw new Error(`未知环境类型 ${id}`);
     }
   }
 }

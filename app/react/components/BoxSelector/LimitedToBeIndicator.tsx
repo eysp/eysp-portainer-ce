@@ -18,7 +18,7 @@ export function LimitedToBeIndicator({ tooltipId, featureId }: Props) {
       <div className="absolute left-0 top-0 w-full">
         <div className="mx-auto max-w-fit bg-warning-4 rounded-b-lg py-1 px-3 flex gap-1 text-sm items-center">
           <a href={url} target="_blank" rel="noopener noreferrer">
-            <span className="text-warning-9">Pro Feature</span>
+            <span className="text-warning-9">专业版特点</span>
           </a>
           <HelpCircle
             className="feather !text-warning-7"
@@ -36,8 +36,8 @@ export function LimitedToBeIndicator({ tooltipId, featureId }: Props) {
         place="top"
         delayHide={1000}
       >
-        Business Edition feature. <br />
-        This feature is currently limited to Business Edition users only.
+        商业版功能 <br />
+        这个功能目前只限于商业版用户。
       </ReactTooltip>
     </>
   );

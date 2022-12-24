@@ -27,13 +27,13 @@ export function EnvironmentTypeSelectView() {
     <>
       <PageHeader
         title="Quick Setup"
-        breadcrumbs={[{ label: 'Environment Wizard' }]}
+        breadcrumbs={[{ label: '环境向导' }]}
       />
 
       <div className="row">
         <div className="col-sm-12">
           <Widget>
-            <WidgetTitle icon="svg-magic" title="Environment Wizard" />
+            <WidgetTitle icon="svg-magic" title="环境向导" />
             <WidgetBody>
               <EnvironmentSelector
                 value={types}
@@ -44,7 +44,7 @@ export function EnvironmentTypeSelectView() {
                 disabled={types.length === 0}
                 onClick={() => startWizard()}
               >
-                Start Wizard
+                启动向导
               </Button>
             </WidgetBody>
           </Widget>

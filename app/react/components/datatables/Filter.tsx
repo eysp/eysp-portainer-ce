@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { Menu, MenuButton, MenuPopover } from '@reach/menu-button';
 import { ColumnInstance } from 'react-table';
 
-export const DefaultFilter = filterHOC('Filter by state');
+export const DefaultFilter = filterHOC('按状态筛选');
 
 interface MultipleSelectionFilterProps {
   options: string[];
@@ -18,7 +18,7 @@ export function MultipleSelectionFilter({
   value = [],
   filterKey,
   onChange,
-  menuTitle = 'Filter by state',
+  menuTitle = '按状态筛选',
 }: MultipleSelectionFilterProps) {
   const enabled = value.length > 0;
   return (

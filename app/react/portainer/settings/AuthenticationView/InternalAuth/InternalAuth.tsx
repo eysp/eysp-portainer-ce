@@ -42,13 +42,13 @@ export function InternalAuth({
 
   return (
     <>
-      <FormSectionTitle>Information</FormSectionTitle>
+      <FormSectionTitle>信息</FormSectionTitle>
       <div className="form-group col-sm-12 text-muted small">
       当使用内部认证时，Portainer将加密用户的
         密码并在本地存储证书。
       </div>
 
-      <FormSectionTitle>Password rules</FormSectionTitle>
+      <FormSectionTitle>密码规则</FormSectionTitle>
       <div className="form-group col-sm-12 text-muted small">
       定义用户生成的密码的最小长度。
       </div>

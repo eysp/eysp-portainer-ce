@@ -18,18 +18,18 @@ import { FormValues } from './types';
 
 const asyncIntervalFieldSettings = {
   ping: {
-    label: 'Edge agent default ping frequency',
+    label: '边缘代理默认的ping频率',
     tooltip:
-      'Interval used by default by each Edge agent to ping the Portainer instance. Affects Edge environment management and Edge compute features.',
+      '每个Edge代理默认使用的间隔，以ping Portainer实例。影响Edge环境管理和Edge计算功能。',
   },
   snapshot: {
-    label: 'Edge agent default snapshot frequency',
+    label: '边缘代理默认快照频率',
     tooltip:
-      'Interval used by default by each Edge agent to snapshot the agent state.',
+      '每个Edge代理默认使用的时间间隔，用于快照代理状态。',
   },
   command: {
-    label: 'Edge agent default command frequency',
-    tooltip: 'Interval used by default by each Edge agent to execute commands.',
+    label: '边缘代理的默认命令频率',
+    tooltip: '每个Edge代理执行命令时默认使用的间隔。',
   },
 };
 
@@ -112,7 +112,7 @@ export function DeploymentSyncOptions() {
                         isLoading={settingsMutation.isLoading}
                         loadingText="Saving settings..."
                       >
-                        Save settings
+                        保存设置
                       </LoadingButton>
                     </div>
                   </div>

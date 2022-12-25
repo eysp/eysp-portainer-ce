@@ -9,7 +9,7 @@ export const options = [
     id: 'backup_file',
     icon: <BadgeIcon icon={DownloadCloud} />,
     featherIcon: true,
-    label: 'Download backup file',
+    label: '下载备份文件',
     value: 'file',
   },
   {
@@ -17,7 +17,7 @@ export const options = [
     icon: <BadgeIcon icon={UploadCloud} />,
     featherIcon: true,
     label: 'Store in S3',
-    description: 'Define a cron schedule',
+    description: '定义cron计划',
     value: 's3',
     feature: FeatureId.S3_BACKUP_SETTING,
   },

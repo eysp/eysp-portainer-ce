@@ -48,8 +48,8 @@
     analytics-event="docker-stack-pull-redeploy"
     analytics-category="docker"
   >
-    <span ng-hide="$ctrl.state.redeployInProgress"> <i class="fa fa-sync space-right" aria-hidden="true"></i> Pull and redeploy </span>
-    <span ng-show="$ctrl.state.redeployInProgress">In progress...</span>
+    <span ng-hide="$ctrl.state.redeployInProgress"> <i class="fa fa-sync space-right" aria-hidden="true"></i> 拉取并重新部署 </span>
+    <span ng-show="$ctrl.state.redeployInProgress">正在进行中...</span>
   </button>
 
   <button
@@ -63,7 +63,7 @@
     analytics-category="docker"
     analytics-properties="$ctrl.buildAnalyticsProperties()"
   >
-    <span ng-hide="$ctrl.state.inProgress"> Save settings </span>
-    <span ng-show="$ctrl.state.inProgress">In progress...</span>
+    <span ng-hide="$ctrl.state.inProgress"> 保存设置 </span>
+    <span ng-show="$ctrl.state.inProgress">正在进行中...</span>
   </button>
 </form>

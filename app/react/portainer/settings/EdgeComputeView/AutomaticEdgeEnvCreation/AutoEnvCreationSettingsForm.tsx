@@ -25,7 +25,7 @@ const validation = yup.object({
     .string()
     .test(
       'url',
-      'URL should be a valid URI and cannot include localhost',
+      'URL应该是一个有效的URI，不能包括localhost',
       (value) => {
         if (!value) {
           return false;
@@ -65,7 +65,7 @@ export function AutoEnvCreationSettingsForm({ settings }: Props) {
         onSuccess() {
           notifySuccess(
             'Success',
-            'Successfully updated Automatic Environment Creation settings'
+            '成功地更新了自动环境创建设置'
           );
         },
       });
@@ -93,7 +93,7 @@ export function AutoEnvCreationSettingsForm({ settings }: Props) {
 
           <FormControl
             label="Portainer URL"
-            tooltip="URL of the Portainer instance that the agent will use to initiate the communications."
+            tooltip="代理将用于启动通信的Portainer实例的URL。"
             inputId="url-input"
             errors={errors.EdgePortainerUrl}
           >
@@ -109,7 +109,7 @@ export function AutoEnvCreationSettingsForm({ settings }: Props) {
                 isLoading={mutation.isLoading}
                 disabled={!isValid || !dirty}
               >
-                Save settings
+                保存设置
               </LoadingButton>
             </div>
           </div>

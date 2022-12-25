@@ -130,8 +130,8 @@ export function SettingsOpenAMT({ settings, onSubmit }: Props) {
                 </FormControl>
 
                 <TextTip color="blue">
-                  When enabled, this will allow Portainer to interact with an
-                  OpenAMT MPS API.
+                启用后，这将允许Portainer与一个
+                  OpenAMT MPS API进行交互。
                 </TextTip>
 
                 {edgeComputeFeaturesEnabled && values.enabled && (
@@ -174,7 +174,7 @@ export function SettingsOpenAMT({ settings, onSubmit }: Props) {
                       inputId="mps_password"
                       label="MPS Password"
                       size="medium"
-                      tooltip="Needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character."
+                      tooltip="需要8-32个字符，包括一个大写字母、一个小写字母、一个10进制数字和一个特殊字符。"
                       errors={errors.mpsPassword}
                     >
                       <Field
@@ -192,16 +192,16 @@ export function SettingsOpenAMT({ settings, onSubmit }: Props) {
 
                     <FormControl
                       inputId="domain_name"
-                      label="Domain Name"
+                      label="域名"
                       size="medium"
-                      tooltip="Enter the FQDN that is associated with the provisioning certificate (i.e amtdomain.com)"
+                      tooltip="输入与供应证书相关的FQDN（即 amtdomain.com）"
                       errors={errors.domainName}
                     >
                       <Field
                         as={Input}
                         name="domainName"
                         id="domain_name"
-                        placeholder="Enter the Domain Name"
+                        placeholder="输入域名"
                         value={values.domainName}
                         data-cy="openAMT-domainInput"
                       />
@@ -209,9 +209,9 @@ export function SettingsOpenAMT({ settings, onSubmit }: Props) {
 
                     <FormControl
                       inputId="certificate_file"
-                      label="Provisioning Certificate File (.pfx)"
+                      label="提供证书文件 (.pfx)"
                       size="medium"
-                      tooltip="Supported CAs are Comodo, DigiCert, Entrust and GoDaddy.<br>The certificate must contain the private key.<br>On AMT 15 based devices you need to use SHA2."
+                      tooltip="支持的 CA 是 Comodo、DigiCert、Entrust 和 GoDaddy。<br>证书必须包含私钥。<br>在基于 AMT 15 的设备上，你需要使用 SHA2。"
                       errors={errors.certFileContent}
                     >
                       <FileUploadField
@@ -227,9 +227,9 @@ export function SettingsOpenAMT({ settings, onSubmit }: Props) {
 
                     <FormControl
                       inputId="certificate_password"
-                      label="Provisioning Certificate Password"
+                      label="提供证书密码"
                       size="medium"
-                      tooltip="Needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character."
+                      tooltip="需要8-32个字符，包括一个大写字母、一个小写字母、一个10进制数字和一个特殊字符。"
                       errors={errors.certFilePassword}
                     >
                       <Field
@@ -251,9 +251,9 @@ export function SettingsOpenAMT({ settings, onSubmit }: Props) {
                       disabled={!isValid || !dirty}
                       data-cy="settings-fdoButton"
                       isLoading={isSubmitting}
-                      loadingText="Saving settings..."
+                      loadingText="正在保存设置..."
                     >
-                      Save settings
+                      保存设置
                     </LoadingButton>
                   </div>
                 </div>

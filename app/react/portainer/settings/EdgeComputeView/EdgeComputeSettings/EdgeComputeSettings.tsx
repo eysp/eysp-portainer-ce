@@ -32,7 +32,7 @@ export function EdgeComputeSettings({ settings, onSubmit }: Props) {
   return (
     <div className="row">
       <Widget>
-        <WidgetTitle icon="svg-laptop" title="Edge Compute settings" />
+        <WidgetTitle icon="svg-laptop" title="边缘计算设置" />
         <WidgetBody>
           <Formik
             initialValues={settings}
@@ -57,7 +57,7 @@ export function EdgeComputeSettings({ settings, onSubmit }: Props) {
               >
                 <FormControl
                   inputId="edge_enable"
-                  label="Enable Edge Compute features"
+                  label="启用边缘计算功能"
                   size="small"
                   errors={errors.EnableEdgeComputeFeatures}
                 >
@@ -73,15 +73,15 @@ export function EdgeComputeSettings({ settings, onSubmit }: Props) {
                 </FormControl>
 
                 <TextTip color="blue">
-                  When enabled, this will enable Portainer to execute Edge
-                  Device features.
+                启用后，这将使Portainer能够执行Edge
+                  设备的功能。
                 </TextTip>
 
                 <FormControl
                   inputId="edge_enforce_id"
-                  label="Enforce use of Portainer generated Edge ID"
+                  label="强制使用Portainer生成的边缘ID"
                   size="small"
-                  tooltip="This setting only applies to manually created environments."
+                  tooltip="这个设置只适用于手动创建的环境。"
                   errors={errors.EnforceEdgeID}
                 >
                   <Switch
@@ -103,8 +103,8 @@ export function EdgeComputeSettings({ settings, onSubmit }: Props) {
                     setFieldValue('EdgeAgentCheckinInterval', value)
                   }
                   isDefaultHidden
-                  label="Edge agent default poll frequency"
-                  tooltip="Interval used by default by each Edge agent to check in with the Portainer instance. Affects Edge environment management and Edge compute features."
+                  label="边缘代理默认轮询频率"
+                  tooltip="每个Edge代理默认使用的与Portainer实例签到的时间间隔。影响Edge环境管理和Edge计算功能。"
                 />
 
                 <div className="form-group mt-5">
@@ -113,9 +113,9 @@ export function EdgeComputeSettings({ settings, onSubmit }: Props) {
                       disabled={!isValid || !dirty}
                       data-cy="settings-edgeComputeButton"
                       isLoading={isSubmitting}
-                      loadingText="Saving settings..."
+                      loadingText="保存设置中..."
                     >
-                      Save settings
+                      保存设置
                     </LoadingButton>
                   </div>
                 </div>

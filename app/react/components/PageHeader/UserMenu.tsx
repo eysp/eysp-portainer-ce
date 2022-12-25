@@ -53,7 +53,7 @@ export function UserMenu() {
 
         <MenuLink
           to="portainer.logout"
-          label="注销"
+          label="注销登陆"
           data-cy="userMenu-logOut"
           params={{ performApiLogout: true }}
         />

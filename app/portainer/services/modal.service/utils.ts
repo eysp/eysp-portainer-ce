@@ -26,7 +26,7 @@ export function confirmButtons(options: ButtonsOptions) {
       label:
         options.cancel && options.cancel.label
           ? sanitize(options.cancel.label)
-          : 'Cancel',
+          : '取消',
       className: 'btn-default',
     },
   };

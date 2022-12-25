@@ -4,6 +4,6 @@ interface SelectedRowsCountProps {
 
 export function SelectedRowsCount({ value }: SelectedRowsCountProps) {
   return value !== 0 ? (
-    <div className="infoBar">{value} item(s) selected</div>
+    <div className="infoBar">选择了 {value} 个项目</div>
   ) : null;
 }

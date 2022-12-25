@@ -71,7 +71,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Name'"
+                  col-title="'名称'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Name'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Name' && $ctrl.state.reverseOrder"
@@ -80,7 +80,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Image'"
+                  col-title="'镜像'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Image'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Image' && $ctrl.state.reverseOrder"
@@ -89,7 +89,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Image Pull Policy'"
+                  col-title="'镜像拉取策略'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'ImagePullPolicy'"
                   is-sorted-desc="$ctrl.state.orderBy === 'ImagePullPolicy' && $ctrl.state.reverseOrder"
@@ -98,7 +98,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Status'"
+                  col-title="'状态'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Status'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Status' && $ctrl.state.reverseOrder"
@@ -107,7 +107,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Node'"
+                  col-title="'节点'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'Node'"
                   is-sorted-desc="$ctrl.state.orderBy === 'Node' && $ctrl.state.reverseOrder"
@@ -125,7 +125,7 @@
               </th>
               <th>
                 <table-column-header
-                  col-title="'Creation date'"
+                  col-title="'创建日期'"
                   can-sort="true"
                   is-sorted="$ctrl.state.orderBy === 'CreationDate'"
                   is-sorted-desc="$ctrl.state.orderBy === 'CreationDate' && $ctrl.state.reverseOrder"
@@ -163,17 +163,17 @@
                   ui-sref="kubernetes.applications.application.stats({ pod: item.PodName, container: item.Name })"
                   class="vertical-center mr-1"
                 >
-                  <pr-icon icon="'bar-chart'" feather="true"></pr-icon>Stats
+                  <pr-icon icon="'bar-chart'" feather="true"></pr-icon>统计
                 </a>
                 <a ui-sref="kubernetes.applications.application.logs({ pod: item.PodName, container: item.Name })" class="vertical-center mr-1">
-                  <pr-icon icon="'file-text'" feather="true"></pr-icon>Logs
+                  <pr-icon icon="'file-text'" feather="true"></pr-icon>日志
                 </a>
                 <a
                   ng-if="item.Status === 'Running'"
                   ui-sref="kubernetes.applications.application.console({ pod: item.PodName, container: item.Name })"
                   class="vertical-center mr-1"
                 >
-                  <pr-icon icon="'terminal'" feather="true"></pr-icon>Console
+                  <pr-icon icon="'terminal'" feather="true"></pr-icon>控制台
                 </a>
               </td>
             </tr>

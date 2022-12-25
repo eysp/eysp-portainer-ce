@@ -41,7 +41,7 @@ export function NetworkContainersTable({
     <div className="row">
       <div className="col-lg-12 col-md-12 col-xs-12">
         <TableContainer>
-          <TableTitle label="Containers in network" icon="server" featherIcon />
+          <TableTitle label="网络中的容器" icon="server" featherIcon />
           <Table className="nopadding">
             <DetailsTable
               headers={tableHeaders}

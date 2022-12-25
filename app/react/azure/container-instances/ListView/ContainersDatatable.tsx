@@ -98,7 +98,7 @@ export function ContainersDatatable({
     <div className="row">
       <div className="col-sm-12">
         <TableContainer>
-          <TableTitle icon={Box} label="Containers">
+          <TableTitle icon={Box} label="容器">
             <SearchBar
               value={searchBarValue}
               onChange={handleSearchBarChange}

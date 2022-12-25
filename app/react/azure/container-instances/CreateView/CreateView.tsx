@@ -7,7 +7,7 @@ export function CreateView() {
   return (
     <>
       <PageHeader
-        title="Create container instance"
+        title="创建容器实例"
         breadcrumbs={[
           { link: 'azure.containerinstances', label: 'Container instances' },
           { label: '添加容器' },

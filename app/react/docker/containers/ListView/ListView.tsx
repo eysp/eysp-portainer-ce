@@ -20,7 +20,7 @@ export function ListView({ endpoint: environment }: Props) {
   return (
     <>
       <PageHeader
-        title="Container list"
+        title="容器列表"
         breadcrumbs={[{ label: '容器' }]}
         reload
       />

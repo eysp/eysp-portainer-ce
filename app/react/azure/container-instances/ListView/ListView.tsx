@@ -43,7 +43,7 @@ export function ListView() {
       <PageHeader
         breadcrumbs="Container instances"
         reload
-        title="Container list"
+        title="容器列表"
       />
       <TableSettingsProvider defaults={defaultSettings} storageKey={tableKey}>
         <ContainersDatatable

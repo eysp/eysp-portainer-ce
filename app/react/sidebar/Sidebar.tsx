@@ -38,7 +38,7 @@ export function Sidebar() {
             <SidebarItem
               to="portainer.home"
               icon={Home}
-              label="Home"
+              label="首页"
               data-cy="portainerSidebar-home"
             />
 

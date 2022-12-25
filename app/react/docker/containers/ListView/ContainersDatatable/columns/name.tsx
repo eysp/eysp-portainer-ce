@@ -11,7 +11,7 @@ import { TableSettings } from '../types';
 import { useRowContext } from '../RowContext';
 
 export const name: Column<DockerContainer> = {
-  Header: 'Name',
+  Header: '名称',
   accessor: (row) => {
     const name = row.Names[0];
     return name.substring(1, name.length);

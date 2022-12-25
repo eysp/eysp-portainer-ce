@@ -63,9 +63,9 @@ export function ItemView() {
   return (
     <>
       <PageHeader
-        title="Container Instance"
+        title="容器实例"
         breadcrumbs={[
-          { link: 'azure.containerinstances', label: 'Container instances' },
+          { link: 'azure.containerinstances', label: '容器实例' },
           { label: container.name },
         ]}
       />
@@ -74,8 +74,8 @@ export function ItemView() {
         <div className="col-sm-12">
           <Widget>
             <WidgetBody className="form-horizontal">
-              <FormSectionTitle>Azure settings</FormSectionTitle>
-              <FormControl label="Subscription" inputId="subscription-input">
+              <FormSectionTitle>Azure 设置</FormSectionTitle>
+              <FormControl label="订阅" inputId="subscription-input">
                 <Input
                   name="subscription"
                   id="subscription-input"
@@ -84,7 +84,7 @@ export function ItemView() {
                 />
               </FormControl>
 
-              <FormControl label="Resource group" inputId="resourceGroup-input">
+              <FormControl label="资源组" inputId="resourceGroup-input">
                 <Input
                   name="resourceGroup"
                   id="resourceGroup-input"
@@ -93,7 +93,7 @@ export function ItemView() {
                 />
               </FormControl>
 
-              <FormControl label="Location" inputId="location-input">
+              <FormControl label="位置" inputId="location-input">
                 <Input
                   name="location"
                   id="location-input"
@@ -102,9 +102,9 @@ export function ItemView() {
                 />
               </FormControl>
 
-              <FormSectionTitle>Container configuration</FormSectionTitle>
+              <FormSectionTitle>容器配置</FormSectionTitle>
 
-              <FormControl label="Name" inputId="name-input">
+              <FormControl label="名称" inputId="name-input">
                 <Input
                   name="name"
                   id="name-input"
@@ -113,7 +113,7 @@ export function ItemView() {
                 />
               </FormControl>
 
-              <FormControl label="Image" inputId="image-input">
+              <FormControl label="镜像" inputId="image-input">
                 <Input
                   name="image"
                   id="image-input"
@@ -133,7 +133,7 @@ export function ItemView() {
 
               <PortsMappingField value={container.ports} readOnly />
 
-              <FormControl label="Public IP" inputId="public-ip">
+              <FormControl label="公网 IP" inputId="public-ip">
                 <Input
                   name="public-ip"
                   id="public-ip"
@@ -142,7 +142,7 @@ export function ItemView() {
                 />
               </FormControl>
 
-              <FormSectionTitle>Container Resources</FormSectionTitle>
+              <FormSectionTitle>容器资源</FormSectionTitle>
 
               <FormControl label="CPU" inputId="cpu-input">
                 <Input
@@ -155,7 +155,7 @@ export function ItemView() {
                 />
               </FormControl>
 
-              <FormControl label="Memory" inputId="cpu-input">
+              <FormControl label="内存" inputId="cpu-input">
                 <Input
                   name="memory"
                   id="memory-input"

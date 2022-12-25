@@ -100,7 +100,7 @@ export function ContainersDatatable({
         }}
         storageKey={storageKey}
         dataset={containersQuery.data || []}
-        emptyContentLabel="No containers found"
+        emptyContentLabel="未找到容器"
       />
     </RowProvider>
   );

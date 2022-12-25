@@ -42,32 +42,32 @@ const NvidiaCapabilitiesOptions = [
   {
     value: 'compute',
     label: 'compute',
-    description: 'required for CUDA and OpenCL applications',
+    description: 'CUDA和OpenCL应用所需的',
   },
   {
     value: 'compat32',
     label: 'compat32',
-    description: 'required for running 32-bit applications',
+    description: '运行32位应用程序时需要',
   },
   {
     value: 'graphics',
     label: 'graphics',
-    description: 'required for running OpenGL and Vulkan applications',
+    description: '运行OpenGL和Vulkan应用程序所需要的',
   },
   {
     value: 'utility',
     label: 'utility',
-    description: 'required for using nvidia-smi and NVML',
+    description: '使用nvidia-smi和NVML时需要',
   },
   {
     value: 'video',
     label: 'video',
-    description: 'required for using the Video Codec SDK',
+    description: '使用视频编解码器SDK时需要',
   },
   {
     value: 'display',
     label: 'display',
-    description: 'required for leveraging X11 display',
+    description: '需要利用X11显示',
   },
 ];
 
@@ -115,7 +115,7 @@ export function Gpu({
 
     options.unshift({
       value: 'all',
-      label: 'Use All GPUs',
+      label: '使用所有GPU',
     });
 
     return options;
@@ -183,7 +183,7 @@ export function Gpu({
     <div>
       <div className="form-group">
         <div className="col-sm-3 col-lg-2 control-label text-left">
-          Enable GPU
+          启用 GPU
           <Switch
             id="enabled"
             name="enabled"
@@ -211,8 +211,8 @@ export function Gpu({
         <>
           <div className="form-group">
             <div className="col-sm-3 col-lg-2 control-label text-left">
-              Capabilities
-              <Tooltip message="‘compute’ and ‘utility’ capabilities are preselected by Portainer because they are used by default when you don’t explicitly specify capabilities with docker CLI ‘--gpus’ option." />
+            能力
+              <Tooltip message="计算 和 实用 功能由Portainer预选，因为当你没有用docker CLI的 '--gpus' 选项明确指定功能时，它们被默认为使用。" />
             </div>
             <div className="col-sm-9 col-lg-10 text-left">
               <Select<GpuOption, true>
@@ -228,8 +228,8 @@ export function Gpu({
 
           <div className="form-group">
             <div className="col-sm-3 col-lg-2 control-label text-left">
-              Control
-              <Tooltip message="This is the generated equivalent of the '--gpus' docker CLI parameter based on your settings." />
+              控制
+              <Tooltip message="这是根据你的设置生成的相当于 '--gpus' 的docker CLI参数。" />
             </div>
             <div className="col-sm-9 col-lg-10">
               <code>{gpuCmd}</code>

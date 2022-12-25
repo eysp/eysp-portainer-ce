@@ -93,7 +93,7 @@ export function PasswordLengthSlider({
     <div className={clsx(styles.root, styles[sliderProps.strength])}>
       <div className="col-sm-4">
         <SliderWithTooltip
-          tipFormatter={(value) => `${value} characters`}
+          tipFormatter={(value) => `${value} 个字符`}
           min={min}
           max={max}
           step={step}

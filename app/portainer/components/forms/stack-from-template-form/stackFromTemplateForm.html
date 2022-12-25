@@ -11,7 +11,7 @@
           </div>
         </div>
         <!-- !description -->
-        <div class="form-section-title"> Configuration </div>
+        <div class="form-section-title"> 配置 </div>
         <!-- name-input -->
         <div class="form-group">
           <label for="template_name" class="col-sm-2 control-label text-left">名称</label>
@@ -24,7 +24,7 @@
             <div ng-messages="stackTemplateForm.template_name.$error">
               <p ng-message="pattern">
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span>This field must consist of lower case alphanumeric characters, '_' or '-' (例如 'my-name', or 'abc-123').</span>
+                <span>该字段必须由小写字母数字字符组成， '_' or '-' (例如 'my-name', 或 'abc-123').</span>
               </p>
               <p ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 本栏为必填项。</p>
             </div>
@@ -67,7 +67,7 @@
             </button>
             <button type="button" class="btn btn-default" ng-click="$ctrl.unselectTemplate($ctrl.template)">隐藏</button>
             <div class="cols-sm-12 small text-danger space-left mt-1" ng-if="$ctrl.state.formValidationError">{{ $ctrl.state.formValidationError }}</div>
-            <div class="cols-sm-12 small text-danger space-left mt-1" ng-if="!$ctrl.state.deployable">This template type cannot be deployed on this environment.</div>
+            <div class="cols-sm-12 small text-danger space-left mt-1" ng-if="!$ctrl.state.deployable">无法在此环境上部署此模板类型。</div>
           </div>
         </div>
         <!-- !actions -->

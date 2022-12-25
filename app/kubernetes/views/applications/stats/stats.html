@@ -1,6 +1,6 @@
 <page-header
   ng-if="ctrl.state.viewReady"
-  title="'Application stats'"
+  title="'应用程序统计'"
   breadcrumbs="[
     { label:'Namespaces', link:'kubernetes.resourcePools' },
     {
@@ -8,7 +8,7 @@
       link: 'kubernetes.resourcePools.resourcePool',
       linkParams:{ id: ctrl.state.transition.namespace }
     },
-    { label:'Applications', link:'kubernetes.applications' },
+    { label:'应用程序', link:'kubernetes.applications' },
     {
       label:ctrl.state.transition.applicationName,
       link: 'kubernetes.applications.application',
@@ -30,8 +30,7 @@
   <information-panel ng-if="!ctrl.state.getMetrics" title-text="Unable to retrieve container metrics">
     <span class="small text-warning vertical-center">
       <pr-icon icon="'alert-triangle'" feather="true" mode="'warning'"></pr-icon>
-      Portainer was unable to retrieve any metrics associated to that container. Please contact your administrator to ensure that the Kubernetes metrics feature is properly
-      configured.
+      Portainer无法检索到与该容器相关的任何度量。请联系你的管理员，以确保Kubernetes的指标功能配置正确。
     </span>
   </information-panel>
   <div class="row" ng-if="ctrl.state.getMetrics">
@@ -40,7 +39,7 @@
         <div class="toolBar pt-5 px-5">
           <div class="toolBarTitle flex">
             <pr-icon icon="'info'" feather="true" mode="'primary'" class-name="'icon-nested-blue'"></pr-icon>
-            <span class="vertical-center"> About statistics </span>
+            <span class="vertical-center"> 关于统计 </span>
           </div>
         </div>
         <rd-widget-body>
@@ -48,8 +47,8 @@
             <div class="form-group">
               <div class="col-sm-12">
                 <span class="small text-warning">
-                  This view displays real-time statistics about the container <b>{{ ctrl.state.transition.containerName | trimcontainername }}</b
-                  >.
+                  该视图显示关于容器 <b>{{ ctrl.state.transition.containerName | trimcontainername }}</b
+                  >的实时统计数据。
                 </span>
               </div>
             </div>
@@ -69,7 +68,7 @@
               <div class="col-sm-12">
                 <span class="small text-muted">
                   <pr-icon icon="'alert-triangle'" feather="true" mode="'warning'"></pr-icon>
-                  Network stats are unavailable for this container.
+                  该容器的网络统计资料不可用。
                 </span>
               </div>
             </div>
@@ -85,7 +84,7 @@
         <div class="toolBar pt-5 px-5">
           <div class="toolBarTitle flex">
             <pr-icon icon="'svg-memory'" mode="'primary'" class-name="'icon-nested-blue'"></pr-icon>
-            <span class="vertical-center"> Memory usage </span>
+            <span class="vertical-center"> 内存使用 </span>
           </div>
         </div>
         <rd-widget-body>
@@ -100,7 +99,7 @@
         <div class="toolBar pt-5 px-5">
           <div class="toolBarTitle flex">
             <pr-icon icon="'cpu'" feather="true" mode="'primary'" class-name="'icon-nested-blue'"></pr-icon>
-            <span class="vertical-center"> CPU usage </span>
+            <span class="vertical-center"> CPU 使用 </span>
           </div>
         </div>
         <rd-widget-body>

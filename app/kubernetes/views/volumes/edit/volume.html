@@ -36,7 +36,7 @@
                       <td data-cy="k8sVolDetail-volName">
                         {{ ctrl.volume.PersistentVolumeClaim.Name }}
                         <span class="label label-primary image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && ctrl.isExternalVolume()">外部</span>
-                        <span class="label label-warning image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && !ctrl.isUsed()">unused</span>
+                        <span class="label label-warning image-tag label-margins" ng-if="!ctrl.isSystemNamespace() && !ctrl.isUsed()">未使用</span>
                       </td>
                     </tr>
                     <tr>

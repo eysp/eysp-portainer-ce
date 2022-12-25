@@ -32,11 +32,11 @@ export function NetworkDetailsTable({
     <div className="row">
       <div className="col-lg-12 col-md-12 col-xs-12">
         <TableContainer>
-          <TableTitle label="Network details" icon="share-2" featherIcon />
+          <TableTitle label="网络详情" icon="share-2" featherIcon />
           <Table className="nopadding">
             <DetailsTable dataCy="networkDetails-detailsTable">
               {/* networkRowContent */}
-              <DetailsTable.Row label="Name">{network.Name}</DetailsTable.Row>
+              <DetailsTable.Row label="名称">{network.Name}</DetailsTable.Row>
               <DetailsTable.Row label="Id">
                 {network.Id}
                 {allowRemoveNetwork && (
@@ -53,19 +53,19 @@ export function NetworkDetailsTable({
                         className="space-right"
                         aria-hidden="true"
                       />
-                      Delete this network
+                      删除此网络
                     </Button>
                   </Authorized>
                 )}
               </DetailsTable.Row>
-              <DetailsTable.Row label="Driver">
+              <DetailsTable.Row label="驱动程序">
                 {network.Driver}
               </DetailsTable.Row>
-              <DetailsTable.Row label="Scope">{network.Scope}</DetailsTable.Row>
-              <DetailsTable.Row label="Attachable">
+              <DetailsTable.Row label="范围">{network.Scope}</DetailsTable.Row>
+              <DetailsTable.Row label="可附加的">
                 {String(network.Attachable)}
               </DetailsTable.Row>
-              <DetailsTable.Row label="Internal">
+              <DetailsTable.Row label="内部">
                 {String(network.Internal)}
               </DetailsTable.Row>
 
@@ -73,14 +73,14 @@ export function NetworkDetailsTable({
               {ipv4Configs.map((config) => (
                 <Fragment key={config.Subnet}>
                   <DetailsTable.Row
-                    label={`IPV4 Subnet${getConfigDetails(config.Subnet)}`}
+                    label={`IPV4 子网${getConfigDetails(config.Subnet)}`}
                   >
-                    {`IPV4 Gateway${getConfigDetails(config.Gateway)}`}
+                    {`IPV4 网关${getConfigDetails(config.Gateway)}`}
                   </DetailsTable.Row>
                   <DetailsTable.Row
-                    label={`IPV4 IP Range${getConfigDetails(config.IPRange)}`}
+                    label={`IPV4 IP 范围${getConfigDetails(config.IPRange)}`}
                   >
-                    {`IPV4 Excluded IPs${getAuxiliaryAddresses(
+                    {`IPV4 排除的IP${getAuxiliaryAddresses(
                       config.AuxiliaryAddresses
                     )}`}
                   </DetailsTable.Row>

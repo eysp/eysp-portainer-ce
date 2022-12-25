@@ -38,7 +38,7 @@ export function CreateTeamForm({ users, teams }: Props) {
         <Widget>
           <Widget.Title
             icon="plus"
-            title="Add a new team"
+            title="添加新团队"
             featherIcon
             className="vertical-center"
           />
@@ -65,7 +65,7 @@ export function CreateTeamForm({ users, teams }: Props) {
                 >
                   <FormControl
                     inputId="team_name"
-                    label="Name"
+                    label="名称"
                     errors={errors.name}
                     required
                   >
@@ -74,7 +74,7 @@ export function CreateTeamForm({ users, teams }: Props) {
                       name="name"
                       id="team_name"
                       required
-                      placeholder="e.g. development"
+                      placeholder="例如 development"
                       data-cy="team-teamNameInput"
                     />
                   </FormControl>
@@ -82,8 +82,8 @@ export function CreateTeamForm({ users, teams }: Props) {
                   {users.length > 0 && (
                     <FormControl
                       inputId="users-input"
-                      label="Select team leader(s)"
-                      tooltip="You can assign one or more leaders to this team. Team leaders can manage their teams users and resources."
+                      label="选择团队领导"
+                      tooltip="您可以为此团队指派一个或多个领导者。团队领导者可以管理他们的团队用户和资源。"
                       errors={errors.leaders}
                     >
                       <UsersSelector
@@ -94,7 +94,7 @@ export function CreateTeamForm({ users, teams }: Props) {
                         users={users}
                         dataCy="team-teamLeaderSelect"
                         inputId="users-input"
-                        placeholder="Select one or more team leaders"
+                        placeholder="选择一个或多个团队领导"
                       />
                     </FormControl>
                   )}
@@ -105,10 +105,10 @@ export function CreateTeamForm({ users, teams }: Props) {
                         disabled={!isValid}
                         data-cy="team-createTeamButton"
                         isLoading={isSubmitting || addTeamMutation.isLoading}
-                        loadingText="Creating team..."
+                        loadingText="创建团队中..."
                       >
                         <Icon icon="plus" feather size="md" />
-                        Create team
+                        创建团队
                       </LoadingButton>
                     </div>
                   </div>

@@ -88,7 +88,7 @@ export function TeamsDatatable({ teams, isAdmin }: Props) {
     <div className="row">
       <div className="col-sm-12">
         <Table.Container>
-          <Table.Title icon={Users} label="Teams">
+          <Table.Title icon={Users} label="团队">
             <SearchBar
               value={searchBarValue}
               onChange={handleSearchBarChange}
@@ -102,7 +102,7 @@ export function TeamsDatatable({ teams, isAdmin }: Props) {
                   disabled={selectedFlatRows.length === 0}
                   icon={Trash2}
                 >
-                  Remove
+                  删除
                 </Button>
               </Table.Actions>
             )}
@@ -147,7 +147,7 @@ export function TeamsDatatable({ teams, isAdmin }: Props) {
                   />
                 )}
                 rows={page}
-                emptyContent="No teams found"
+                emptyContent="未找到团队"
               />
             </tbody>
           </Table>

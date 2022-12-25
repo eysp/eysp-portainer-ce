@@ -170,7 +170,7 @@
             <a ui-sref="kubernetes.volumes.volume({ namespace: item.ResourcePool.Namespace.Name, name: item.PersistentVolumeClaim.Name })">{{ item.PersistentVolumeClaim.Name }}</a>
             <span class="label label-info image-tag label-margins" ng-if="$ctrl.isSystemNamespace(item)">系统</span>
             <span class="label label-primary image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && $ctrl.isExternalVolume(item)">外部</span>
-            <span class="label label-warning image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && !$ctrl.isUsed(item)">unused</span>
+            <span class="label label-warning image-tag label-margins" ng-if="!$ctrl.isSystemNamespace(item) && !$ctrl.isUsed(item)">未使用</span>
           </td>
           <td>
             <a ui-sref="kubernetes.resourcePools.resourcePool({ id: item.ResourcePool.Namespace.Name })">{{ item.ResourcePool.Namespace.Name }}</a>

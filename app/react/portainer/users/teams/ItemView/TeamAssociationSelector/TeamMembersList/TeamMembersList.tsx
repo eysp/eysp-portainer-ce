@@ -124,7 +124,7 @@ export function TeamMembersList({ users, roles, disabled, teamId }: Props) {
             id="filter-users"
             value={search}
             onChange={handleSearchBarChange}
-            placeholder="Filter..."
+            placeholder="筛选..."
             className="input-sm"
           />
         </div>

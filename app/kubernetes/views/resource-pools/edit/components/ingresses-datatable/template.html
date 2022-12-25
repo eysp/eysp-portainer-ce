@@ -107,7 +107,7 @@
                   <pr-icon icon="'svg-arrowright'" class-name="'m-0.5'"></pr-icon>
                   <a ui-sref="kubernetes.applications.application({ name: path.ApplicationName, namespace: item.Namespace })">{{ path.ApplicationName }}</a>
                 </span>
-                <span class="label label-warning image-tag label-margins" ng-if="path.ApplicationName === '-'">unused</span>
+                <span class="label label-warning image-tag label-margins" ng-if="path.ApplicationName === '-'">未使用</span>
               </td>
             </tr>
             <tr ng-if="!$ctrl.dataset">

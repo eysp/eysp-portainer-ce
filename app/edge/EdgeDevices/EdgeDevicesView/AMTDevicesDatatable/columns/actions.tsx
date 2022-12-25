@@ -20,7 +20,7 @@ enum DeviceAction {
 }
 
 export const actions: Column<Device> = {
-  Header: 'Actions',
+  Header: '操作',
   accessor: () => 'actions',
   id: 'actions',
   disableFilters: true,
@@ -76,15 +76,15 @@ export function ActionsCell({ row: { original: device } }: CellProps<Device>) {
 
   async function handleDeviceActionClick(action: string) {
     const confirmed = await confirmAsync({
-      title: 'Confirm action',
-      message: `Are you sure you want to ${action} the device?`,
+      title: '确认操作',
+      message: `是否确实要对设备执行 ${action} ？`,
       buttons: {
         cancel: {
-          label: 'Cancel',
+          label: '取消',
           className: 'btn-default',
         },
         confirm: {
-          label: 'Confirm',
+          label: '确认',
           className: 'btn-primary',
         },
       },

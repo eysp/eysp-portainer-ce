@@ -16,7 +16,7 @@ export function ListView() {
 
   return (
     <>
-      <PageHeader title="Teams" breadcrumbs={[{ label: 'Teams management' }]} />
+      <PageHeader title="Teams" breadcrumbs={[{ label: '团队管理' }]} />
 
       {usersQuery.data && teamsQuery.data && (
         <CreateTeamForm users={usersQuery.data} teams={teamsQuery.data} />

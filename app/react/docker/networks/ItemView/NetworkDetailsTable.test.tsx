@@ -13,7 +13,7 @@ jest.mock('@uirouter/react', () => ({
   })),
 }));
 
-test('Network details values should be visible', async () => {
+test('网络详细信息值应可见', async () => {
   const network = getNetwork('test');
 
   const { findByText } = await renderComponent(true, network);
@@ -30,20 +30,20 @@ test('Network details values should be visible', async () => {
   ).resolves.toBeVisible();
 });
 
-test(`System networks shouldn't show a delete button`, async () => {
+test(`系统网络不应显示删除按钮`, async () => {
   const systemNetwork = getNetwork('bridge');
   const { queryByText } = await renderComponent(true, systemNetwork);
 
-  const deleteButton = queryByText('Delete this network');
+  const deleteButton = queryByText('删除此网络');
   expect(deleteButton).toBeNull();
 });
 
-test('Non system networks should have a delete button', async () => {
+test('非系统网络应具有删除按钮', async () => {
   const nonSystemNetwork = getNetwork('non system network');
 
   const { queryByText } = await renderComponent(true, nonSystemNetwork);
 
-  const button = queryByText('Delete this network');
+  const button = queryByText('删除此网络');
   expect(button).toBeVisible();
 });
 

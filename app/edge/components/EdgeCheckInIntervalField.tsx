@@ -17,22 +17,22 @@ interface Props {
 }
 
 export const checkinIntervalOptions = [
-  { label: 'Use default interval', value: 0 },
+  { label: '使用默认间隔', value: 0 },
   {
-    label: '5 seconds',
+    label: '5 秒',
     value: 5,
   },
   {
-    label: '10 seconds',
+    label: '10 秒',
     value: 10,
   },
   {
-    label: '30 seconds',
+    label: '30 秒',
     value: 30,
   },
-  { label: '5 minutes', value: 300 },
-  { label: '1 hour', value: 3600 },
-  { label: '1 day', value: 86400 },
+  { label: '5 分钟', value: 300 },
+  { label: '1 小时', value: 3600 },
+  { label: '1 天', value: 86400 },
 ];
 
 export function EdgeCheckinIntervalField({
@@ -40,8 +40,8 @@ export function EdgeCheckinIntervalField({
   readonly,
   onChange,
   isDefaultHidden = false,
-  label = 'Poll frequency',
-  tooltip = 'Interval used by this Edge agent to check in with the Portainer instance. Affects Edge environment management and Edge compute features.',
+  label = '轮询频率',
+  tooltip = '该Edge代理用于与Portainer实例签到的时间间隔。影响Edge环境管理和Edge计算功能。',
 }: Props) {
   const options = useOptions(isDefaultHidden);
 
@@ -87,7 +87,7 @@ function useOptions(isDefaultHidden: boolean) {
         return [
           {
             value: 0,
-            label: `Use default interval (${label})`,
+            label: `使用默认间隔 (${label})`,
           },
           ...options.slice(1),
         ];

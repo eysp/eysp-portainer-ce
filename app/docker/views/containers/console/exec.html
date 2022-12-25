@@ -70,7 +70,7 @@
           </div>
           <div ng-if="state !== states.disconnected">
             <label
-              >以 <code>{{ ::formValues.user || '默认用户' }}</code> 的形式执行到容器中，使用命令
+              >以 <code>{{ ::formValues.user || '默认用户' }}</code> 的身份执行到容器中，使用命令
               <code>{{ formValues.isCustomCommand ? formValues.customCommand : formValues.command }}</code></label
             >
             <button type="button" class="btn btn-primary" ng-click="disconnect()">

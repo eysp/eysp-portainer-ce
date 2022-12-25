@@ -193,15 +193,15 @@ function EndpointController(
 
     if (isEdgeEnvironment(endpoint.Type) && _.difference($scope.initialTagIds, endpoint.TagIds).length > 0) {
       let confirmed = await confirmDestructiveAsync({
-        title: 'Confirm action',
-        message: 'Removing tags from this environment will remove the corresponding edge stacks when dynamic grouping is being used',
+        title: '确认操作',
+        message: '当使用动态分组时，从这个环境中删除标签将删除相应的边缘堆栈。',
         buttons: {
           cancel: {
-            label: 'Cancel',
+            label: '取消',
             className: 'btn-default',
           },
           confirm: {
-            label: 'Confirm',
+            label: '确认',
             className: 'btn-primary',
           },
         },

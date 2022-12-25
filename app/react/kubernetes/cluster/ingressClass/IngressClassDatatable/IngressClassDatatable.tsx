@@ -195,20 +195,20 @@ export function IngressClassDatatable({
           ''
         )}</ul>`;
         confirmWarn({
-          title: 'Disallow in-use ingress controllers?',
+          title: '不允许使用中的入站控制器？',
           message: `
             <div>
-              <p>There are ingress controllers you want to disallow that are in use:</p>
+              <p>有一些你想禁止的入口控制器正在使用中：</p>
               ${usedControllerHtmlList}
-              <p>No new ingress rules can be created for the disallowed controllers.</p>
+              <p>不能为不允许的控制器创建新的入口规则。</p>
             </div>`,
           buttons: {
             cancel: {
-              label: 'Cancel',
+              label: '取消',
               className: 'btn-default',
             },
             confirm: {
-              label: 'Disallow',
+              label: '禁止',
               className: 'btn-warning',
             },
           },

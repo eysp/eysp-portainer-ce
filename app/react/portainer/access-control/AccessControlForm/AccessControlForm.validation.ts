@@ -14,8 +14,8 @@ export function validationSchema(isAdmin: boolean) {
     .test(
       'user-and-team',
       isAdmin
-        ? 'You must specify at least one team or user.'
-        : 'You must specify at least one team.',
+        ? '你必须至少指定一个团队或用户。'
+        : '你必须至少指定一个团队。',
       ({ ownership, authorizedTeams, authorizedUsers }) => {
         if (ownership !== ResourceControlOwnership.RESTRICTED) {
           return true;

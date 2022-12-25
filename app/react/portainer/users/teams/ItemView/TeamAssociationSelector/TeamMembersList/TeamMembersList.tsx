@@ -90,7 +90,7 @@ export function TeamMembersList({ users, roles, disabled, teamId }: Props) {
   );
   return (
     <Widget>
-      <Widget.Title icon={Users} title="Team members">
+      <Widget.Title icon={Users} title="团队成员">
       每页项目数:
         <select
           value={pageSize}

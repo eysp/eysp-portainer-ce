@@ -32,6 +32,14 @@ function CEFooter() {
         >
           升级
         </a>
+        <a
+          href="https://hub.docker.com/r/6053537/portainer-ce"
+          className="text-blue-6 font-medium"
+          target="_blank"
+          rel="noreferrer"
+        >
+          汉化
+        </a>
       </FooterContent>
     </div>
   );

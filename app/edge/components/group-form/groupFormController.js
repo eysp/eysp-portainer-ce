@@ -51,15 +51,15 @@ export class EdgeGroupFormController {
   dissociateEndpoint(endpoint) {
     return this.$async(async () => {
       const confirmed = await confirmDestructiveAsync({
-        title: 'Confirm action',
-        message: 'Removing the environment from this group will remove its corresponding edge stacks',
+        title: '确认操作',
+        message: '从这个组中删除环境将删除其相应的边缘堆栈',
         buttons: {
           cancel: {
-            label: 'Cancel',
+            label: '取消',
             className: 'btn-default',
           },
           confirm: {
-            label: 'Confirm',
+            label: '确认',
             className: 'btn-primary',
           },
         },

@@ -112,7 +112,7 @@ export function EdgeDevicesDatatableActions({
   async function onAddNewDeviceClick() {
     const result = isFDOEnabled
       ? await promptAsync({
-          title: 'How would you like to add an Edge Device?',
+          title: '您希望如何添加边缘设备？',
           inputType: 'radio',
           inputOptions: [
             {
@@ -120,13 +120,13 @@ export function EdgeDevicesDatatableActions({
               value: DeployType.FDO,
             },
             {
-              text: 'Deploy agent manually',
+              text: '手动部署代理',
               value: DeployType.MANUAL,
             },
           ],
           buttons: {
             confirm: {
-              label: 'Confirm',
+              label: '确认',
               className: 'btn-primary',
             },
           },
@@ -152,14 +152,14 @@ export function EdgeDevicesDatatableActions({
 
     const confirmed = await confirmAsync({
       title: '',
-      message: `Associate ${selectedEnvironment.Name} with OpenAMT`,
+      message: `将 ${selectedEnvironment.Name} 与OpenAMT关联`,
       buttons: {
         cancel: {
-          label: 'Cancel',
+          label: '取消',
           className: 'btn-default',
         },
         confirm: {
-          label: 'Confirm',
+          label: '确认',
           className: 'btn-primary',
         },
       },
@@ -171,7 +171,7 @@ export function EdgeDevicesDatatableActions({
 
     try {
       setLoadingMessage(
-        'Activating Active Management Technology on selected device...'
+        '在所选设备上激活活动管理技术...'
       );
       await activateDevice(selectedEnvironment.Id);
       notifications.success(

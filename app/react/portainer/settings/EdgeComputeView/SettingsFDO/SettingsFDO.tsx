@@ -86,8 +86,7 @@ export function SettingsFDO({ settings, onSubmit }: Props) {
                 </FormControl>
 
                 <TextTip color="blue">
-                  When enabled, this will allow Portainer to interact with FDO
-                  Services.
+                启用后，这将允许Portainer与FDO 服务。
                 </TextTip>
 
                 {edgeComputeFeaturesEnabled && values.enabled && (
@@ -96,7 +95,7 @@ export function SettingsFDO({ settings, onSubmit }: Props) {
 
                     <FormControl
                       inputId="owner_url"
-                      label="Owner Service Server"
+                      label="所有者服务服务器"
                       errors={errors.ownerURL}
                     >
                       <Field
@@ -111,7 +110,7 @@ export function SettingsFDO({ settings, onSubmit }: Props) {
 
                     <FormControl
                       inputId="owner_username"
-                      label="Owner Service Username"
+                      label="所有者服务用户名"
                       errors={errors.ownerUsername}
                     >
                       <Field
@@ -126,7 +125,7 @@ export function SettingsFDO({ settings, onSubmit }: Props) {
 
                     <FormControl
                       inputId="owner_password"
-                      label="Owner Service Password"
+                      label="所有者服务密码"
                       errors={errors.ownerPassword}
                     >
                       <Field
@@ -148,9 +147,9 @@ export function SettingsFDO({ settings, onSubmit }: Props) {
                       disabled={!isValid || !dirty}
                       data-cy="settings-fdoButton"
                       isLoading={isSubmitting}
-                      loadingText="Saving settings..."
+                      loadingText="正在保存设置..."
                     >
-                      Save settings
+                      保存设置
                     </LoadingButton>
                   </div>
                 </div>
@@ -162,8 +161,8 @@ export function SettingsFDO({ settings, onSubmit }: Props) {
             <div className={styles.fdoTable}>
               <FormSectionTitle>Device Profiles</FormSectionTitle>
               <TextTip color="blue">
-                Add, Edit and Manage the list of device profiles available
-                during FDO device setup
+              添加、编辑和管理可用的设备配置文件列表
+                在FDO设备设置过程中
               </TextTip>
               <FDOProfilesDatatableContainer isFDOEnabled={initialFDOEnabled} />
             </div>

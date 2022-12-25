@@ -3,10 +3,10 @@
     <span class="col-sm-12 text-muted small vertical-center">
       <pr-icon icon="'info'" mode="'primary'" feather="true"></pr-icon>
       <span
-        >Indicate the path to the {{ $ctrl.deployMethod == 'compose' ? 'Compose' : 'Manifest' }} file from the root of your repository.
+        >指明仓库根目录中 {{ $ctrl.deployMethod == 'compose' ? 'Compose' : 'Manifest' }} 文件的路径。
         <span ng-if="$ctrl.isDockerStandalone">
-          To enable rebuilding of an image if already present on Docker standalone environments, include<code>pull_policy: build</code>in your compose file as per
-          <a href="https://docs.docker.com/compose/compose-file/#pull_policy">Docker documentation</a>.</span
+          如果已经存在于Docker独立环境中，要启用重建镜像，请在你的编译文件中加入<code>pull_policy: build</code>根据
+          <a href="https://docs.docker.com/compose/compose-file/#pull_policy">Docker文档</a>在你的编译文件中。</span
         ></span
       >
     </span>

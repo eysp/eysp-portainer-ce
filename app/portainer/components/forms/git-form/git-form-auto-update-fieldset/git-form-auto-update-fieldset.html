@@ -4,7 +4,7 @@
       <por-switch-field
         name="'autoUpdate'"
         checked="$ctrl.model.RepositoryAutomaticUpdates"
-        label="'Automatic Updates'"
+        label="'自动更新'"
         label-class="'col-sm-3 col-lg-2'"
         on-change="($ctrl.onChangeAutoUpdate)"
         switch-values="{on:'Yes',off:'No'}"
@@ -98,10 +98,10 @@
   </div>
   <div class="small vertical-center" ng-if="$ctrl.model.RepositoryAutomaticUpdates">
     <pr-icon icon="'info'" mode="'primary'" feather="true"></pr-icon>
-    <span class="text-muted">When enabled, enforces automatic deployment at each interval or webhook invocation.</span>
+    <span class="text-muted">启用后，在每个间隔期或webhook调用时强制执行自动部署。</span>
   </div>
   <div class="small vertical-center" ng-if="!$ctrl.model.RepositoryAutomaticUpdates">
     <pr-icon icon="'info'" mode="'primary'" feather="true"></pr-icon>
-    <span class="text-muted">When enabled, updates from the git repository will occur automatically at an interval or webhook.</span>
+    <span class="text-muted">启用后，来自git仓库的更新将在某个时间间隔或webhook自动发生。</span>
   </div>
 </ng-form>

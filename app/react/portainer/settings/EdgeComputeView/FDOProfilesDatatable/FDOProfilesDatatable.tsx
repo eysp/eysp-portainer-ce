@@ -156,12 +156,12 @@ export function FDOProfilesDatatable({
 
 function userMessage(isLoading: boolean, error?: PortainerError) {
   if (isLoading) {
-    return 'Loading...';
+    return '加载中...';
   }
 
   if (error) {
     return error.message;
   }
 
-  return 'No profiles found';
+  return '未找到配置文件';
 }

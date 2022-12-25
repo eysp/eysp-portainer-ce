@@ -22,13 +22,13 @@ export function EdgeGroupsField({ disabled }: Props) {
   );
 
   return (
-    <FormControl label="Groups" required inputId="groups-select" errors={error}>
+    <FormControl label="群组" required inputId="groups-select" errors={error}>
       <Select
         name={name}
         onBlur={onBlur}
         value={selectedGroups}
         inputId="groups-select"
-        placeholder="Select one or multiple group(s)"
+        placeholder="选择一个或多个组"
         onChange={(selectedGroups) => setValue(selectedGroups.map((g) => g.Id))}
         isMulti
         options={groupsQuery.data || []}

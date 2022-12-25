@@ -419,7 +419,7 @@ angular.module('portainer.docker').controller('ContainerController', [
           Name: restartPolicy,
           MaximumRetryCount: maximumRetryCount,
         };
-        Notifications.success('Success', '更新了重启政策');
+        Notifications.success('Success', '更新了重启策略');
       }
 
       function notifyOnError(err) {

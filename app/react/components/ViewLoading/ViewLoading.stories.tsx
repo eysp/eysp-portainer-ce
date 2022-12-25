@@ -17,5 +17,5 @@ function Template({ message }: Args) {
 
 export const Example: Story<Args> = Template.bind({});
 Example.args = {
-  message: 'Loading...',
+  message: '加载中...',
 };

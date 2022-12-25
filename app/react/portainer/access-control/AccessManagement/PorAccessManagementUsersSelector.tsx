@@ -38,7 +38,7 @@ export function PorAccessManagementUsersSelector({
             onChange={onChange}
             data-cy="component-selectUser"
             inputId="users-selector"
-            placeholder="Select one or more users and/or teams"
+            placeholder="选择一个或多个用户和/或团队"
             components={{ MultiValueLabel, Option: OptionComponent }}
           />
         )}

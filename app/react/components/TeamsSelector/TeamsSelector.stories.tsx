@@ -22,7 +22,7 @@ function Example() {
       value={selectedTeams}
       onChange={(value) => setSelectedTeams(value)}
       teams={teams}
-      placeholder="Select one or more teams"
+      placeholder="选择一个或多个团队"
     />
   );
 }

@@ -26,7 +26,7 @@ export function CreateNamespaceRegistriesSelector({
       onChange={onChange}
       inputId={inputId}
       data-cy="namespaceCreate-registrySelect"
-      placeholder="Select one or more registry"
+      placeholder="选择一个或多个注册表"
     />
   );
 }

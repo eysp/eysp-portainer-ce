@@ -27,7 +27,7 @@ export function PorAccessControlFormTeamSelector({
       onChange={onChange}
       data-cy="portainer-selectTeamAccess"
       inputId={inputId}
-      placeholder="Select one or more teams"
+      placeholder="选择一个或多个团队"
     />
   );
 }

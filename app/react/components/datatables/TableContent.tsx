@@ -19,7 +19,7 @@ export function TableContent<
   renderRow,
 }: Props<T>) {
   if (isLoading) {
-    return <TableContentOneColumn>Loading...</TableContentOneColumn>;
+    return <TableContentOneColumn>加载中...</TableContentOneColumn>;
   }
 
   if (!rows.length) {

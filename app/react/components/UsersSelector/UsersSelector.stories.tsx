@@ -23,7 +23,7 @@ function Example() {
       value={selectedUsers}
       onChange={setSelectedUsers}
       users={users}
-      placeholder="Select one or more users"
+      placeholder="选择一个或多个用户"
     />
   );
 }

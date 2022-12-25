@@ -93,12 +93,12 @@ export function AMTDevicesDatatable({ environmentId }: AMTDevicesTableProps) {
 
 function userMessage(isLoading: boolean, error?: PortainerError) {
   if (isLoading) {
-    return 'Loading...';
+    return '加载中...';
   }
 
   if (error) {
     return error.message;
   }
 
-  return 'No devices found';
+  return '未找到设备';
 }

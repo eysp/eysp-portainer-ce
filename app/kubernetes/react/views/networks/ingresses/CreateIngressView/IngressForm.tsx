@@ -98,7 +98,7 @@ export function IngressForm({
   namespace,
 }: Props) {
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>加载中...</div>;
   }
   const hasNoHostRule = rule.Hosts?.some((host) => host.NoHost);
   const placeholderAnnotation =

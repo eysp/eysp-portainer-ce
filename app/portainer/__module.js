@@ -101,7 +101,7 @@ angular
           },
         },
       };
-v
+
       var portainer = {
         name: 'portainer',
         parent: 'root',

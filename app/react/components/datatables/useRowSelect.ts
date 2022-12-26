@@ -139,7 +139,7 @@ function defaultGetToggleAllPageRowsSelectedProps<D extends DefaultType>(
         cursor: 'pointer',
       },
       checked: instance.isAllPageRowsSelected,
-      title: 'Toggle All Current Page Rows Selected',
+      title: '切换选中的所有当前页行数',
       indeterminate: Boolean(
         !instance.isAllPageRowsSelected &&
           instance.page.some(({ id }) => instance.state.selectedRowIds[id])

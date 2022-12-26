@@ -27,7 +27,7 @@ export function MultipleSelectionFilter({
         <MenuButton
           className={clsx('table-filter', { 'filter-active': enabled })}
         >
-          Filter
+          筛选
           <i
             className={clsx(
               'fa',

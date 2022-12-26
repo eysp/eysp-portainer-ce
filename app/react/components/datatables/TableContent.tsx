@@ -14,7 +14,7 @@ export function TableContent<
 >({
   isLoading = false,
   rows,
-  emptyContent = 'No items available',
+  emptyContent = '没有可用项目',
   prepareRow,
   renderRow,
 }: Props<T>) {

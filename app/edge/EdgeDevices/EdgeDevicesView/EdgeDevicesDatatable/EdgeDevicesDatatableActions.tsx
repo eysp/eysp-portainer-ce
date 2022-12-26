@@ -72,12 +72,12 @@ export function EdgeDevicesDatatableActions({
 
   async function onDeleteEdgeDeviceClick() {
     const confirmed = await confirmDestructiveAsync({
-      title: 'Are you sure ?',
+      title: '你确定吗？',
       message:
-        'This action will remove all configurations associated to your environment(s). Continue?',
+        '这个动作将删除与您的环境相关的所有配置。继续吗？',
       buttons: {
         confirm: {
-          label: 'Remove',
+          label: '删除',
           className: 'btn-danger',
         },
       },
@@ -93,14 +93,14 @@ export function EdgeDevicesDatatableActions({
           await deleteEndpoint(environment.Id);
 
           notifications.success(
-            'Environment successfully removed',
+            '环境成功删除',
             environment.Name
           );
         } catch (err) {
           notifications.error(
             'Failure',
             err as Error,
-            'Unable to remove environment'
+            '无法删除环境'
           );
         }
       })

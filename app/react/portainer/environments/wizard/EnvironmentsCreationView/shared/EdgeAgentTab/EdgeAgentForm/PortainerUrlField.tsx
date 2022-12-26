@@ -13,7 +13,7 @@ export function validation() {
   return string()
     .test(
       'url',
-      'URL should be a valid URI and cannot include localhost',
+      'URL应该是一个有效的URI，不能包括localhost',
       (value) => {
         if (!value) {
           return false;
@@ -26,7 +26,7 @@ export function validation() {
         }
       }
     )
-    .required('URL is required');
+    .required('URL是必需的');
 }
 
 export function PortainerUrlField({ fieldName, readonly }: Props) {
@@ -36,7 +36,7 @@ export function PortainerUrlField({ fieldName, readonly }: Props) {
   return (
     <FormControl
       label="Portainer server URL"
-      tooltip="URL of the Portainer instance that the agent will use to initiate the communications."
+      tooltip="代理将用于启动通信的Portainer实例的URL。"
       required
       errors={metaProps.error}
       inputId={id}
@@ -45,7 +45,7 @@ export function PortainerUrlField({ fieldName, readonly }: Props) {
         id={id}
         name={fieldName}
         as={Input}
-        placeholder="e.g. https://10.0.0.10:9443 or https://portainer.mydomain.com"
+        placeholder="例如 https://10.0.0.10:9443 或 https://portainer.mydomain.com"
         required
         data-cy="endpointCreate-portainerServerUrlInput"
         readOnly={readonly}

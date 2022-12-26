@@ -58,8 +58,8 @@ export function FDOProfilesDatatableActions({
 
   async function onDuplicateProfileClick() {
     const confirmed = await confirmAsync({
-      title: 'Are you sure ?',
-      message: 'This action will duplicate the selected profile. Continue?',
+      title: '你确定吗？',
+      message: '这个动作将复制选定的配置文件。继续吗？',
       buttons: {
         confirm: {
           label: 'Confirm',
@@ -90,11 +90,11 @@ export function FDOProfilesDatatableActions({
 
   async function onDeleteProfileClick() {
     const confirmed = await confirmDestructiveAsync({
-      title: 'Are you sure ?',
-      message: 'This action will delete the selected profile(s). Continue?',
+      title: '你确定吗？',
+      message: '这个动作将删除所选的配置文件。继续吗？',
       buttons: {
         confirm: {
-          label: 'Remove',
+          label: '删除',
           className: 'btn-danger',
         },
       },

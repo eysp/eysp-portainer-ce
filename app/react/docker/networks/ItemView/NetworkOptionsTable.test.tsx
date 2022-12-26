@@ -13,12 +13,12 @@ const options: NetworkOptions = {
   'com.docker.network.driver.mtu': '1500',
 };
 
-test('Network options values should be visible', async () => {
+test('网络选项值应该是可见的', async () => {
   const { findByText, findAllByText } = render(
     <NetworkOptionsTable options={options} />
   );
 
-  await expect(findByText('Network options')).resolves.toBeVisible();
+  await expect(findByText('网络选项')).resolves.toBeVisible();
   // expect to find three 'true' values for the first 3 options
   const cells = await findAllByText('true');
   expect(cells).toHaveLength(3);

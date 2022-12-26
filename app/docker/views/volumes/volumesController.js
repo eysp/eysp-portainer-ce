@@ -14,19 +14,19 @@ angular.module('portainer.docker').controller('VolumesController', [
   'endpoint',
   function ($q, $scope, $state, VolumeService, ServiceService, VolumeHelper, Notifications, HttpRequestHelper, Authentication, ModalService, endpoint) {
     $scope.removeAction = function (selectedItems) {
-      ModalService.confirmDeletion('Do you want to remove the selected volume(s)?', (confirmed) => {
+      ModalService.confirmDeletion('您想删除所选的存储卷吗？', (confirmed) => {
         if (confirmed) {
           var actionCount = selectedItems.length;
           angular.forEach(selectedItems, function (volume) {
             HttpRequestHelper.setPortainerAgentTargetHeader(volume.NodeName);
             VolumeService.remove(volume)
               .then(function success() {
-                Notifications.success('Volume successfully removed', volume.Id);
+                Notifications.success('存储卷成功删除', volume.Id);
                 var index = $scope.volumes.indexOf(volume);
                 $scope.volumes.splice(index, 1);
               })
               .catch(function error(err) {
-                Notifications.error('失败', err, 'Unable to remove volume');
+                Notifications.error('失败', err, '无法删除存储卷');
               })
               .finally(function final() {
                 --actionCount;
@@ -70,7 +70,7 @@ angular.module('portainer.docker').controller('VolumesController', [
             );
         })
         .catch(function error(err) {
-          Notifications.error('失败', err, 'Unable to retrieve volumes');
+          Notifications.error('失败', err, '无法检索到存储卷');
         });
     }
 

@@ -44,7 +44,7 @@ export function WizardEndpointsList({ environmentIds }: Props) {
 
   return (
     <Widget>
-      <WidgetTitle icon="svg-plug" title="New Environments" />
+      <WidgetTitle icon="svg-plug" title="新环境" />
       <WidgetBody>
         {environments.map((environment) => (
           <div className={styles.wizardListWrapper} key={environment.Id}>

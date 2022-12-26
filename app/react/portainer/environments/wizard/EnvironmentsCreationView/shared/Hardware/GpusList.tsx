@@ -20,7 +20,7 @@ function Item({ item, onChange }: ItemProps<Gpu>) {
   return (
     <div className="flex gap-2 flex-grow">
       <InputGroup size="small" className="flex-grow">
-        <InputGroup.Addon>GPU Name</InputGroup.Addon>
+        <InputGroup.Addon>GPU 名称</InputGroup.Addon>
         <InputGroup.Input
           placeholder="my-gpu"
           value={item.name}
@@ -31,7 +31,7 @@ function Item({ item, onChange }: ItemProps<Gpu>) {
       </InputGroup>
 
       <InputGroup size="small" className="flex-grow">
-        <InputGroup.Addon>Index or UUID</InputGroup.Addon>
+        <InputGroup.Addon>索引或UUID</InputGroup.Addon>
         <InputGroup.Input
           placeholder="0 or GPU-6e2c7185-c3d3-ae22-da43-bc5267b89061"
           value={item.value}

@@ -55,7 +55,7 @@ export function AgentForm({ onCreate, showGpus = false }: Props) {
             <div className="col-sm-12">
               <LoadingButton
                 className="wizard-connect-button vertical-center"
-                loadingText="Connecting environment..."
+                loadingText="正在连接环境..."
                 isLoading={mutation.isLoading}
                 disabled={!dirty || !isValid}
               >
@@ -63,7 +63,7 @@ export function AgentForm({ onCreate, showGpus = false }: Props) {
                   icon="svg-plug"
                   className="icon icon-sm vertical-center"
                 />{' '}
-                Connect
+                连接
               </LoadingButton>
             </div>
           </div>

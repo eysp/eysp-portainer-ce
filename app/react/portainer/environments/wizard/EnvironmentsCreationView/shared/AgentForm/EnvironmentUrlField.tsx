@@ -8,7 +8,7 @@ export function EnvironmentUrlField() {
 
   return (
     <FormControl
-      label="Environment address"
+      label="环境地址"
       errors={meta.error}
       required
       inputId="environment-url-field"
@@ -18,7 +18,7 @@ export function EnvironmentUrlField() {
         id="environment-url-field"
         name="environmentUrl"
         as={Input}
-        placeholder="e.g. 10.0.0.10:9001 or tasks.portainer_agent:9001"
+        placeholder="例如 10.0.0.10:9001 或 tasks.portainer_agent:9001"
         data-cy="endpointCreate-endpointUrlAgentInput"
       />
     </FormControl>

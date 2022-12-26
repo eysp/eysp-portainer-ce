@@ -25,7 +25,7 @@ jest.mock('@uirouter/react', () => ({
   })),
 }));
 
-test('Network container values should be visible and the link should be valid', async () => {
+test('网络容器的值应该是可见的，并且链接应该是有效的', async () => {
   const user = new UserViewModel({ Username: 'test', Role: 1 });
   const { findByText } = renderWithQueryClient(
     <UserContext.Provider value={{ user }}>
@@ -38,7 +38,7 @@ test('Network container values should be visible and the link should be valid', 
     </UserContext.Provider>
   );
 
-  await expect(findByText('Containers in network')).resolves.toBeVisible();
+  await expect(findByText('网络中的容器')).resolves.toBeVisible();
   await expect(findByText(networkContainers[0].Name)).resolves.toBeVisible();
   await expect(
     findByText(networkContainers[0].IPv4Address)
@@ -47,6 +47,6 @@ test('Network container values should be visible and the link should be valid', 
     findByText(networkContainers[0].MacAddress)
   ).resolves.toBeVisible();
   await expect(
-    findByText('Leave network', { exact: false })
+    findByText('断开网络', { exact: false })
   ).resolves.toBeVisible();
 });

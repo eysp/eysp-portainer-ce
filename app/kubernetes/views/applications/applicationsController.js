@@ -94,11 +94,11 @@ class KubernetesApplicationsController {
             }
           }
         }
-        this.Notifications.success('Application successfully removed', application.Name);
+        this.Notifications.success('应用程序成功删除', application.Name);
         const index = this.state.applications.indexOf(application);
         this.state.applications.splice(index, 1);
       } catch (err) {
-        this.Notifications.error('失败', err, 'Unable to remove application');
+        this.Notifications.error('失败', err, '无法删除应用程序');
       } finally {
         --actionCount;
         if (actionCount === 0) {
@@ -109,7 +109,7 @@ class KubernetesApplicationsController {
   }
 
   removeAction(selectedItems) {
-    this.ModalService.confirmDeletion('Do you want to remove the selected application(s)?', (confirmed) => {
+    this.ModalService.confirmDeletion('你想删除选定的应用程序吗？', (confirmed) => {
       if (confirmed) {
         return this.$async(this.removeActionAsync, selectedItems);
       }
@@ -138,7 +138,7 @@ class KubernetesApplicationsController {
       this.state.stacks = KubernetesStackHelper.stacksFromApplications(applications);
       this.state.ports = KubernetesApplicationHelper.portMappingsFromApplications(applications);
     } catch (err) {
-      this.Notifications.error('失败', err, 'Unable to retrieve applications');
+      this.Notifications.error('失败', err, '无法检索到应用程序s');
     }
   }
 

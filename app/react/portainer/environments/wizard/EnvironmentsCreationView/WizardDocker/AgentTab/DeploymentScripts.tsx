@@ -79,7 +79,7 @@ function DeployCode({ code }: DeployCodeProps) {
       <div className="code-script">
         <Code>{code}</Code>
       </div>
-      <CopyButton copyText={code}>Copy command</CopyButton>
+      <CopyButton copyText={code}>复制命令</CopyButton>
     </>
   );
 }

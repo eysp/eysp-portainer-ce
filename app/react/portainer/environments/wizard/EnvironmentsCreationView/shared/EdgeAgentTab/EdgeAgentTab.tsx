@@ -49,7 +49,7 @@ export function EdgeAgentTab({
           <div className="row">
             <div className="flex justify-end">
               <Button color="primary" type="reset" onClick={handleReset}>
-                Add another environment
+              添加其他环境
               </Button>
             </div>
           </div>

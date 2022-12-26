@@ -18,11 +18,11 @@ type Props = {
 };
 
 const tableHeaders = [
-  'Container Name',
-  'IPv4 Address',
-  'IPv6 Address',
-  'MacAddress',
-  'Actions',
+  '容器名称',
+  'IPv4 地址',
+  'IPv6 地址',
+  'Mac地址',
+  '操作',
 ];
 
 export function NetworkContainersTable({
@@ -85,7 +85,7 @@ export function NetworkContainersTable({
                           feather
                           class-name="icon-secondary icon-md"
                         />
-                        Leave Network
+                        断开网络
                       </Button>
                     </Authorized>
                   </td>

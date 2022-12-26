@@ -58,14 +58,14 @@ export function EdgeAgentForm({ onCreate, readonly, showGpus = false }: Props) {
                 <LoadingButton
                   className="vertical-center"
                   isLoading={createMutation.isLoading}
-                  loadingText="Creating environment..."
+                  loadingText="创建环境中..."
                   disabled={!isValid}
                 >
                   <Icon
                     icon="svg-plug"
                     className="icon icon-sm vertical-center"
                   />
-                  Create
+                  创建
                 </LoadingButton>
               </div>
             </div>

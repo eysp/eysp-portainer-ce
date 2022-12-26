@@ -67,7 +67,7 @@ angular.module('portainer.app').controller('AccountController', [
     };
 
     $scope.removeAction = (selectedTokens) => {
-      const msg = 'Do you want to remove the selected access token(s)? Any script or application using these tokens will no longer be able to invoke the Portainer API.';
+      const msg = '您是否想删除所选的访问令牌？任何使用这些令牌的脚本或应用程序将不再能够调用Portainer API。';
 
       ModalService.confirmDeletion(msg, function (confirmed) {
         if (!confirmed) {
@@ -77,12 +77,12 @@ angular.module('portainer.app').controller('AccountController', [
         selectedTokens.forEach((token) => {
           UserService.deleteAccessToken($scope.userID, token.id)
             .then(() => {
-              Notifications.success('Success', 'Token successfully removed');
+              Notifications.success('Success', '令牌成功移除');
               var index = $scope.tokens.indexOf(token);
               $scope.tokens.splice(index, 1);
             })
             .catch((err) => {
-              Notifications.error('失败', err, 'Unable to remove token');
+              Notifications.error('失败', err, '无法删除令牌');
             })
             .finally(() => {
               --actionCount;
@@ -104,7 +104,7 @@ angular.module('portainer.app').controller('AccountController', [
     $scope.updateTheme = function () {
       UserService.updateUserTheme($scope.userID, $scope.formValues.userTheme)
         .then(function success() {
-          Notifications.success('Success', 'User theme successfully updated');
+          Notifications.success('Success', '用户主题成功更新');
           $state.reload();
         })
         .catch(function error(err) {
@@ -145,7 +145,7 @@ angular.module('portainer.app').controller('AccountController', [
           StateManager.setRequiredPasswordLength(data.RequiredPasswordLength);
         })
         .catch(function error(err) {
-          Notifications.error('失败', err, 'Unable to retrieve application settings');
+          Notifications.error('失败', err, '无法检索应用程序设置');
         });
 
       UserService.getAccessTokens($scope.userID)
@@ -153,7 +153,7 @@ angular.module('portainer.app').controller('AccountController', [
           $scope.tokens = data;
         })
         .catch(function error(err) {
-          Notifications.error('失败', err, 'Unable to retrieve user tokens');
+          Notifications.error('失败', err, '无法检索到用户令牌');
         });
     }
 

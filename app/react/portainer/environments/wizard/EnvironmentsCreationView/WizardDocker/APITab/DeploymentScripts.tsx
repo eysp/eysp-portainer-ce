@@ -51,12 +51,12 @@ function DeployCode({ code }: DeployCodeProps) {
   return (
     <>
       <span className="text-muted small">
-        When using the socket, ensure that you have started the Portainer
-        container with the following Docker flag:
+      在使用socket套接字时，确保你已经启动了Portainer
+        容器，并设置了以下Docker标志。
       </span>
 
       <Code>{code}</Code>
-      <CopyButton copyText={code}>Copy command</CopyButton>
+      <CopyButton copyText={code}>复制命令</CopyButton>
     </>
   );
 }

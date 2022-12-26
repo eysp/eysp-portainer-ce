@@ -17,7 +17,7 @@ export function NameField({ readonly }: Props) {
   const id = 'name-input';
 
   return (
-    <FormControl label="Name" required errors={meta.error} inputId={id}>
+    <FormControl label="名称" required errors={meta.error} inputId={id}>
       <Field
         id={id}
         name="name"
@@ -50,10 +50,10 @@ const debouncedIsNameUnique = debounce(isNameUnique, 500);
 
 export function nameValidation() {
   return string()
-    .required('Name is required')
+    .required('名称是必填项')
     .test(
       'unique-name',
-      'Name should be unique',
+      '名称应唯一',
       (name) => debouncedIsNameUnique(name) || false
     );
 }

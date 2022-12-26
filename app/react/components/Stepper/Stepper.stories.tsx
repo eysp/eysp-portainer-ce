@@ -28,13 +28,13 @@ function Template({ totalSteps = 5 }: Args) {
         onClick={() => setCurrentStep(currentStep - 1)}
         disabled={currentStep <= 1}
       >
-        Previous
+        上一页
       </Button>
       <Button
         onClick={() => setCurrentStep(currentStep + 1)}
         disabled={currentStep >= steps.length}
       >
-        Next
+        下一页
       </Button>
     </>
   );

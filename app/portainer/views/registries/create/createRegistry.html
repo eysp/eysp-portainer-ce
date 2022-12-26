@@ -1,4 +1,4 @@
-<page-header title="'创建注册表'" breadcrumbs="[{label:'Registries', link:'portainer.registries'}, 'Add registry']"> </page-header>
+<page-header title="'创建注册表'" breadcrumbs="[{label:'Registries', link:'portainer.registries'}, '添加注册表']"> </page-header>
 
 <div class="row">
   <div class="col-sm-12">
@@ -13,7 +13,7 @@
             ng-if="$ctrl.model.Type === $ctrl.RegistryTypes.QUAY"
             model="$ctrl.model"
             form-action="$ctrl.createRegistry"
-            form-action-label="Add registry"
+            form-action-label="添加注册表"
             action-in-progress="$ctrl.state.actionInProgress"
             name-is-used="($ctrl.nameIsUsed)"
           ></registry-form-quay>
@@ -22,7 +22,7 @@
             ng-if="$ctrl.model.Type === $ctrl.RegistryTypes.AZURE"
             model="$ctrl.model"
             form-action="$ctrl.createRegistry"
-            form-action-label="Add registry"
+            form-action-label="添加注册表"
             action-in-progress="$ctrl.state.actionInProgress"
             name-is-used="($ctrl.nameIsUsed)"
           ></registry-form-azure>
@@ -31,7 +31,7 @@
             ng-if="$ctrl.model.Type === $ctrl.RegistryTypes.CUSTOM"
             model="$ctrl.model"
             form-action="$ctrl.createRegistry"
-            form-action-label="Add registry"
+            form-action-label="添加注册表"
             action-in-progress="$ctrl.state.actionInProgress"
             name-is-used="($ctrl.nameIsUsed)"
           ></registry-form-custom>
@@ -40,7 +40,7 @@
             ng-if="$ctrl.model.Type === $ctrl.RegistryTypes.ECR"
             model="$ctrl.model"
             form-action="$ctrl.createRegistry"
-            form-action-label="Add registry"
+            form-action-label="添加注册表"
             action-in-progress="$ctrl.state.actionInProgress"
             name-is-used="($ctrl.nameIsUsed)"
           ></registry-form-ecr>
@@ -49,7 +49,7 @@
             ng-if="$ctrl.model.Type === $ctrl.RegistryTypes.PROGET"
             model="$ctrl.model"
             form-action="$ctrl.createRegistry"
-            form-action-label="Add registry"
+            form-action-label="添加注册表"
             action-in-progress="$ctrl.state.actionInProgress"
             name-is-used="($ctrl.nameIsUsed)"
           ></registry-form-proget>
@@ -68,7 +68,7 @@
             ng-if="$ctrl.model.Type === $ctrl.RegistryTypes.DOCKERHUB"
             model="$ctrl.model"
             form-action="$ctrl.createRegistry"
-            form-action-label="Add registry"
+            form-action-label="添加注册表"
             action-in-progress="$ctrl.state.actionInProgress"
             name-is-used="($ctrl.nameIsUsed)"
           ></registry-form-dockerhub>

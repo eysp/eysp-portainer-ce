@@ -58,13 +58,13 @@ export function APIForm({ onCreate }: Props) {
             inputId="url-field"
             label="Docker API URL"
             required
-            tooltip="URL or IP address of a Docker host. The Docker API must be exposed over a TCP port. Please refer to the Docker documentation to configure it."
+            tooltip="Docker主机的URL或IP地址。Docker API必须通过一个TCP端口暴露。请参考Docker文档来配置它。"
           >
             <Field
               as={Input}
               id="url-field"
               name="url"
-              placeholder="e.g. 10.0.0.10:2375 or mydocker.mydomain.com:2375"
+              placeholder="例如 10.0.0.10:2375 或 mydocker.mydomain.com:2375"
             />
           </FormControl>
 
@@ -78,7 +78,7 @@ export function APIForm({ onCreate }: Props) {
             <div className="col-sm-12">
               <LoadingButton
                 className="wizard-connect-button vertical-center"
-                loadingText="Connecting environment..."
+                loadingText="连接环境中..."
                 isLoading={mutation.isLoading}
                 disabled={!dirty || !isValid}
               >
@@ -86,7 +86,7 @@ export function APIForm({ onCreate }: Props) {
                   icon="svg-plug"
                   className="icon icon-sm vertical-center"
                 />{' '}
-                Connect
+                连接
               </LoadingButton>
             </div>
           </div>

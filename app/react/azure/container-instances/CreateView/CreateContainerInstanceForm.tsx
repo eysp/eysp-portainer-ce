@@ -65,7 +65,7 @@ export function CreateContainerInstanceForm() {
         <Form className="form-horizontal" onSubmit={handleSubmit} noValidate>
           <FormSectionTitle>Azure settings</FormSectionTitle>
           <FormControl
-            label="Subscription"
+            label="订阅"
             inputId="subscription-input"
             errors={errors.subscription}
           >
@@ -78,7 +78,7 @@ export function CreateContainerInstanceForm() {
           </FormControl>
 
           <FormControl
-            label="Resource group"
+            label="资源组"
             inputId="resourceGroup-input"
             errors={errors.resourceGroup}
           >
@@ -94,7 +94,7 @@ export function CreateContainerInstanceForm() {
           </FormControl>
 
           <FormControl
-            label="Location"
+            label="位置"
             inputId="location-input"
             errors={errors.location}
           >
@@ -106,9 +106,9 @@ export function CreateContainerInstanceForm() {
             />
           </FormControl>
 
-          <FormSectionTitle>Container configuration</FormSectionTitle>
+          <FormSectionTitle>容器配置</FormSectionTitle>
 
-          <FormControl label="Name" inputId="name-input" errors={errors.name}>
+          <FormControl label="名称" inputId="name-input" errors={errors.name}>
             <Field
               name="name"
               as={Input}
@@ -118,7 +118,7 @@ export function CreateContainerInstanceForm() {
           </FormControl>
 
           <FormControl
-            label="Image"
+            label="镜像"
             inputId="image-input"
             errors={errors.image}
           >
@@ -150,12 +150,11 @@ export function CreateContainerInstanceForm() {
 
           <div className="form-group">
             <div className="col-sm-12 small text-muted">
-              This will automatically deploy a container with a public IP
-              address
+            这将自动部署一个具有公共IP地址的容器
             </div>
           </div>
 
-          <FormSectionTitle>Container Resources</FormSectionTitle>
+          <FormSectionTitle>容器资源</FormSectionTitle>
 
           <FormControl label="CPU" inputId="cpu-input" errors={errors.cpu}>
             <Field
@@ -168,7 +167,7 @@ export function CreateContainerInstanceForm() {
           </FormControl>
 
           <FormControl
-            label="Memory"
+            label="内存"
             inputId="cpu-input"
             errors={errors.memory}
           >
@@ -193,10 +192,10 @@ export function CreateContainerInstanceForm() {
               <LoadingButton
                 disabled={!isValid}
                 isLoading={isSubmitting}
-                loadingText="Deployment in progress..."
+                loadingText="部署正在进行中..."
               >
                 <i className="fa fa-plus space-right" aria-hidden="true" />
-                Deploy the container
+                部署容器
               </LoadingButton>
             </div>
           </div>
@@ -208,10 +207,10 @@ export function CreateContainerInstanceForm() {
   async function onSubmit(values: ContainerInstanceFormValues) {
     try {
       await mutateAsync(values);
-      notifications.success('Container successfully created', values.name);
+      notifications.success('容器成功创建', values.name);
       router.stateService.go('azure.containerinstances');
     } catch (e) {
-      notifications.error('Failure', e as Error, 'Unable to create container');
+      notifications.error('Failure', e as Error, '无法创建容器');
     }
   }
 }

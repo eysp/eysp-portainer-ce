@@ -29,7 +29,7 @@ export function TLSFieldset() {
           <div className="form-group">
             <div className="col-sm-12">
               <SwitchField
-                label="Skip Certification Verification"
+                label="跳过认证验证"
                 checked={!!values.skipVerify}
                 onChange={(checked) => setFieldValue('skipVerify', checked)}
               />
@@ -39,7 +39,7 @@ export function TLSFieldset() {
           {!values.skipVerify && (
             <>
               <FormControl
-                label="TLS CA certificate"
+                label="TLS CA证书"
                 inputId="ca-cert-field"
                 errors={errors.caCertFile}
               >
@@ -50,7 +50,7 @@ export function TLSFieldset() {
                 />
               </FormControl>
               <FormControl
-                label="TLS certificate"
+                label="TLS 证书"
                 inputId="cert-field"
                 errors={errors.certFile}
               >
@@ -84,7 +84,7 @@ const MAX_FILE_SIZE = 5_242_880; // 5MB
 function certValidation() {
   return withFileSize(file(), MAX_FILE_SIZE).when(['tls', 'skipVerify'], {
     is: (tls: boolean, skipVerify: boolean) => tls && !skipVerify,
-    then: (schema) => schema.required('File is required'),
+    then: (schema) => schema.required('文件是必需的'),
   });
 }
 

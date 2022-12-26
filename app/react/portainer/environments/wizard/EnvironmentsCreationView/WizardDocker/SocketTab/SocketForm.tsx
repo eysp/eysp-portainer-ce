@@ -56,7 +56,7 @@ export function SocketForm({ onCreate }: Props) {
             <div className="col-sm-12">
               <LoadingButton
                 className="wizard-connect-button vertical-center"
-                loadingText="Connecting environment..."
+                loadingText="连接环境..."
                 isLoading={mutation.isLoading}
                 disabled={!dirty || !isValid}
               >
@@ -64,7 +64,7 @@ export function SocketForm({ onCreate }: Props) {
                   icon="svg-plug"
                   className="icon icon-sm vertical-center"
                 />{' '}
-                Connect
+                连接
               </LoadingButton>
             </div>
           </div>
@@ -83,7 +83,7 @@ export function SocketForm({ onCreate }: Props) {
       },
       {
         onSuccess(environment) {
-          notifySuccess('Environment created', environment.Name);
+          notifySuccess('环境创建', environment.Name);
           clearForm();
           onCreate(environment);
         },
@@ -102,20 +102,20 @@ function OverrideSocketFieldset() {
           <SwitchField
             checked={values.overridePath}
             onChange={(checked) => setFieldValue('overridePath', checked)}
-            label="Override default socket path"
+            label="覆盖默认的socket路径"
           />
         </div>
       </div>
       {values.overridePath && (
         <FormControl
-          label="Socket Path"
-          tooltip="Path to the Docker socket. Remember to bind-mount the socket, see the important notice above for more information."
+          label="Socket 路径"
+          tooltip="Docker Socket的路径。记住要对套接字进行绑定挂载，更多信息请参见上面的重要通知。"
           errors={errors.socketPath}
         >
           <Field
             name="socketPath"
             as={Input}
-            placeholder="e.g. /var/run/docker.sock (on Linux) or //./pipe/docker_engine (on Windows)"
+            placeholder="例如 /var/run/docker.sock (on Linux) 或 //./pipe/docker_engine (on Windows)"
           />
         </FormControl>
       )}

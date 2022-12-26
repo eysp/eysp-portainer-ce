@@ -82,7 +82,7 @@ angular.module('portainer.docker').controller('ContainerConsoleController', [
           initTerm(url, ContainerService.resizeTTY.bind(this, attachId));
         })
         .catch(function error(err) {
-          Notifications.error('Error', err, 'Unable to retrieve container details');
+          Notifications.error('Error', err, '无法检索到容器的详细信息');
           $scope.disconnect();
         });
     };
@@ -123,7 +123,7 @@ angular.module('portainer.docker').controller('ContainerConsoleController', [
           initTerm(url, ExecService.resizeTTY.bind(this, params.id));
         })
         .catch(function error(err) {
-          Notifications.error('失败', err, 'Unable to exec into container');
+          Notifications.error('失败', err, '无法执行到容器中');
           $scope.disconnect();
         });
     };
@@ -201,7 +201,7 @@ angular.module('portainer.docker').controller('ContainerConsoleController', [
         socket.onerror = function (err) {
           $scope.disconnect();
           $scope.$apply();
-          Notifications.error('失败', err, 'Connection error');
+          Notifications.error('失败', err, '连接错误');
         };
         socket.onclose = function () {
           $scope.disconnect();
@@ -239,7 +239,7 @@ angular.module('portainer.docker').controller('ContainerConsoleController', [
           $scope.loaded = true;
         })
         .catch(function error(err) {
-          Notifications.error('Error', err, 'Unable to retrieve container details');
+          Notifications.error('Error', err, '无法检索到容器的详细信息');
         });
     };
 

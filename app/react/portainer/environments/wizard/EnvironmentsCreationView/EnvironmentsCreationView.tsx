@@ -89,10 +89,10 @@ export function EnvironmentCreationView() {
                   )}
                 >
                   <Button disabled={isFirstStep} onClick={onPreviousClick}>
-                    <Icon icon="arrow-left" feather /> Previous
+                    <Icon icon="arrow-left" feather /> 上一步
                   </Button>
                   <Button onClick={onNextClick}>
-                    {isLastStep ? 'Close' : 'Next'}
+                    {isLastStep ? '关闭' : '下一步'}
                     <Icon icon="arrow-right" feather />
                   </Button>
                 </div>

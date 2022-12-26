@@ -239,7 +239,7 @@
         button-spinner="$ctrl.actionInProgress"
       >
         <span ng-hide="$ctrl.actionInProgress">{{ $ctrl.formActionLabel }}</span>
-        <span ng-show="$ctrl.actionInProgress">In progress...</span>
+        <span ng-show="$ctrl.actionInProgress">正在进行中...</span>
       </button>
       <span class="text-danger space-left" ng-if="$ctrl.state.formValidationError">
         {{ $ctrl.state.formValidationError }}

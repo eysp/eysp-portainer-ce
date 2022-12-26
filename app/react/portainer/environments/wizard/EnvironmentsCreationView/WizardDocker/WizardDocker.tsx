@@ -24,7 +24,7 @@ const defaultOptions: BoxSelectorOption<
   {
     id: 'agent',
     icon: 'svg-agent',
-    label: 'Agent',
+    label: '代理',
     description: '',
     value: 'agent',
   },
@@ -45,7 +45,7 @@ const defaultOptions: BoxSelectorOption<
   {
     id: 'edgeAgent',
     icon: 'svg-edgeagent',
-    label: 'Edge Agent',
+    label: '边缘代理',
     description: '',
     value: 'edgeAgent',
     hide: window.ddExtension,

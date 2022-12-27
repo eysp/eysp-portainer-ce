@@ -60,7 +60,7 @@ angular.module('portainer.docker').controller('ContainerConsoleController', [
       ContainerService.container(attachId)
         .then((details) => {
           if (!details.State.Running) {
-            Notifications.error('失败', details, 'Container ' + attachId + ' is not running!');
+            Notifications.error('失败', details, '容器 ' + attachId + ' 没有运行!');
             $scope.disconnect();
             return;
           }

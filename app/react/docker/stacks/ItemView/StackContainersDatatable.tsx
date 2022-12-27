@@ -94,7 +94,7 @@ export function StackContainersDatatable({ environment, stackName }: Props) {
         storageKey={storageKey}
         dataset={containersQuery.data || []}
         isLoading={containersQuery.isLoading}
-        emptyContentLabel="No containers found"
+        emptyContentLabel="未找到容器"
       />
     </RowProvider>
   );

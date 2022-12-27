@@ -19,7 +19,7 @@ import { useColumns } from './columns';
 import { ContainersDatatableActions } from './ContainersDatatableActions';
 import { RowProvider } from './RowContext';
 
-const storageKey = '容器';
+const storageKey = 'containers';
 const useStore = createStore(storageKey);
 
 const actions = [

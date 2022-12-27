@@ -58,7 +58,7 @@ export function ContainersDatatable({
       <Datatable
         titleOptions={{
           icon: 'svg-cubes',
-          title: 'containers',
+          title: '容器',
         }}
         settingsStore={settings}
         columns={columns}

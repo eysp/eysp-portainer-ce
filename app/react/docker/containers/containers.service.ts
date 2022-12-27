@@ -10,7 +10,7 @@ export async function startContainer(
   id: ContainerId
 ) {
   await axios.post<void>(
-    urlBuilder(endpointId, id, '启动'),
+    urlBuilder(endpointId, id, 'start'),
     {},
     { transformResponse: genericHandler }
   );
@@ -20,35 +20,35 @@ export async function stopContainer(
   endpointId: EnvironmentId,
   id: ContainerId
 ) {
-  await axios.post<void>(urlBuilder(endpointId, id, '停止'), {});
+  await axios.post<void>(urlBuilder(endpointId, id, 'stop'), {});
 }
 
 export async function restartContainer(
   endpointId: EnvironmentId,
   id: ContainerId
 ) {
-  await axios.post<void>(urlBuilder(endpointId, id, '重启'), {});
+  await axios.post<void>(urlBuilder(endpointId, id, 'restart'), {});
 }
 
 export async function killContainer(
   endpointId: EnvironmentId,
   id: ContainerId
 ) {
-  await axios.post<void>(urlBuilder(endpointId, id, '终止'), {});
+  await axios.post<void>(urlBuilder(endpointId, id, 'kill'), {});
 }
 
 export async function pauseContainer(
   endpointId: EnvironmentId,
   id: ContainerId
 ) {
-  await axios.post<void>(urlBuilder(endpointId, id, '暂停'), {});
+  await axios.post<void>(urlBuilder(endpointId, id, 'pause'), {});
 }
 
 export async function resumeContainer(
   endpointId: EnvironmentId,
   id: ContainerId
 ) {
-  await axios.post<void>(urlBuilder(endpointId, id, '恢复'), {});
+  await axios.post<void>(urlBuilder(endpointId, id, 'unpause'), {});
 }
 
 export async function renameContainer(
@@ -57,7 +57,7 @@ export async function renameContainer(
   name: string
 ) {
   await axios.post<void>(
-    urlBuilder(endpointId, id, '重命名'),
+    urlBuilder(endpointId, id, 'rename'),
     {},
     { params: { name }, transformResponse: genericHandler }
   );

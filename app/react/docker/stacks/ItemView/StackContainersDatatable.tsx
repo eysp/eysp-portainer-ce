@@ -56,7 +56,7 @@ export function StackContainersDatatable({ environment, stackName }: Props) {
       <Datatable
         titleOptions={{
           icon: 'fa-cubes',
-          title: 'containers',
+          title: '容器',
         }}
         settingsStore={settings}
         columns={columns}

@@ -128,7 +128,7 @@ export function ContainersDatatableActions({
             disabled={selectedItemCount === 0}
             icon={RefreshCw}
           >
-            终止
+            重启
           </Button>
         </Authorized>
 
